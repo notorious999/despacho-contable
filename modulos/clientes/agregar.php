@@ -28,18 +28,53 @@ function normalize_money($val): float {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Campos básicos
-    $razon_social   = sanitize($_POST['razon_social'] ?? '');
-    $actividad      = sanitize($_POST['actividad'] ?? ''); // reemplaza nombre_comercial
-    $rfc            = strtoupper(trim(sanitize($_POST['rfc'] ?? '')));
-    $regimen_fiscal = sanitize($_POST['regimen_fiscal'] ?? '');
-    $inicio_regimen = sanitize($_POST['inicio_regimen'] ?? '') ?: null;
-    $domicilio_fiscal = sanitize($_POST['domicilio_fiscal'] ?? '');
-    $codigo_postal  = sanitize($_POST['codigo_postal'] ?? '');
-    $telefono       = sanitize($_POST['telefono'] ?? '');
-    $email          = sanitize($_POST['email'] ?? '');
-    $fecha_alta     = sanitize($_POST['fecha_alta'] ?? date('Y-m-d'));
-    $estatus        = sanitize($_POST['estatus'] ?? 'activo');
+    // Verificar token CSRF
+    if (!isset($_POST['csrf_token']) || !validateCSRFToken($_POST['csrf_token'])) {
+        logSecurityEvent('csrf_token_invalid', ['form' => 'agregar_cliente']);
+        flash('mensaje', 'Token de seguridad inválido. Intente nuevamente.', 'alert alert-danger');
+        redirect($_SERVER['PHP_SELF']);
+    }
+    
+    // Verificar rate limiting
+    if (!checkRateLimit('add_client', 10, 300)) {
+        logSecurityEvent('rate_limit_exceeded', ['action' => 'add_client']);
+        flash('mensaje', 'Demasiados intentos. Espere un momento antes de continuar.', 'alert alert-warning');
+        redirect($_SERVER['PHP_SELF']);
+    }
+    
+    // Campos básicos con sanitización mejorada
+    $razon_social   = sanitizeInput($_POST['razon_social'] ?? '', 'html');
+    $actividad      = sanitizeInput($_POST['actividad'] ?? '', 'html');
+    $rfc            = strtoupper(trim(sanitizeInput($_POST['rfc'] ?? '', 'html')));
+    $regimen_fiscal = sanitizeInput($_POST['regimen_fiscal'] ?? '', 'html');
+    $inicio_regimen = sanitizeInput($_POST['inicio_regimen'] ?? '', 'html') ?: null;
+    $domicilio_fiscal = sanitizeInput($_POST['domicilio_fiscal'] ?? '', 'html');
+    $codigo_postal  = sanitizeInput($_POST['codigo_postal'] ?? '', 'int');
+    $telefono       = sanitizeInput($_POST['telefono'] ?? '', 'html');
+    $email          = sanitizeInput($_POST['email'] ?? '', 'email');
+    $fecha_alta     = sanitizeInput($_POST['fecha_alta'] ?? date('Y-m-d'), 'html');
+    $estatus        = sanitizeInput($_POST['estatus'] ?? 'activo', 'html');
+
+    // Validaciones mejoradas
+    $errores = [];
+    
+    if (empty($razon_social)) {
+        $errores[] = 'La razón social es requerida';
+    }
+    
+    if (empty($rfc)) {
+        $errores[] = 'El RFC es requerido';
+    } elseif (!validateRFC($rfc)) {
+        $errores[] = 'El formato del RFC no es válido';
+    }
+    
+    if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errores[] = 'El formato del email no es válido';
+    }
+    
+    if (!empty($codigo_postal) && (!is_numeric($codigo_postal) || strlen($codigo_postal) !== 5)) {
+        $errores[] = 'El código postal debe tener 5 dígitos';
+    }
     $responsable_id = isset($_POST['responsable_id']) && $_POST['responsable_id'] !== '' ? (int)sanitize($_POST['responsable_id']) : null;
     $notas          = sanitize($_POST['notas'] ?? '');
 

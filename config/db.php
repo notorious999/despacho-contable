@@ -2,16 +2,22 @@
 require_once 'config.php';
 
 class Database {
-    private $host = "localhost";
-    private $user = "root";
-    private $pass = "";
-    private $dbname = "despacho_contable";
+    private $host;
+    private $user;
+    private $pass;
+    private $dbname;
     
     private $dbh;
     private $stmt;
     private $error;
     
     public function __construct() {
+        // Usar constantes de configuración
+        $this->host = DB_HOST;
+        $this->user = DB_USER;
+        $this->pass = DB_PASS;
+        $this->dbname = DB_NAME;
+        
         // Set DSN
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname . ';charset=utf8mb4';
         
@@ -19,7 +25,9 @@ class Database {
         $options = array(
             PDO::ATTR_PERSISTENT => true,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+            PDO::ATTR_EMULATE_PREPARES => false,
+            PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4"
         );
         
         // Create PDO instance
@@ -27,8 +35,32 @@ class Database {
             $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
         } catch(PDOException $e) {
             $this->error = $e->getMessage();
-            echo 'Connection Error: ' . $this->error;
+            $this->logError('Database connection failed: ' . $this->error);
+            
+            // En producción, mostrar mensaje genérico
+            if (defined('ENVIRONMENT') && ENVIRONMENT === 'production') {
+                die('Database connection error. Please contact administrator.');
+            } else {
+                die('Connection Error: ' . $this->error);
+            }
         }
+    }
+    
+    /**
+     * Log database errors
+     */
+    private function logError($message) {
+        if (function_exists('logSecurityEvent')) {
+            logSecurityEvent('database_error', ['message' => $message]);
+        }
+        
+        $log_file = APP_ROOT . '/logs/database.log';
+        if (!file_exists(dirname($log_file))) {
+            mkdir(dirname($log_file), 0755, true);
+        }
+        
+        $log_entry = date('Y-m-d H:i:s') . " - " . $message . "\n";
+        file_put_contents($log_file, $log_entry, FILE_APPEND | LOCK_EX);
     }
     
     // Prepare statement with query
@@ -59,7 +91,13 @@ class Database {
     
     // Execute the prepared statement
     public function execute() {
-        return $this->stmt->execute();
+        try {
+            return $this->stmt->execute();
+        } catch(PDOException $e) {
+            $this->error = $e->getMessage();
+            $this->logError('Query execution failed: ' . $this->error);
+            return false;
+        }
     }
     
     // Get result set as array of objects

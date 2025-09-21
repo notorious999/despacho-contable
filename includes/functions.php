@@ -1,12 +1,15 @@
 <?php
 session_start();
 
-// Función para sanear entradas de formularios
+// Incluir funciones de seguridad
+require_once __DIR__ . '/security.php';
+
+// Configurar headers de seguridad
+setSecurityHeaders();
+
+// Función para sanear entradas de formularios (mantenida para compatibilidad)
 function sanitize($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
+    return sanitizeInput($data, 'html');
 }
 
 // Función para redireccionar
