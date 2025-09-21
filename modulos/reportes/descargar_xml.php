@@ -14,10 +14,38 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
 }
 
 $id = sanitize($_GET['id']);
+$tipo = sanitize($_GET['tipo'] ?? 'emitida'); // emitida o recibida
 
 // Inicializar la base de datos
 $database = new Database();
 
+// Determinar tabla según el tipo
+$tabla = ($tipo === 'recibida') ? 'CFDIs_Recibidas' : 'CFDIs_Emitidas';
+
 // Obtener el XML de la factura
-$database->query('SELECT folio_fiscal, xml_contenido, xml_filename FROM CFDIs WHERE id = :id');
-$database->bind(':i
+$database->query("SELECT folio_fiscal, xml_contenido, xml_filename FROM {$tabla} WHERE id = :id");
+$database->bind(':id', $id);
+$factura = $database->single();
+
+// Verificar que la factura existe
+if (!$factura) {
+    flash('mensaje', 'Factura no encontrada', 'alert alert-danger');
+    redirect(URL_ROOT . '/modulos/reportes/index.php');
+}
+
+// Verificar que tiene contenido XML
+if (empty($factura->xml_contenido)) {
+    flash('mensaje', 'El XML de esta factura no está disponible', 'alert alert-warning');
+    redirect(URL_ROOT . '/modulos/reportes/index.php');
+}
+
+// Preparar el nombre del archivo
+$filename = $factura->xml_filename ?: $factura->folio_fiscal . '.xml';
+
+// Configurar headers para descarga
+header('Content-Type: application/xml');
+header('Content-Disposition: attachment; filename="' . $filename . '"');
+header('Content-Length: ' . strlen($factura->xml_contenido));
+
+// Enviar el contenido XML
+echo $factura->xml_contenido;

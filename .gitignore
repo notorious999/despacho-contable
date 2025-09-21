@@ -1,0 +1,42 @@
+# Archivos de configuración sensibles
+.env
+config/local.php
+
+# Directorios de logs y uploads
+logs/
+uploads/
+temp/
+cache/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Archivos de editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Dependencias (si se añaden en el futuro)
+vendor/
+node_modules/
+composer.lock
+package-lock.json
+
+# Archivos de backup
+*.bak
+*.backup
+*.sql
+
+# Certificados y claves
+*.pem
+*.key
+*.crt
+*.p12
+
+# Archivos temporales de PHP
+*.tmp
+*.temp
