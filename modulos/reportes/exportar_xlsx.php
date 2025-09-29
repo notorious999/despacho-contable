@@ -36,9 +36,9 @@ if ($tipo === 'emitida') {
     $rows = $db->resultSet();
 
     $headers = [
-        'Tipo','Folio','Folio Fiscal','Fecha Emisión','Receptor','RFC Receptor',
+        'Tipo','Folio','Folio Fiscal','Fecha Emisión','Receptor','RFC Receptor', 'Descripcion',
         'Forma Pago','Método Pago',
-        'Subtotal','Tasa 0% (Base)','Tasa 16% (Base)','IVA (Importe)','IEPS (Importe)','ISR (Importe)','Total','Estado'
+        'Subtotal','Tasa 0% (Base)','Tasa 16% (Base)','IVA (Importe)','IEPS (Importe)','ISR (Importe)', 'IVA (Retencion)', 'IEPS (Retencion)', 'ISR (Retencion)','Total','Estado'
     ];
     $data = [];
     foreach ($rows as $f) {
@@ -50,15 +50,19 @@ if ($tipo === 'emitida') {
             (string)($f->fecha_emision ?? ''),
             (string)($f->nombre_receptor ?? ''),
             (string)($f->rfc_receptor ?? ''),
+            (string)($f->descripcion ?? ''),
             (string)($f->forma_pago ?? ''),
             (string)($f->metodo_pago ?? ''),
-            number_format((float)($f->subtotal ?? 0), 2, '.', ''),
-            number_format((float)($f->tasa0_base ?? 0), 2, '.', ''),
-            number_format((float)($f->tasa16_base ?? 0), 2, '.', ''),
-            number_format((float)($f->iva_importe ?? 0), 2, '.', ''),
-            number_format((float)($f->ieps_importe ?? 0), 2, '.', ''),
-            number_format((float)($f->isr_importe ?? 0), 2, '.', ''),
-            number_format((float)($f->total ?? 0), 2, '.', ''),
+            number_format((float)($f->tasa0_base ?? 0), 2),
+            number_format((float)($f->tasa0_base ?? 0), 2),
+            number_format((float)($f->tasa16_base ?? 0), 2),
+            number_format((float)($f->iva_importe ?? 0), 2),
+            number_format((float)($f->ieps_importe ?? 0), 2),
+            number_format((float)($f->isr_importe ?? 0), 2),
+            number_format((float)($f->retencion_iva ?? 0), 2),
+            number_format((float)($f->retencion_ieps ?? 0), 2),
+            number_format((float)($f->retencion_isr ?? 0), 2),
+            number_format((float)($f->total ?? 0), 2),
             (string)$estadoMostrar,
         ];
     }
@@ -94,19 +98,24 @@ if ($tipo === 'emitida') {
         $estadoMostrar = !empty($f->estatus_cancelacion_sat) ? 'Cancelado' : (!empty($f->estado_sat) ? $f->estado_sat : ($f->estado ?? ''));
         $data[] = [
             (string)($f->tipo_comprobante ?? ''),
+            (string)($f->folio_interno ?? ''),
             (string)($f->folio_fiscal ?? ''),
-            (string)($f->fecha_certificacion ?? ''),
-            (string)($f->nombre_emisor ?? ''),
-            (string)($f->rfc_emisor ?? ''),
+            (string)($f->fecha_emision ?? ''),
+            (string)($f->nombre_receptor ?? ''),
+            (string)($f->rfc_receptor ?? ''),
+            (string)($f->descripcion ?? ''),
             (string)($f->forma_pago ?? ''),
             (string)($f->metodo_pago ?? ''),
-            number_format((float)($f->subtotal ?? 0), 2, '.', ''),
-            number_format((float)($f->tasa0_base ?? 0), 2, '.', ''),
-            number_format((float)($f->tasa16_base ?? 0), 2, '.', ''),
-            number_format((float)($f->iva_importe ?? 0), 2, '.', ''),
-            number_format((float)($f->ieps_importe ?? 0), 2, '.', ''),
-            number_format((float)($f->isr_importe ?? 0), 2, '.', ''),
-            number_format((float)($f->total ?? 0), 2, '.', ''),
+            number_format((float)($f->tasa0_base ?? 0), 2),
+            number_format((float)($f->tasa0_base ?? 0), 2),
+            number_format((float)($f->tasa16_base ?? 0), 2),
+            number_format((float)($f->iva_importe ?? 0), 2),
+            number_format((float)($f->ieps_importe ?? 0), 2),
+            number_format((float)($f->isr_importe ?? 0), 2),
+            number_format((float)($f->retencion_iva ?? 0), 2),
+            number_format((float)($f->retencion_ieps ?? 0), 2),
+            number_format((float)($f->retencion_isr ?? 0), 2),
+            number_format((float)($f->total ?? 0), 2),
             (string)$estadoMostrar,
         ];
     }

@@ -44,6 +44,11 @@ if (!isLoggedIn() && basename($_SERVER['PHP_SELF']) != 'login.php') {
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo URL_ROOT; ?>/modulos/reportes/index.php">Reportes</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo URL_ROOT; ?>/modulos/reportes/clientes_totales.php">
+                                <i class=""></i> Totales
+                            </a>
+                        </li>
                         <?php if (hasRole('administrador')) : ?>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo URL_ROOT; ?>/modulos/usuarios/index.php">Usuarios</a>
@@ -52,11 +57,7 @@ if (!isLoggedIn() && basename($_SERVER['PHP_SELF']) != 'login.php') {
                                 <a class="nav-link" href="<?php echo URL_ROOT; ?>/modulos/recibos/index.php">Recibos</a>
                             </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?php echo URL_ROOT; ?>/modulos/reportes/clientes_totales.php">
-                                    <i class=""></i> Totales
-                                </a>
-                            </li>
+
                         <?php endif; ?>
                     </ul>
                     <ul class="navbar-nav ms-auto">

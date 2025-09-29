@@ -43,11 +43,11 @@ include_once __DIR__ . '/../../includes/header.php';
                 <thead>
                     <tr>
                         <th>RFC</th>
-                        <th>Razón Social</th>
-                        <th>Nombre Comercial</th>
+                        <th>Razon Social</th>
+                        <th>Actividad</th>
                         <th>Teléfono</th>
                         <th>Email</th>
-                        <th>Fecha Alta</th>
+                        <th>Nivel</th>
                         <th>Estatus</th>
                         <th>Responsable</th>
                         <th>Acciones</th>
@@ -58,10 +58,10 @@ include_once __DIR__ . '/../../includes/header.php';
                     <tr>
                         <td><?php echo $cliente->rfc; ?></td>
                         <td><?php echo $cliente->razon_social; ?></td>
-                        <td><?php echo $cliente->nombre_comercial ?? '-'; ?></td>
+                        <td><?php echo $cliente->actividad ?? '-'; ?></td>
                         <td><?php echo $cliente->telefono ?? '-'; ?></td>
                         <td><?php echo $cliente->email ?? '-'; ?></td>
-                        <td><?php echo formatDate($cliente->fecha_alta); ?></td>
+                        <td><?php echo $cliente->nivel; ?></td>
                         <td>
                             <?php if($cliente->estatus == 'activo'): ?>
                             <span class="badge bg-success">Activo</span>

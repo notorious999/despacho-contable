@@ -143,7 +143,7 @@ include_once __DIR__ . '/../../includes/header.php';
       <i class="fas fa-upload"></i> Cargar XML
     </a>
     <button id="btn-actualizar-sat" class="btn btn-outline-secondary me-2" title="Consultar al SAT el estado de todos los CFDI del listado actual">
-      <i class="fas fa-sync"></i> Actualizar estados SAT (mes filtrado)
+      <i class="fas fa-sync"></i> Consultar estados (cancelados)
     </button>
     <button id="exportarExcel" class="btn btn-success">
       <i class="fas fa-file-excel"></i> Exportar a Excel (.xlsx)

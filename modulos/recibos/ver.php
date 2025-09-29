@@ -47,20 +47,20 @@ include_once __DIR__ . '/../../includes/header.php';
         <a href="index.php" class="btn btn-secondary me-2">
             <i class="fas fa-arrow-left"></i> Volver
         </a>
-        <?php if($recibo->estado != 'cancelado'): ?>
-        <a href="editar.php?id=<?php echo $recibo->id; ?>" class="btn btn-primary me-2">
-            <i class="fas fa-edit"></i> Editar
-        </a>
-        <a href="cambiar_estado.php?id=<?php echo $recibo->id; ?>" class="btn btn-warning me-2">
-            <i class="fas fa-exchange-alt"></i> Cambiar Estado
-        </a>
-        <a href="imprimir.php?id=<?php echo $recibo->id; ?>" class="btn btn-info" target="_blank">
-            <i class="fas fa-print"></i> Imprimir
-        </a>
+        <?php if ($recibo->estado != 'cancelado'): ?>
+            <a href="editar.php?id=<?php echo $recibo->id; ?>" class="btn btn-primary me-2">
+                <i class="fas fa-edit"></i> Editar
+            </a>
+            <a href="cambiar_estado.php?id=<?php echo $recibo->id; ?>" class="btn btn-warning me-2">
+                <i class="fas fa-exchange-alt"></i> Cambiar Estado
+            </a>
+            <a href="imprimir.php?id=<?php echo $recibo->id; ?>" class="btn btn-info" target="_blank">
+                <i class="fas fa-print"></i> Imprimir
+            </a>
         <?php else: ?>
-        <a href="imprimir.php?id=<?php echo $recibo->id; ?>" class="btn btn-info">
-            <i class="fas fa-print"></i> Imprimir
-        </a>
+            <a href="imprimir.php?id=<?php echo $recibo->id; ?>" class="btn btn-info">
+                <i class="fas fa-print"></i> Imprimir
+            </a>
         <?php endif; ?>
     </div>
 </div>
@@ -96,7 +96,7 @@ include_once __DIR__ . '/../../includes/header.php';
                     </tr>
                 </table>
             </div>
-            
+
             <div class="col-md-6">
                 <h5>Fechas y Estado</h5>
                 <table class="table table-bordered">
@@ -104,24 +104,24 @@ include_once __DIR__ . '/../../includes/header.php';
                         <th width="40%">Fecha de Pago:</th>
                         <td><?php echo formatDate($recibo->fecha_pago, 'd/m/Y'); ?></td>
                     </tr>
-                    <?php if(!empty($recibo->vencimiento)): ?>
-                    <tr>
-                        <th>Vencimiento:</th>
-                        <td>
-                            <?php echo formatDate($recibo->vencimiento, 'd/m/Y'); ?>
-                            <small class="text-muted">(<?php echo $recibo->duracion; ?>)</small>
-                        </td>
-                    </tr>
+                    <?php if (!empty($recibo->vencimiento)): ?>
+                        <tr>
+                            <th>Vencimiento:</th>
+                            <td>
+                                <?php echo formatDate($recibo->vencimiento, 'd/m/Y'); ?>
+                                <small class="text-muted">(<?php echo $recibo->duracion; ?>)</small>
+                            </td>
+                        </tr>
                     <?php endif; ?>
                     <tr>
                         <th>Estado:</th>
                         <td>
-                            <?php if($recibo->estado == 'pagado'): ?>
-                            <span class="badge bg-success">Pagado</span>
-                            <?php elseif($recibo->estado == 'pendiente'): ?>
-                            <span class="badge bg-warning">Pendiente</span>
+                            <?php if ($recibo->estado == 'pagado'): ?>
+                                <span class="badge bg-success">Pagado</span>
+                            <?php elseif ($recibo->estado == 'pendiente'): ?>
+                                <span class="badge bg-warning">Pendiente</span>
                             <?php else: ?>
-                            <span class="badge bg-danger">Cancelado</span>
+                                <span class="badge bg-secondary">Desconocido</span>
                             <?php endif; ?>
                         </td>
                     </tr>
@@ -132,8 +132,8 @@ include_once __DIR__ . '/../../includes/header.php';
                     <tr>
                         <th>Registrado por:</th>
                         <td>
-                            <?php 
-                            if(!empty($recibo->usuario_nombre)) {
+                            <?php
+                            if (!empty($recibo->usuario_nombre)) {
                                 echo $recibo->usuario_nombre . ' ' . $recibo->usuario_apellidos;
                             } else {
                                 echo 'N/A';
@@ -144,16 +144,16 @@ include_once __DIR__ . '/../../includes/header.php';
                 </table>
             </div>
         </div>
-        
-        <?php if(!empty($recibo->observaciones)): ?>
-        <div class="row">
-            <div class="col-12">
-                <h5>Observaciones</h5>
-                <div class="p-3 bg-light rounded">
-                    <?php echo nl2br($recibo->observaciones); ?>
+
+        <?php if (!empty($recibo->observaciones)): ?>
+            <div class="row">
+                <div class="col-12">
+                    <h5>Observaciones</h5>
+                    <div class="p-3 bg-light rounded">
+                        <?php echo nl2br($recibo->observaciones); ?>
+                    </div>
                 </div>
             </div>
-        </div>
         <?php endif; ?>
     </div>
 </div>

@@ -54,9 +54,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                      motivo_cancelacion = :motivo_cancelacion,
                      total = 0,
                      subtotal = 0,
-                     iva = 0,
-                     tasa0 = 0,
-                     tasa16 = 0
+                     iva_importe = 0,
+                     tasa0_base = 0,
+                     tasa16_base = 0
                      " . ($tipo == 'recibida' ? ", retencion_iva = 0, retencion_isr = 0, retencion_ieps = 0" : "") . "
                      WHERE id = :id");
     

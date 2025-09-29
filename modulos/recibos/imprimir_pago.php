@@ -227,7 +227,121 @@ $subtotal = $importe; $iva = 0.00; $total = $importe;
     <div><?php echo htmlspecialchars($FIRMA_NOMBRE, ENT_QUOTES, 'UTF-8'); ?></div>
     <div class="small"><?php echo htmlspecialchars($FIRMA_CEDULA, ENT_QUOTES, 'UTF-8'); ?></div>
   </div>
+<div class="container">
+  <div class="row header">
+    <div class="col">
+      <!-- Logo: puedes reemplazar por <img src="..."> -->
+      <div style="font-weight:bold; font-size: 16px;"><?php echo htmlspecialchars($EMPRESA_NOMBRE, ENT_QUOTES, 'UTF-8'); ?></div>
+      <div class="small">
+        DOMICILIO: <?php echo htmlspecialchars($EMPRESA_DOMICILIO, ENT_QUOTES, 'UTF-8'); ?><br>
+        CELULAR: <?php echo htmlspecialchars($EMPRESA_CELULAR, ENT_QUOTES, 'UTF-8'); ?>
+        FIJO: <?php echo htmlspecialchars($EMPRESA_FIJO, ENT_QUOTES, 'UTF-8'); ?><br>
+        CORREO ELECTRÓNICO (1) <?php echo htmlspecialchars($EMPRESA_CORREO1, ENT_QUOTES, 'UTF-8'); ?><br>
+        CORREO ELECTRÓNICO (2) <?php echo htmlspecialchars($EMPRESA_CORREO2, ENT_QUOTES, 'UTF-8'); ?>
+      </div>
+    </div>
+    <div class="col">
+      <div class="box">
+        <div class="center" style="font-weight:bold;">RECIBO DE HONORARIOS</div>
+        <table>
+          <tr><td style="width: 120px;"><strong>FOLIO</strong></td><td class="right"><?php echo $folio; ?></td></tr>
+          <tr><td><strong>FECHA</strong></td><td class="right"><?php echo htmlspecialchars($fecha, ENT_QUOTES, 'UTF-8'); ?></td></tr>
+        </table>
+      </div>
+      <div class="box" style="margin-top:8px;">
+        <div class="small center" style="font-weight:bold;">ESTIMADO CLIENTE, AGRADECEMOS SU DEPÓSITO POR LOS SERVICIOS PRESTADOS A LAS SIGUIENTES CUENTAS:</div>
+        <div class="small">
+          BANCO: <?php echo htmlspecialchars($BANCO_NOMBRE, ENT_QUOTES, 'UTF-8'); ?><br>
+          CUENTA: <?php echo htmlspecialchars($BANCO_CUENTA, ENT_QUOTES, 'UTF-8'); ?><br>
+          CLABE INTERBANCARIA: <?php echo htmlspecialchars($BANCO_CLABE, ENT_QUOTES, 'UTF-8'); ?><br>
+          BENEFICIARIO: <?php echo htmlspecialchars($BANCO_BENEF, ENT_QUOTES, 'UTF-8'); ?>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="box mb-3">
+    <table>
+      <tr>
+        <td style="width:120px;"><strong>CLIENTE:</strong></td>
+        <td><?php echo htmlspecialchars($cliente, ENT_QUOTES, 'UTF-8'); ?></td>
+      </tr>
+      <tr>
+        <td><strong>RFC:</strong></td>
+        <td><?php echo htmlspecialchars($rfc, ENT_QUOTES, 'UTF-8'); ?></td>
+      </tr>
+      <tr>
+        <td><strong>DOMICILIO:</strong></td>
+        <td><?php echo htmlspecialchars($domicilio, ENT_QUOTES, 'UTF-8'); ?></td>
+      </tr>
+    </table>
+  </div>
+
+  <table class="mb-3">
+    <thead>
+      <tr>
+        <th style="width:80px;">CANTIDAD</th>
+        <th style="width:120px;">UNIDAD</th>
+        <th>DESCRIPCIÓN</th>
+        <th style="width:130px;">PRECIO SERV</th>
+        <th style="width:130px;">IMPORTE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center">1</td>
+        <td class="center">SERVICIO</td>
+        <td><?php echo htmlspecialchars($concepto, ENT_QUOTES, 'UTF-8'); ?></td>
+        <td class="right">$ <?php echo $importe_fmt; ?></td>
+        <td class="right">$ <?php echo $importe_fmt; ?></td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>CANTIDAD CON LETRAS:</strong></td>
+        <td colspan="3"><?php echo htmlspecialchars($letras, ENT_QUOTES, 'UTF-8'); ?></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="mb-3">
+    <tr>
+      <td style="border:none;"></td>
+      <td style="border:none;"></td>
+      <td class="right" style="width:130px;"><strong>SUBTOTAL</strong></td>
+      <td class="right" style="width:130px;">$ <?php echo number_format($subtotal, 2, '.', ','); ?></td>
+    </tr>
+    <tr>
+      <td style="border:none;"></td>
+      <td style="border:none;"></td>
+      <td class="right"><strong>IVA</strong></td>
+      <td class="right">$ <?php echo number_format($iva, 2, '.', ','); ?></td>
+    </tr>
+    <tr>
+      <td style="border:none;"></td>
+      <td style="border:none;"></td>
+      <td class="right"><strong>TOTAL</strong></td>
+      <td class="right">$ <?php echo number_format($total, 2, '.', ','); ?></td>
+    </tr>
+  </table>
+
+  <div class="row mb-3">
+    <div class="col center">
+      <div class="line"></div>
+      <div class="small">COPIA</div>
+    </div>
+    <div class="col center">
+      <div class="line"></div>
+      <div class="small">FECHA DE PAGO</div>
+    </div>
+  </div>
+
+  <div class="center mb-2">
+    ATENTAMENTE
+  </div>
+  <div class="center mb-3">
+    <div class="line" style="width: 60%; margin:0 auto;"></div>
+    <div><?php echo htmlspecialchars($FIRMA_NOMBRE, ENT_QUOTES, 'UTF-8'); ?></div>
+    <div class="small"><?php echo htmlspecialchars($FIRMA_CEDULA, ENT_QUOTES, 'UTF-8'); ?></div>
+  </div>
   <div class="center no-print">
     <button onclick="window.print()" class="btn btn-primary">Imprimir</button>
   </div>

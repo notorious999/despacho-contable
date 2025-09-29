@@ -224,7 +224,7 @@ include_once __DIR__ . '/../../includes/header.php';
 
       <div class="row mb-3">
         <div class="col-md-3">
-          <label class="form-label">Honorarios (MXN)</label>
+          <label class="form-label">Honorarios</label>
           <input type="text" name="honorarios" class="form-control" inputmode="decimal" placeholder="0.00">
         </div>
         <div class="col-md-3">

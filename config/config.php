@@ -12,15 +12,15 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'despacho_contable');
 
-// Asegúrate de que exista el directorio de uploads
+
 if (!file_exists(UPLOAD_PATH)) {
     mkdir(UPLOAD_PATH, 0777, true);
 }
 if (!file_exists(XML_UPLOAD_PATH)) {
     mkdir(XML_UPLOAD_PATH, 0777, true);
 }
-// RFC de TU EMPRESA (usado para consultas al SAT).
-// IMPORTANTE: Reemplaza ESTE valor por el RFC real de tu empresa, en MAYÚSCULAS.
+
+
 if (!defined('RFC_PROPIO')) {
-    define('RFC_PROPIO', 'XAXX010101000'); // <-- CAMBIA ESTO por tu RFC real
+    define('RFC_PROPIO', 'XAXX010101000');
 }

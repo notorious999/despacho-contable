@@ -38,18 +38,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Sanear entradas
     $nuevo_estado = sanitize($_POST['nuevo_estado']);
     $observaciones = sanitize($_POST['observaciones']);
-    
+
     // Actualizar observaciones con el comentario del cambio de estado
     $fecha_actual = date('d/m/Y H:i');
     $usuario_actual = $_SESSION['user_name'];
     $observaciones_actualizadas = $recibo->observaciones . "\n\n[" . $fecha_actual . "] Cambio de estado de '" . $recibo->estado . "' a '" . $nuevo_estado . "' por " . $usuario_actual . ".\n" . $observaciones;
-    
+
     // Actualizar estado del recibo
     $database->query('UPDATE Recibos SET estado = :estado, observaciones = :observaciones WHERE id = :id');
     $database->bind(':estado', $nuevo_estado);
     $database->bind(':observaciones', $observaciones_actualizadas);
     $database->bind(':id', $id);
-    
+
     if ($database->execute()) {
         flash('mensaje', 'Estado del recibo actualizado correctamente', 'alert alert-success');
         redirect(URL_ROOT . '/modulos/recibos/ver.php?id=' . $id);
@@ -82,7 +82,7 @@ include_once __DIR__ . '/../../includes/header.php';
     </div>
     <div class="card-body">
         <?php flash('mensaje'); ?>
-        
+
         <div class="row mb-4">
             <div class="col-md-6">
                 <h5>Información del Recibo</h5>
@@ -106,18 +106,18 @@ include_once __DIR__ . '/../../includes/header.php';
                     <tr>
                         <th>Estado Actual:</th>
                         <td>
-                            <?php if($recibo->estado == 'pagado'): ?>
-                            <span class="badge bg-success">Pagado</span>
-                            <?php elseif($recibo->estado == 'pendiente'): ?>
-                            <span class="badge bg-warning">Pendiente</span>
+                            <?php if ($recibo->estado == 'pagado'): ?>
+                                <span class="badge bg-success">Pagado</span>
+                            <?php elseif ($recibo->estado == 'pendiente'): ?>
+                                <span class="badge bg-warning">Pendiente</span>
                             <?php else: ?>
-                            <span class="badge bg-danger">Cancelado</span>
+                                <span class="badge bg-secondary">Desconocido</span>
                             <?php endif; ?>
                         </td>
                     </tr>
                 </table>
             </div>
-            
+
             <div class="col-md-6">
                 <form action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $id; ?>" method="post">
                     <div class="mb-3">
@@ -126,16 +126,15 @@ include_once __DIR__ . '/../../includes/header.php';
                             <option value="">Seleccione nuevo estado</option>
                             <option value="pagado" <?php echo ($recibo->estado == 'pagado') ? 'disabled' : ''; ?>>Pagado</option>
                             <option value="pendiente" <?php echo ($recibo->estado == 'pendiente') ? 'disabled' : ''; ?>>Pendiente</option>
-                            <option value="cancelado" <?php echo ($recibo->estado == 'cancelado') ? 'disabled' : ''; ?>>Cancelado</option>
                         </select>
                         <div class="form-text">Seleccione el nuevo estado para el recibo.</div>
                     </div>
-                    
+
                     <div class="mb-3">
                         <label for="observaciones" class="form-label">Comentarios</label>
                         <textarea class="form-control" id="observaciones" name="observaciones" rows="4" placeholder="Agregue un comentario sobre este cambio de estado..."></textarea>
                     </div>
-                    
+
                     <div class="d-grid gap-2">
                         <button type="submit" class="btn btn-primary" onclick="return confirm('¿Está seguro de cambiar el estado del recibo?');">
                             <i class="fas fa-save"></i> Guardar Cambios
