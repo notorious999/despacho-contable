@@ -7,26 +7,37 @@ if (!isLoggedIn()) {
     redirect(URL_ROOT . '/modulos/usuarios/login.php');
 }
 
-$tipo       = isset($_GET['tipo']) ? sanitize($_GET['tipo']) : 'emitida'; // emitida | recibida
+// Filtros
+$tipo       = isset($_GET['tipo']) ? sanitize($_GET['tipo']) : 'emitida';
 $cliente_id = isset($_GET['cliente_id']) ? sanitize($_GET['cliente_id']) : '';
+$desde      = isset($_GET['desde']) ? sanitize($_GET['desde']) : '';
+$hasta      = isset($_GET['hasta']) ? sanitize($_GET['hasta']) : '';
+$hastaFiltro = '';
+if ($hasta !== '') {
+    // Si el campo en BD es DATETIME/TIMESTAMP
+    $hastaFiltro = date('Y-m-d', strtotime($hasta . ' +1 day'));
+}
 $mes        = isset($_GET['mes']) ? sanitize($_GET['mes']) : '';
 $busqueda   = isset($_GET['busqueda']) ? sanitize($_GET['busqueda']) : '';
 $estado     = isset($_GET['estado']) ? sanitize($_GET['estado']) : '';
+$tipos      = isset($_GET['tipos']) ? $_GET['tipos'] : [];
+if (!is_array($tipos)) $tipos = [];
 
 $db = new Database();
 
-// Clientes
-$db->query('SELECT id, razon_social, rfc FROM Clientes WHERE estatus = "activo" ORDER BY razon_social');
-$clientes = $db->resultSet();
+$tipos_cfdi_opciones = [
+    'Ingreso' => 'Ingresos',
+    'Egreso'  => 'Egresos',
+    'Nómina'  => 'Nóminas',
+    'Pago'    => 'Pagos'
+];
 
-// Meses disponibles
 $mesQuery = ($tipo === 'emitida')
     ? 'SELECT DISTINCT DATE_FORMAT(fecha_emision, "%Y-%m") as mes, DATE_FORMAT(fecha_emision, "%M %Y") as mes_nombre FROM CFDIs_Emitidas ORDER BY mes DESC'
     : 'SELECT DISTINCT DATE_FORMAT(fecha_certificacion, "%Y-%m") as mes, DATE_FORMAT(fecha_certificacion, "%M %Y") as mes_nombre FROM CFDIs_Recibidas ORDER BY mes DESC';
 $db->query($mesQuery);
 $meses_disponibles = $db->resultSet();
 
-// Cargar facturas según filtros
 if ($tipo === 'emitida') {
     $sql = 'SELECT e.*, c.razon_social AS cliente_nombre
             FROM CFDIs_Emitidas e
@@ -34,6 +45,11 @@ if ($tipo === 'emitida') {
             WHERE 1=1';
     $params = [];
     if ($cliente_id !== '') { $sql .= ' AND e.cliente_id = :cliente_id'; $params[':cliente_id'] = $cliente_id; }
+    if ($desde !== '')      { $sql .= ' AND e.fecha_emision >= :desde';  $params[':desde'] = $desde; }
+    if ($hastaFiltro !== '') {
+    $sql .= ' AND e.fecha_emision < :hasta';  // Para emitidas
+    $params[':hasta'] = $hastaFiltro;
+}
     if ($mes !== '')        { $sql .= ' AND DATE_FORMAT(e.fecha_emision, "%Y-%m") = :mes'; $params[':mes'] = $mes; }
     if ($busqueda !== '') {
         $sql .= ' AND (e.folio_interno LIKE :q OR e.folio_fiscal LIKE :q OR e.nombre_receptor LIKE :q OR e.rfc_receptor LIKE :q OR e.descripcion LIKE :q OR e.tipo_comprobante LIKE :q OR e.estado_sat LIKE :q OR e.estatus_cancelacion_sat LIKE :q)';
@@ -44,30 +60,33 @@ if ($tipo === 'emitida') {
         $params[':estado'] = $estado;
         $params[':estadoSat'] = ($estado === 'vigente' ? 'Vigente' : ($estado === 'cancelado' ? 'Cancelado' : $estado));
     }
+    if (!empty($tipos)) {
+        $sql .= ' AND e.tipo_comprobante IN (' . implode(',', array_map(fn($t)=>$db->dbh->quote($t), $tipos)) . ')';
+    }
     $sql .= ' ORDER BY e.fecha_emision ASC';
     $db->query($sql);
     foreach ($params as $k=>$v) $db->bind($k,$v);
     $facturas = $db->resultSet();
 
-    // Totales
     $totales = [
         'subtotal'=>0,'tasa0_base'=>0,'tasa16_base'=>0,'iva_importe'=>0,'ieps_importe'=>0,'isr_importe'=>0,
         'retencion_iva'=>0,'retencion_ieps'=>0,'retencion_isr'=>0,'total'=>0
     ];
     foreach ($facturas as $f) {
-        if (!isset($f->estado) || ($f->estado ?? '') === 'vigente') {
-            $totales['subtotal']        += (float)($f->subtotal ?? 0);
-            $totales['tasa0_base']      += (float)($f->tasa0_base ?? 0);
-            $totales['tasa16_base']     += (float)($f->tasa16_base ?? 0);
-            $totales['iva_importe']     += (float)($f->iva_importe ?? 0);
-            $totales['ieps_importe']    += (float)($f->ieps_importe ?? 0);
-            $totales['isr_importe']     += (float)($f->isr_importe ?? 0);
-            $totales['retencion_iva']   += (float)($f->retencion_iva ?? 0);
-            $totales['retencion_ieps']  += (float)($f->retencion_ieps ?? 0);
-            $totales['retencion_isr']   += (float)($f->retencion_isr ?? 0);
-            $totales['total']           += (float)($f->total ?? 0);
-        }
-    }
+    $isCancelado = (strtolower($f->estado_sat ?? '') === 'cancelado' || strtolower($f->estatus_cancelacion_sat ?? '') === 'cancelado');
+    if ($isCancelado) continue;
+    $factor = (strtolower($f->tipo_comprobante ?? '') === 'egreso') ? -1 : 1;
+    $totales['subtotal']        += $factor * (float)($f->subtotal ?? 0);
+    $totales['tasa0_base']      += $factor * (float)($f->tasa0_base ?? 0);
+    $totales['tasa16_base']     += $factor * (float)($f->tasa16_base ?? 0);
+    $totales['iva_importe']     += $factor * (float)($f->iva_importe ?? 0);
+    $totales['ieps_importe']    += $factor * (float)($f->ieps_importe ?? 0);
+    $totales['isr_importe']     += $factor * (float)($f->isr_importe ?? 0);
+    $totales['retencion_iva']   += $factor * (float)($f->retencion_iva ?? 0);
+    $totales['retencion_ieps']  += $factor * (float)($f->retencion_ieps ?? 0);
+    $totales['retencion_isr']   += $factor * (float)($f->retencion_isr ?? 0);
+    $totales['total']           += $factor * (float)($f->total ?? 0);
+}
 } else {
     $sql = 'SELECT r.*, c.razon_social AS cliente_nombre
             FROM CFDIs_Recibidas r
@@ -75,6 +94,11 @@ if ($tipo === 'emitida') {
             WHERE 1=1';
     $params = [];
     if ($cliente_id !== '') { $sql .= ' AND r.cliente_id = :cliente_id'; $params[':cliente_id'] = $cliente_id; }
+    if ($desde !== '')      { $sql .= ' AND r.fecha_certificacion >= :desde';  $params[':desde'] = $desde; }
+    if ($hastaFiltro !== '') {
+    $sql .= ' AND r.fecha_certificacion < :hasta';  // Para recibidas
+    $params[':hasta'] = $hastaFiltro;
+}
     if ($mes !== '')        { $sql .= ' AND DATE_FORMAT(r.fecha_certificacion, "%Y-%m") = :mes'; $params[':mes'] = $mes; }
     if ($busqueda !== '') {
         $sql .= ' AND (r.folio_fiscal LIKE :q OR r.nombre_emisor LIKE :q OR r.rfc_emisor LIKE :q OR r.descripcion LIKE :q OR r.tipo_comprobante LIKE :q OR r.estado_sat LIKE :q OR r.estatus_cancelacion_sat LIKE :q)';
@@ -84,6 +108,9 @@ if ($tipo === 'emitida') {
         $sql .= ' AND (r.estado = :estado OR r.estado_sat = :estadoSat)';
         $params[':estado'] = $estado;
         $params[':estadoSat'] = ($estado === 'vigente' ? 'Vigente' : ($estado === 'cancelado' ? 'Cancelado' : $estado));
+    }
+    if (!empty($tipos)) {
+        $sql .= ' AND r.tipo_comprobante IN (' . implode(',', array_map(fn($t)=>$db->dbh->quote($t), $tipos)) . ')';
     }
     $sql .= ' ORDER BY r.fecha_certificacion ASC';
     $db->query($sql);
@@ -95,22 +122,22 @@ if ($tipo === 'emitida') {
         'retencion_iva'=>0,'retencion_ieps'=>0,'retencion_isr'=>0,'total'=>0
     ];
     foreach ($facturas as $f) {
-        if (!isset($f->estado) || ($f->estado ?? '') === 'vigente') {
-            $totales['subtotal']        += (float)($f->subtotal ?? 0);
-            $totales['tasa0_base']      += (float)($f->tasa0_base ?? 0);
-            $totales['tasa16_base']     += (float)($f->tasa16_base ?? 0);
-            $totales['iva_importe']     += (float)($f->iva_importe ?? 0);
-            $totales['ieps_importe']    += (float)($f->ieps_importe ?? 0);
-            $totales['isr_importe']     += (float)($f->isr_importe ?? 0);
-            $totales['retencion_iva']   += (float)($f->retencion_iva ?? 0);
-            $totales['retencion_ieps']  += (float)($f->retencion_ieps ?? 0);
-            $totales['retencion_isr']   += (float)($f->retencion_isr ?? 0);
-            $totales['total']           += (float)($f->total ?? 0);
-        }
-    }
+    $isCancelado = (strtolower($f->estado_sat ?? '') === 'cancelado' || strtolower($f->estatus_cancelacion_sat ?? '') === 'cancelado');
+    if ($isCancelado) continue;
+    $factor = (strtolower($f->tipo_comprobante ?? '') === 'egreso') ? -1 : 1;
+    $totales['subtotal']        += $factor * (float)($f->subtotal ?? 0);
+    $totales['tasa0_base']      += $factor * (float)($f->tasa0_base ?? 0);
+    $totales['tasa16_base']     += $factor * (float)($f->tasa16_base ?? 0);
+    $totales['iva_importe']     += $factor * (float)($f->iva_importe ?? 0);
+    $totales['ieps_importe']    += $factor * (float)($f->ieps_importe ?? 0);
+    $totales['isr_importe']     += $factor * (float)($f->isr_importe ?? 0);
+    $totales['retencion_iva']   += $factor * (float)($f->retencion_iva ?? 0);
+    $totales['retencion_ieps']  += $factor * (float)($f->retencion_ieps ?? 0);
+    $totales['retencion_isr']   += $factor * (float)($f->retencion_isr ?? 0);
+    $totales['total']           += $factor * (float)($f->total ?? 0);
+}
 }
 
-// Helpers locales
 if (!function_exists('satEstadoBadgeClass')) {
     function satEstadoBadgeClass(?string $estado): string {
         $e = strtolower((string)$estado);
@@ -136,18 +163,10 @@ include_once __DIR__ . '/../../includes/header.php';
     <p class="lead mb-0"><?php echo ($tipo === 'emitida') ? 'Facturas Emitidas' : 'Facturas Recibidas'; ?></p>
   </div>
   <div class="col-md-6 text-end">
-    <a href="<?php echo URL_ROOT; ?>/index.php" class="btn btn-secondary me-2">
-      <i class="fas fa-arrow-left"></i> Volver
-    </a>
-    <a href="cargar_xml.php" class="btn btn-primary me-2">
-      <i class="fas fa-upload"></i> Cargar XML
-    </a>
-    <button id="btn-actualizar-sat" class="btn btn-outline-secondary me-2" title="Consultar al SAT el estado de todos los CFDI del listado actual">
-      <i class="fas fa-sync"></i> Consultar estados (cancelados)
-    </button>
-    <button id="exportarExcel" class="btn btn-success">
-      <i class="fas fa-file-excel"></i> Exportar a Excel (.xlsx)
-    </button>
+    <a href="<?php echo URL_ROOT; ?>/index.php" class="btn btn-secondary me-2"><i class="fas fa-arrow-left"></i> Volver</a>
+    <a href="cargar_xml.php" class="btn btn-primary me-2"><i class="fas fa-upload"></i> Cargar XML</a>
+    <button id="btn-actualizar-sat" class="btn btn-outline-secondary me-2" title="Consultar al SAT el estado de todos los CFDI del listado actual"><i class="fas fa-sync"></i> Consultar estados (cancelados)</button>
+    <button id="exportarExcel" class="btn btn-success"><i class="fas fa-file-excel"></i> Exportar a Excel (.xlsx)</button>
   </div>
 </div>
 
@@ -167,16 +186,8 @@ include_once __DIR__ . '/../../includes/header.php';
 <div class="card mb-3">
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
-      <li class="nav-item">
-        <a class="nav-link <?php echo ($tipo==='emitida'?'active':''); ?>" href="?tipo=emitida">
-          <i class="fas fa-file-invoice-dollar"></i> Emitidas
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link <?php echo ($tipo==='recibida'?'active':''); ?>" href="?tipo=recibida">
-          <i class="fas fa-file-invoice"></i> Recibidas
-        </a>
-      </li>
+      <li class="nav-item"><a class="nav-link <?php echo ($tipo==='emitida'?'active':''); ?>" href="?tipo=emitida"><i class="fas fa-file-invoice-dollar"></i> Emitidas</a></li>
+      <li class="nav-item"><a class="nav-link <?php echo ($tipo==='recibida'?'active':''); ?>" href="?tipo=recibida"><i class="fas fa-file-invoice"></i> Recibidas</a></li>
     </ul>
   </div>
   <div class="card-body">
@@ -184,19 +195,33 @@ include_once __DIR__ . '/../../includes/header.php';
     <?php flash('mensaje'); ?>
 
     <!-- Filtros -->
-    <form class="row g-3 mb-4">
+    <form class="row g-3 mb-4" method="get" id="form-reportes">
       <input type="hidden" name="tipo" value="<?php echo htmlspecialchars($tipo, ENT_QUOTES, 'UTF-8'); ?>">
 
+      <!-- Buscador de cliente sin jQuery, JS puro -->
       <div class="col-md-3">
-        <label for="cliente_id" class="form-label">Cliente</label>
-        <select id="cliente_id" name="cliente_id" class="form-select">
-          <option value="">Todos</option>
-          <?php foreach ($clientes as $c): ?>
-          <option value="<?php echo (int)$c->id; ?>" <?php echo ($cliente_id == $c->id ? 'selected' : ''); ?>>
-            <?php echo htmlspecialchars($c->razon_social . ' (' . $c->rfc . ')', ENT_QUOTES, 'UTF-8'); ?>
-          </option>
-          <?php endforeach; ?>
-        </select>
+        <label for="cliente_search" class="form-label">Buscar cliente (Razón social o RFC)</label>
+        <input type="text" id="cliente_search" class="form-control" placeholder="Escribe para buscar...">
+        <div id="cliente_results" class="list-group mt-2" style="max-height:220px; overflow:auto;">
+          <div class="list-group-item text-muted small">Escribe para buscar…</div>
+        </div>
+        <input type="hidden" name="cliente_id" id="cliente_id" value="<?php echo htmlspecialchars($cliente_id, ENT_QUOTES, 'UTF-8'); ?>">
+        <div class="form-text">Haz clic en un resultado para seleccionarlo.</div>
+        <div class="input-group mt-2">
+          <input type="text" id="cliente_selected_text" class="form-control" placeholder="Ninguno" readonly>
+          <button type="button" id="cliente_clear" class="btn btn-outline-danger" title="Quitar selección">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <label for="desde" class="form-label">Desde</label>
+        <input type="date" id="desde" name="desde" class="form-control" value="<?php echo htmlspecialchars($desde, ENT_QUOTES, 'UTF-8'); ?>">
+      </div>
+      <div class="col-md-2">
+        <label for="hasta" class="form-label">Hasta</label>
+        <input type="date" id="hasta" name="hasta" class="form-control" value="<?php echo htmlspecialchars($hasta, ENT_QUOTES, 'UTF-8'); ?>">
       </div>
 
       <div class="col-md-2">
@@ -212,8 +237,15 @@ include_once __DIR__ . '/../../includes/header.php';
       </div>
 
       <div class="col-md-3">
-        <label for="busqueda" class="form-label">Buscar</label>
-        <input type="text" id="busqueda" name="busqueda" class="form-control" value="<?php echo htmlspecialchars($busqueda, ENT_QUOTES, 'UTF-8'); ?>" placeholder="RFC, nombre, folio...">
+        <label class="form-label">Tipo CFDI</label>
+        <div class="d-flex flex-wrap gap-2">
+          <?php foreach ($tipos_cfdi_opciones as $key => $label): ?>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="tipos[]" id="tipo_<?php echo $key; ?>" value="<?php echo $key; ?>" <?php echo in_array($key, $tipos) ? 'checked' : ''; ?>>
+              <label class="form-check-label" for="tipo_<?php echo $key; ?>"><?php echo htmlspecialchars($label, ENT_QUOTES, 'UTF-8'); ?></label>
+            </div>
+          <?php endforeach; ?>
+        </div>
       </div>
 
       <div class="col-md-2">
@@ -225,18 +257,111 @@ include_once __DIR__ . '/../../includes/header.php';
         </select>
       </div>
 
+      <div class="col-md-3">
+        <label for="busqueda" class="form-label">Buscar</label>
+        <input type="text" id="busqueda" name="busqueda" class="form-control" value="<?php echo htmlspecialchars($busqueda, ENT_QUOTES, 'UTF-8'); ?>" placeholder="RFC, nombre, folio...">
+      </div>
+
       <div class="col-md-2 d-flex align-items-end">
-        <button type="submit" class="btn btn-primary me-2">
-          <i class="fas fa-filter"></i> Filtrar
-        </button>
-        <a href="?tipo=<?php echo htmlspecialchars($tipo, ENT_QUOTES, 'UTF-8'); ?>" class="btn btn-secondary">
-          <i class="fas fa-times"></i> Limpiar
-        </a>
+        <button type="submit" class="btn btn-primary me-2"><i class="fas fa-filter"></i> Filtrar</button>
+        <a href="?tipo=<?php echo htmlspecialchars($tipo, ENT_QUOTES, 'UTF-8'); ?>" class="btn btn-secondary"><i class="fas fa-times"></i> Limpiar</a>
       </div>
     </form>
 
-    <!-- Resumen de Totales -->
-    <div class="card mb-4">
+    <script>
+    (function(){
+      const inputSearch = document.getElementById('cliente_search');
+      const results = document.getElementById('cliente_results');
+      const selText = document.getElementById('cliente_selected_text');
+      const selId = document.getElementById('cliente_id');
+      const btnClear = document.getElementById('cliente_clear');
+      const form = document.getElementById('form-reportes');
+
+      let t = null;
+      function debounce(fn, ms){ return function(...args){ clearTimeout(t); t=setTimeout(()=>fn.apply(this,args), ms); }; }
+
+      async function fetchClientes(term, page=1){
+        const url = '<?php echo URL_ROOT; ?>/modulos/clientes/buscar.php?q=' + encodeURIComponent(term||'') + '&page=' + page;
+        try {
+          const r = await fetch(url, { headers: { 'Accept':'application/json' } });
+          if (!r.ok) throw new Error('HTTP '+r.status);
+          const data = await r.json();
+          return data && data.results ? data.results : [];
+        } catch(e) {
+          console.warn('Error buscando clientes:', e);
+          return [];
+        }
+      }
+
+      function renderResults(items){
+        results.innerHTML = '';
+        if (!items.length) {
+          results.innerHTML = '<div class="list-group-item text-muted small">Sin resultados</div>';
+          return;
+        }
+        items.forEach(it => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'list-group-item list-group-item-action';
+          btn.textContent = it.text;
+          btn.dataset.id = it.id;
+          btn.dataset.text = it.text;
+          btn.addEventListener('click', () => {
+            selId.value = it.id;
+            selText.value = it.text;
+            results.innerHTML = '<div class="list-group-item small text-success">Seleccionado: '+it.text+'</div>';
+          });
+          results.appendChild(btn);
+        });
+      }
+
+      const doSearch = debounce(async function(){
+        const term = inputSearch.value.trim();
+        const items = await fetchClientes(term, 1);
+        renderResults(items);
+      }, 300);
+
+      inputSearch.addEventListener('input', doSearch);
+
+      btnClear.addEventListener('click', () => {
+        selId.value = '';
+        selText.value = '';
+        inputSearch.value = '';
+        inputSearch.focus();
+        results.innerHTML = '<div class="list-group-item text-muted small">Escribe para buscar…</div>';
+      });
+
+      // Si quieres forzar selección antes de enviar el filtro, descomenta:
+      // form.addEventListener('submit', (e) => {
+      //   if (!selId.value) {
+      //     e.preventDefault();
+      //     alert('Selecciona un cliente de la lista.');
+      //     inputSearch.focus();
+      //     return false;
+      //   }
+      // });
+
+      // Mostrar nombre si el filtro viene con cliente_id
+      <?php
+      if ($cliente_id !== '') {
+          // Busca el nombre del cliente por id
+          $nombreCliente = '';
+          $db->query('SELECT razon_social, rfc FROM Clientes WHERE id = :id');
+          $db->bind(':id', $cliente_id);
+          $cl = $db->single();
+          if ($cl) $nombreCliente = $cl->razon_social . ' (' . $cl->rfc . ')';
+          if ($nombreCliente) {
+              echo "selText.value = " . json_encode($nombreCliente) . ";";
+          }
+      }
+      ?>
+
+      // Carga inicial (primeros 20)
+      doSearch();
+    })();
+    </script>
+
+   <div class="card mb-4">
       <div class="card-header bg-light"><h5 class="mb-0">Resumen de Totales</h5></div>
       <div class="card-body">
         <div class="row g-2">
@@ -293,7 +418,20 @@ include_once __DIR__ . '/../../includes/header.php';
           </thead>
           <tbody>
           <?php foreach ($facturas as $f): ?>
-            <tr class="<?php echo (($f->estado ?? '') === 'cancelado') ? 'table-danger' : ''; ?>">
+            <?php
+              $isCancelado = (strtolower($f->estado_sat ?? '') === 'cancelado' || strtolower($f->estatus_cancelacion_sat ?? '') === 'cancelado');
+              $subtotal     = $isCancelado ? 0.00 : (float)($f->subtotal ?? 0);
+              $tasa0_base   = $isCancelado ? 0.00 : (float)($f->tasa0_base ?? 0);
+              $tasa16_base  = $isCancelado ? 0.00 : (float)($f->tasa16_base ?? 0);
+              $iva_importe  = $isCancelado ? 0.00 : (float)($f->iva_importe ?? 0);
+              $ieps_importe = $isCancelado ? 0.00 : (float)($f->ieps_importe ?? 0);
+              $isr_importe  = $isCancelado ? 0.00 : (float)($f->isr_importe ?? 0);
+              $retencion_iva= $isCancelado ? 0.00 : (float)($f->retencion_iva ?? 0);
+              $retencion_ieps= $isCancelado ? 0.00 : (float)($f->retencion_ieps ?? 0);
+              $retencion_isr = $isCancelado ? 0.00 : (float)($f->retencion_isr ?? 0);
+              $total         = $isCancelado ? 0.00 : (float)($f->total ?? 0);
+            ?>
+            <tr class="<?php echo $isCancelado ? 'table-danger' : ''; ?>">
               <td data-search="<?php echo htmlspecialchars($f->tipo_comprobante ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                 <?php
                   if (function_exists('getTipoComprobanteBadge')) {
@@ -324,16 +462,16 @@ include_once __DIR__ . '/../../includes/header.php';
               <td><?php echo htmlspecialchars(getFormaPago($f->forma_pago ?? ''), ENT_QUOTES, 'UTF-8'); ?></td>
               <td><?php echo htmlspecialchars(getMetodoPago($f->metodo_pago ?? ''), ENT_QUOTES, 'UTF-8'); ?></td>
 
-              <td class="text-end" data-order="<?php echo (float)($f->subtotal ?? 0); ?>"><?php echo formatMoney($f->subtotal ?? 0); ?></td>
-              <td class="text-end" data-order="<?php echo (float)($f->tasa0_base ?? 0); ?>"><?php echo formatMoney($f->tasa0_base ?? 0); ?></td>
-              <td class="text-end" data-order="<?php echo (float)($f->tasa16_base ?? 0); ?>"><?php echo formatMoney($f->tasa16_base ?? 0); ?></td>
-              <td class="text-end" data-order="<?php echo (float)($f->iva_importe ?? 0); ?>"><?php echo formatMoney($f->iva_importe ?? 0); ?></td>
-              <td class="text-end" data-order="<?php echo (float)($f->ieps_importe ?? 0); ?>"><?php echo formatMoney($f->ieps_importe ?? 0); ?></td>
-              <td class="text-end" data-order="<?php echo (float)($f->isr_importe ?? 0); ?>"><?php echo formatMoney($f->isr_importe ?? 0); ?></td>
-              <td class="text-end" data-order="<?php echo (float)($f->retencion_iva ?? 0); ?>"><?php echo formatMoney($f->retencion_iva ?? 0); ?></td>
-              <td class="text-end" data-order="<?php echo (float)($f->retencion_ieps ?? 0); ?>"><?php echo formatMoney($f->retencion_ieps ?? 0); ?></td>
-              <td class="text-end" data-order="<?php echo (float)($f->retencion_isr ?? 0); ?>"><?php echo formatMoney($f->retencion_isr ?? 0); ?></td>
-              <td class="text-end" data-order="<?php echo (float)($f->total ?? 0); ?>"><?php echo formatMoney($f->total ?? 0); ?></td>
+              <td class="text-end" data-order="<?php echo $subtotal; ?>"><?php echo formatMoney($subtotal); ?></td>
+              <td class="text-end" data-order="<?php echo $tasa0_base; ?>"><?php echo formatMoney($tasa0_base); ?></td>
+              <td class="text-end" data-order="<?php echo $tasa16_base; ?>"><?php echo formatMoney($tasa16_base); ?></td>
+              <td class="text-end" data-order="<?php echo $iva_importe; ?>"><?php echo formatMoney($iva_importe); ?></td>
+              <td class="text-end" data-order="<?php echo $ieps_importe; ?>"><?php echo formatMoney($ieps_importe); ?></td>
+              <td class="text-end" data-order="<?php echo $isr_importe; ?>"><?php echo formatMoney($isr_importe); ?></td>
+              <td class="text-end" data-order="<?php echo $retencion_iva; ?>"><?php echo formatMoney($retencion_iva); ?></td>
+              <td class="text-end" data-order="<?php echo $retencion_ieps; ?>"><?php echo formatMoney($retencion_ieps); ?></td>
+              <td class="text-end" data-order="<?php echo $retencion_isr; ?>"><?php echo formatMoney($retencion_isr); ?></td>
+              <td class="text-end" data-order="<?php echo $total; ?>"><?php echo formatMoney($total); ?></td>
 
               <td class="estado-sat-cell">
                 <?php
@@ -375,7 +513,19 @@ include_once __DIR__ . '/../../includes/header.php';
   </div>
 </div>
 
+<script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+// Buscador rápido jQuery en la tabla
+$('#buscadorRapido').on('input', function() {
+  let filtro = $(this).val().toLowerCase();
+  $('#tabla-facturas tbody tr').each(function() {
+    let texto = $(this).text().toLowerCase();
+    $(this).toggle(texto.indexOf(filtro) !== -1);
+  });
+});
+
 // Utilidades DOM
 const qs = (s, c)=> (c||document).querySelector(s);
 const qsa= (s, c)=> Array.prototype.slice.call((c||document).querySelectorAll(s));
@@ -508,17 +658,113 @@ if (btnBulk) {
 }
 
 // Exportar a Excel .xlsx
-const exportBtn = qs('#exportarExcel');
+const exportBtn = document.getElementById('exportarExcel');
 if (exportBtn) {
-  exportBtn.addEventListener('click', ()=>{
-    const url = new URL('exportar_xlsx.php', window.location.href);
-    url.searchParams.set('tipo', '<?php echo $tipo; ?>');
-    url.searchParams.set('cliente_id', '<?php echo $cliente_id; ?>');
-    url.searchParams.set('mes', '<?php echo $mes; ?>');
-    url.searchParams.set('busqueda', '<?php echo $busqueda; ?>');
-    url.searchParams.set('estado', '<?php echo $estado; ?>');
-    window.location = url.toString();
-  });
+    exportBtn.addEventListener('click', () => {
+        const facturas = <?php echo json_encode($facturas); ?>;
+        const tipoReporte = '<?php echo $tipo; ?>';
+        
+        if (!facturas || facturas.length === 0) {
+            alert('No hay datos para exportar.');
+            return;
+        }
+
+        let headers = [];
+        // ... (la sección de las cabeceras/headers no cambia y puede quedar igual)
+        if (tipoReporte === 'emitida') {
+            headers = [
+                'Tipo', 'Folio', 'Folio Fiscal', 'Fecha Emisión', 'Receptor', 'RFC Receptor', 'Descripcion',
+                'Forma Pago', 'Método Pago', 'Subtotal', 'Tasa 0% (Base)', 'Tasa 16% (Base)', 
+                'IVA (Importe)', 'IEPS (Importe)', 'ISR (Importe)', 'IVA (Retencion)', 
+                'IEPS (Retencion)', 'ISR (Retencion)', 'Total', 'Estado'
+            ];
+        } else { // recibida
+            headers = [
+                'Tipo', 'Folio Fiscal', 'Fecha Certificación', 'Emisor', 'RFC Emisor', 'Descripcion',
+                'Forma Pago', 'Método Pago', 'Subtotal', 'Tasa 0% (Base)', 'Tasa 16% (Base)', 
+                'IVA (Importe)', 'IEPS (Importe)', 'ISR (Importe)', 'IVA (Retencion)', 
+                'IEPS (Retencion)', 'ISR (Retencion)', 'Total', 'Estado'
+            ];
+        }
+
+        // 3. Preparar los datos creando OBJETOS DE CELDA para los números
+        const data = facturas.map(f => {
+            const estadoMostrar = f.estatus_cancelacion_sat ? 'Cancelado' : (f.estado_sat || f.estado || '');
+            
+            // Función para crear el objeto de celda numérica
+            const createNumericCell = (val) => {
+                const number = parseFloat(val || 0);
+                // v = valor (el número puro)
+                // t = tipo ('n' para número)
+                // z = formato (similar a los formatos de celda de Excel)
+                return { v: number, t: 'n', z: '#,##0.00' };
+            };
+
+            if (tipoReporte === 'emitida') {
+                return [
+                    f.tipo_comprobante || '',
+                    f.folio_interno || '',
+                    f.folio_fiscal || '',
+                    f.fecha_emision || '',
+                    f.nombre_receptor || '',
+                    f.rfc_receptor || '',
+                    f.descripcion || '',
+                    f.forma_pago || '',
+                    f.metodo_pago || '',
+                    // Aplicamos la nueva función a todas las celdas de cantidad
+                    createNumericCell(f.subtotal),
+                    createNumericCell(f.tasa0_base),
+                    createNumericCell(f.tasa16_base),
+                    createNumericCell(f.iva_importe),
+                    createNumericCell(f.ieps_importe),
+                    createNumericCell(f.isr_importe),
+                    createNumericCell(f.retencion_iva),
+                    createNumericCell(f.retencion_ieps),
+                    createNumericCell(f.retencion_isr),
+                    createNumericCell(f.total),
+                    estadoMostrar
+                ];
+            } else { // recibida
+                return [
+                    f.tipo_comprobante || '',
+                    f.folio_fiscal || '',
+                    f.fecha_certificacion || '',
+                    f.nombre_emisor || '',
+                    f.rfc_emisor || '',
+                    f.descripcion || '',
+                    f.forma_pago || '',
+                    f.metodo_pago || '',
+                    // Aplicamos la nueva función a todas las celdas de cantidad
+                    createNumericCell(f.subtotal),
+                    createNumericCell(f.tasa0_base),
+                    createNumericCell(f.tasa16_base),
+                    createNumericCell(f.iva_importe),
+                    createNumericCell(f.ieps_importe),
+                    createNumericCell(f.isr_importe),
+                    createNumericCell(f.retencion_iva),
+                    createNumericCell(f.retencion_ieps),
+                    createNumericCell(f.retencion_isr),
+                    createNumericCell(f.total),
+                    estadoMostrar
+                ];
+            }
+        });
+
+        // ... (el resto del código para crear y descargar el XLSX no cambia)
+        const worksheet = XLSX.utils.aoa_to_sheet([headers, ...data]);
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, 'Reporte');
+
+        const colWidths = headers.map((_, i) => ({ wch: 20 })); // Ancho fijo o dinámico
+        worksheet['!cols'] = colWidths;
+        
+        const today = new Date();
+        const dateStr = today.getFullYear() + ('0' + (today.getMonth() + 1)).slice(-2) + ('0' + today.getDate()).slice(-2);
+        const timeStr = ('0' + today.getHours()).slice(-2) + ('0' + today.getMinutes()).slice(-2) + ('0' + today.getSeconds()).slice(-2);
+        const filename = `reporte_${tipoReporte}_${dateStr}_${timeStr}.xlsx`;
+        
+        XLSX.writeFile(workbook, filename);
+    });
 }
 
 // DataTables (opcional)

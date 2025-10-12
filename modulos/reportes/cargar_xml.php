@@ -4,7 +4,7 @@ ini_set('max_execution_time', 300);
 ini_set('memory_limit', '256M');
 ini_set('upload_max_filesize', '50M');
 ini_set('post_max_size', '52M');
-ini_set('max_file_uploads', '100');
+ini_set('max_file_uploads', '1000');
 
 require_once __DIR__ . '/../../config/config.php';
 require_once __DIR__ . '/../../config/db.php';
@@ -21,16 +21,14 @@ $database = new Database();
 $database->query('SELECT id, razon_social, rfc FROM Clientes WHERE estatus = "activo" ORDER BY razon_social');
 $clientes = $database->resultSet();
 
-$cliente_id = isset($_GET['cliente_id']) ? sanitize($_GET['cliente_id']) : '';
+$cliente_id = isset($_POST['cliente_id']) ? sanitize($_POST['cliente_id']) : '';
 
-// Límites del sistema
 $upload_max_filesize = ini_get('upload_max_filesize');
 $post_max_size       = ini_get('post_max_size');
 $max_file_uploads    = ini_get('max_file_uploads');
 $memory_limit        = ini_get('memory_limit');
 $max_execution_time  = ini_get('max_execution_time');
 
-// Procesar POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($_POST['cliente_id'])) {
         flash('mensaje', 'Debe seleccionar un cliente', 'alert alert-danger');
@@ -359,7 +357,6 @@ function procesarCFDIRecibido(SimpleXMLElement $xml, array $namespaces, $cliente
     }
 }
 
-// Header
 include_once __DIR__ . '/../../includes/header.php';
 ?>
 
@@ -399,15 +396,20 @@ include_once __DIR__ . '/../../includes/header.php';
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'], ENT_QUOTES, 'UTF-8'); ?>" method="post" enctype="multipart/form-data">
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <label for="cliente_id" class="form-label">Cliente *</label>
-                    <select class="form-select" id="cliente_id" name="cliente_id" required>
-                        <option value="">Seleccione un cliente</option>
-                        <?php foreach($clientes as $cliente): ?>
-                        <option value="<?php echo (int)$cliente->id; ?>" <?php echo ($cliente_id == $cliente->id) ? 'selected' : ''; ?>>
-                            <?php echo htmlspecialchars($cliente->razon_social . ' (' . $cliente->rfc . ')', ENT_QUOTES, 'UTF-8'); ?>
-                        </option>
-                        <?php endforeach; ?>
-                    </select>
+                    <label for="cliente_search" class="form-label">Cliente *</label>
+                    <!-- Buscador JS puro de cliente -->
+                    <input type="text" id="cliente_search" class="form-control" placeholder="Buscar cliente por nombre o RFC">
+                    <div id="cliente_results" class="list-group mt-2" style="max-height:220px; overflow:auto;">
+                      <div class="list-group-item text-muted small">Escribe para buscar…</div>
+                    </div>
+                    <input type="hidden" name="cliente_id" id="cliente_id" value="<?php echo htmlspecialchars($cliente_id, ENT_QUOTES, 'UTF-8'); ?>" required>
+                    <div class="form-text">Haz clic en un resultado para seleccionarlo.</div>
+                    <div class="input-group mt-2">
+                      <input type="text" id="cliente_selected_text" class="form-control" placeholder="Ninguno" readonly>
+                      <button type="button" id="cliente_clear" class="btn btn-outline-danger" title="Quitar selección">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <label for="tipo_comprobante" class="form-label">Tipo de Comprobante *</label>
@@ -433,6 +435,88 @@ include_once __DIR__ . '/../../includes/header.php';
         </form>
     </div>
 </div>
+
+<script>
+(function(){
+  const inputSearch = document.getElementById('cliente_search');
+  const results = document.getElementById('cliente_results');
+  const selText = document.getElementById('cliente_selected_text');
+  const selId = document.getElementById('cliente_id');
+  const btnClear = document.getElementById('cliente_clear');
+  const form = document.querySelector('form');
+
+  let t = null;
+  function debounce(fn, ms){ return function(...args){ clearTimeout(t); t=setTimeout(()=>fn.apply(this,args), ms); }; }
+
+  async function fetchClientes(term, page=1){
+    const url = '<?php echo URL_ROOT; ?>/modulos/clientes/buscar.php?q=' + encodeURIComponent(term||'') + '&page=' + page;
+    try {
+      const r = await fetch(url, { headers: { 'Accept':'application/json' } });
+      if (!r.ok) throw new Error('HTTP '+r.status);
+      const data = await r.json();
+      return data && data.results ? data.results : [];
+    } catch(e) {
+      console.warn('Error buscando clientes:', e);
+      return [];
+    }
+  }
+
+  function renderResults(items){
+    results.innerHTML = '';
+    if (!items.length) {
+      results.innerHTML = '<div class="list-group-item text-muted small">Sin resultados</div>';
+      return;
+    }
+    items.forEach(it => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'list-group-item list-group-item-action';
+      btn.textContent = it.text;
+      btn.dataset.id = it.id;
+      btn.dataset.text = it.text;
+      btn.addEventListener('click', () => {
+        selId.value = it.id;
+        selText.value = it.text;
+        results.innerHTML = '<div class="list-group-item small text-success">Seleccionado: '+it.text+'</div>';
+      });
+      results.appendChild(btn);
+    });
+  }
+
+  const doSearch = debounce(async function(){
+    const term = inputSearch.value.trim();
+    const items = await fetchClientes(term, 1);
+    renderResults(items);
+  }, 300);
+
+  inputSearch.addEventListener('input', doSearch);
+
+  btnClear.addEventListener('click', () => {
+    selId.value = '';
+    selText.value = '';
+    inputSearch.value = '';
+    inputSearch.focus();
+    results.innerHTML = '<div class="list-group-item text-muted small">Escribe para buscar…</div>';
+  });
+
+  // Mostrar nombre si el filtro viene con cliente_id
+  <?php
+  if ($cliente_id !== '') {
+      $nombreCliente = '';
+      $database->query('SELECT razon_social, rfc FROM Clientes WHERE id = :id');
+      $database->bind(':id', $cliente_id);
+      $cl = $database->single();
+      if ($cl) $nombreCliente = $cl->razon_social . ' (' . $cl->rfc . ')';
+      if ($nombreCliente) {
+          echo "selText.value = " . json_encode($nombreCliente) . ";";
+      }
+  }
+  ?>
+
+  // Carga inicial
+  doSearch();
+})();
+</script>
 
 <script>
 // Arrastrar/soltar + previsualización

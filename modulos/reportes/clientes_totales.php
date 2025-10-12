@@ -12,9 +12,10 @@ $db = new Database();
 // Filtros
 $desde = isset($_GET['desde']) && $_GET['desde'] !== '' ? sanitize($_GET['desde']) : date('Y-m-01');
 $hasta = isset($_GET['hasta']) && $_GET['hasta'] !== '' ? sanitize($_GET['hasta']) : date('Y-m-t');
+$hastaFiltro = date('Y-m-d', strtotime($hasta . ' +1 day'));
 $q     = isset($_GET['q']) ? trim(sanitize($_GET['q'])) : '';
 
-// Query principal: clientes + subconsultas de emitidas/recibidas (ingresos, egresos, neto)
+// Query principal: se añade el cálculo de la Utilidad
 $sql = "
 SELECT
   c.id,
@@ -26,7 +27,8 @@ SELECT
   COALESCE(e.neto,0)       AS emitidas_neto,
   COALESCE(r.ingresos,0)   AS recibidas_ingresos,
   COALESCE(r.egresos,0)    AS recibidas_egresos,
-  COALESCE(r.neto,0)       AS recibidas_neto
+  COALESCE(r.neto,0)       AS recibidas_neto,
+  (COALESCE(e.neto,0) - COALESCE(r.neto,0)) AS utilidad -- --> CAMBIO: Se añade el cálculo de la Utilidad
 FROM clientes c
 LEFT JOIN (
   SELECT
@@ -57,9 +59,9 @@ WHERE 1=1
 
 $params = [
   ':desde1' => $desde.' 00:00:00',
-  ':hasta1' => $hasta.' 23:59:59',
+  ':hasta1' => $hastaFiltro.' 00:00:00',
   ':desde2' => $desde.' 00:00:00',
-  ':hasta2' => $hasta.' 23:59:59',
+  ':hasta2' => $hastaFiltro.' 00:00:00',
 ];
 
 if ($q !== '') {
@@ -76,6 +78,7 @@ $rows = $db->resultSet();
 // Totales generales
 $tot_emit_ing = 0; $tot_emit_egr = 0; $tot_emit_net = 0;
 $tot_rec_ing  = 0; $tot_rec_egr  = 0; $tot_rec_net  = 0;
+$tot_utilidad = 0; // --> CAMBIO: Variable para el total de utilidad
 foreach ($rows as $r) {
   $tot_emit_ing += (float)$r->emitidas_ingresos;
   $tot_emit_egr += (float)$r->emitidas_egresos;
@@ -83,6 +86,7 @@ foreach ($rows as $r) {
   $tot_rec_ing  += (float)$r->recibidas_ingresos;
   $tot_rec_egr  += (float)$r->recibidas_egresos;
   $tot_rec_net  += (float)$r->recibidas_neto;
+  $tot_utilidad += (float)$r->utilidad; // --> CAMBIO: Sumar la utilidad al total
 }
 
 include_once __DIR__ . '/../../includes/header.php';
@@ -128,16 +132,11 @@ include_once __DIR__ . '/../../includes/header.php';
     <table class="table table-striped table-bordered align-middle">
       <thead>
         <tr>
-          <!--!-->
           <th>Cliente</th>
           <th>RFC</th>
-          <!--<th class="text-end">Emitidas (Ingresos)</th>!-->
-          <!--<th class="text-end">Emitidas (Egresos)</th>!-->
           <th class="text-end">Total Emitidas</th>
-          <!--<th class="text-end">Recibidas (Ingresos)</th>!-->
-          <!--<th class="text-end">Recibidas (Egresos)</th>!-->
           <th class="text-end">Total Recibidas</th>
-        </tr>
+          <th class="text-end bg-light">Utilidad</th> </tr>
       </thead>
       <tbody>
         <?php if (!empty($rows)): ?>
@@ -149,35 +148,28 @@ include_once __DIR__ . '/../../includes/header.php';
                   <div class="small text-muted"><?php echo htmlspecialchars($r->actividad, ENT_QUOTES, 'UTF-8'); ?></div>
                 <?php endif; ?>
               </td>
-              <td><?php echo htmlspecialchars($r->rfc, ENT_QUOTES, 'UTF-8'); ?></td><!--
-              <td class="text-end"><?php echo formatMoney((float)$r->emitidas_ingresos); ?></td>
-              <td class="text-end"><?php echo formatMoney((float)$r->emitidas_egresos); ?></td>!-->
+              <td><?php echo htmlspecialchars($r->rfc, ENT_QUOTES, 'UTF-8'); ?></td>
               <td class="text-end fw-bold <?php echo ((float)$r->emitidas_neto)>=0 ? 'text-success':'text-danger'; ?>">
                 <?php echo formatMoney((float)$r->emitidas_neto); ?>
               </td>
-              <!--
-              <td class="text-end"><?php echo formatMoney((float)$r->recibidas_ingresos); ?></td>
-              <td class="text-end"><?php echo formatMoney((float)$r->recibidas_egresos); ?></td>
-              !-->
               <td class="text-end fw-bold <?php echo ((float)$r->recibidas_neto)>=0 ? 'text-success':'text-danger'; ?>">
                 <?php echo formatMoney((float)$r->recibidas_neto); ?>
+              </td>
+              <td class="text-end fw-bold bg-light <?php echo ((float)$r->utilidad)>=0 ? 'text-success':'text-danger'; ?>">
+                <?php echo formatMoney((float)$r->utilidad); ?>
               </td>
             </tr>
           <?php endforeach; ?>
         <?php else: ?>
-          <tr><td colspan="8" class="text-center text-muted">Sin resultados para los criterios seleccionados.</td></tr>
+          <tr><td colspan="5" class="text-center text-muted">Sin resultados para los criterios seleccionados.</td></tr>
         <?php endif; ?>
       </tbody>
       <tfoot>
         <tr class="table-light">
           <th colspan="2" class="text-end">Totales:</th>
-          <!--<th class="text-end"><?php echo formatMoney($tot_emit_ing); ?></th>!-->
-          <!--<th class="text-end"><?php echo formatMoney($tot_emit_egr); ?></th>!-->
           <th class="text-end"><?php echo formatMoney($tot_emit_net); ?></th>
-          <!--<th class="text-end"><?php echo formatMoney($tot_rec_ing); ?></th>!-->
-          <!--<th class="text-end"><?php echo formatMoney($tot_rec_egr); ?></th>!-->
           <th class="text-end"><?php echo formatMoney($tot_rec_net); ?></th>
-        </tr>
+          <th class="text-end"><?php echo formatMoney($tot_utilidad); ?></th> </tr>
       </tfoot>
     </table>
   </div>

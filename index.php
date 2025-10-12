@@ -4,6 +4,9 @@ require_once __DIR__ . '/config/config.php';
 require_once __DIR__ . '/config/db.php';
 require_once __DIR__ . '/includes/functions.php';
 
+/* /assets/css/styles.css */
+
+
 // Si no está logueado, redirigir a login
 if (!isLoggedIn()) {
     redirect(URL_ROOT . '/modulos/usuarios/login.php');

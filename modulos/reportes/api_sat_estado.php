@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 require_once __DIR__ . '/../../config/config.php';
@@ -9,10 +8,9 @@ require_once __DIR__ . '/../../includes/sat_consulta.php';
 
 header('Content-Type: application/json; charset=utf-8');
 
-function sat_log(string $msg): void
-{
+function sat_log(string $msg): void {
     $file = __DIR__ . '/sat.log';
-    @file_put_contents($file, '[' . date('Y-m-d H:i:s') . "] $msg\n", FILE_APPEND);
+    @file_put_contents($file, '['.date('Y-m-d H:i:s')."] $msg\n", FILE_APPEND);
 }
 
 try {
@@ -50,6 +48,7 @@ try {
         $uuid = (string)$row->folio_fiscal;
         $totalRaw = (string)($row->total_raw ?? '');
         $totalNum = (string)$row->total;
+
     } else {
         $db->query('SELECT r.id, r.folio_fiscal, r.total, r.total_raw, r.rfc_emisor
                     FROM CFDIs_Recibidas r WHERE r.id = :id');
@@ -75,35 +74,18 @@ try {
     // Deriva el estado solo con estatusCancelacion (tu regla)
     $estatusCancelacion = $resp['estatusCancelacion'] ?? null;
     $estadoDerivado = (!empty($estatusCancelacion)) ? 'Cancelado' : 'Vigente';
-    
 
     // Guarda cache en BD con el estado derivado
     if ($tipo === 'emitida') {
         $db->query('UPDATE CFDIs_Emitidas
                     SET estado_sat = :estado, codigo_estatus_sat = :codigo,
                         es_cancelable_sat = :esc, estatus_cancelacion_sat = :ec,
-                        total = 0,
-                        subtotal = 0,
-                        iva_importe = 0,
-                        tasa0_base = 0,
-                        tasa16_base = 0, 
-                        retencion_iva = 0, 
-                        retencion_isr = 0, 
-                        retencion_ieps = 0,
                         fecha_consulta_sat = NOW()
                     WHERE id = :id');
     } else {
         $db->query('UPDATE CFDIs_Recibidas
                     SET estado_sat = :estado, codigo_estatus_sat = :codigo,
                         es_cancelable_sat = :esc, estatus_cancelacion_sat = :ec,
-                        total = 0,
-                        subtotal = 0,
-                        iva_importe = 0,
-                        tasa0_base = 0,
-                        tasa16_base = 0, 
-                        retencion_iva = 0, 
-                        retencion_isr = 0, 
-                        retencion_ieps = 0,
                         fecha_consulta_sat = NOW()
                     WHERE id = :id');
     }
@@ -112,9 +94,7 @@ try {
     $db->bind(':esc',    $resp['esCancelable'] ?? null);
     $db->bind(':ec',     $estatusCancelacion);
     $db->bind(':id',     $id);
-   
     $db->execute();
-
 
     echo json_encode([
         'success' => true,

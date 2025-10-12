@@ -39,7 +39,12 @@ $clientes = $db->resultSet();
 // Consulta principal: SOLO recibos de clientes (cliente_id NO NULL), excluir cancelados
 $sql = 'SELECT r.*,
                c.razon_social AS razon_social,
-               c.rfc          AS rfc
+               c.rfc          AS rfc,
+               (
+                 SELECT p.id FROM recibos_pagos p
+                 WHERE p.recibo_id = r.id
+                 ORDER BY p.fecha_pago DESC, p.id DESC LIMIT 1
+               ) AS ultimo_pago_id
         FROM recibos r
         INNER JOIN clientes c ON c.id = r.cliente_id
         WHERE r.estatus = "activo"';
@@ -204,52 +209,59 @@ include_once __DIR__ . '/../../includes/header.php';
             $estadoRow = strtolower($r->estado ?? 'pendiente');
             $badge = ($estadoRow === 'pagado') ? 'bg-success' : 'bg-warning';
         ?>
-          <tr>
-            <td><?php echo htmlspecialchars($r->razon_social ?? '—', ENT_QUOTES, 'UTF-8'); ?></td>
-            <td><?php echo htmlspecialchars($r->rfc ?? '—', ENT_QUOTES, 'UTF-8'); ?></td>
-            <td><?php echo htmlspecialchars($r->concepto ?? '', ENT_QUOTES, 'UTF-8'); ?></td>
-            <td><?php echo formatDate($r->periodo_inicio) . (($r->periodo_inicio !== $r->periodo_fin) ? (' — ' . formatDate($r->periodo_fin)) : ''); ?></td>
-            <td class="text-end"><?php echo formatMoney((float)$r->monto); ?></td>
-            <td class="text-end"><?php echo formatMoney((float)$r->monto_pagado); ?></td>
-            <td class="text-end fw-bold <?php echo ($saldo > 0 ? 'text-danger' : 'text-success'); ?>">
-              <?php echo formatMoney($saldo); ?>
-            </td>
-            <td><span class="badge <?php echo $badge; ?>"><?php echo ucfirst($estadoRow); ?></span></td>
-            <td class="text-center">
-              <button class="btn btn-sm btn-primary mb-1" data-bs-toggle="modal" data-bs-target="#modalPago"
-                data-id="<?php echo (int)$r->id; ?>"
-                data-cliente="<?php echo htmlspecialchars($r->razon_social ?? '', ENT_QUOTES, 'UTF-8'); ?>"
-                data-saldo="<?php echo number_format($saldo, 2, '.', ''); ?>">
-                <i class="fas fa-dollar-sign"></i> Pago
-              </button>
-              <a class="btn btn-sm btn-outline-secondary mb-1"
-                 href="<?php echo URL_ROOT; ?>/modulos/recibos/pagos.php?recibo_id=<?php echo (int)$r->id; ?>">
-                <i class="fas fa-list"></i> Historial
-              </a>
-              <a class="btn btn-sm btn-outline-primary mb-1"
-                 href="<?php echo URL_ROOT; ?>/modulos/recibos/editar.php?id=<?php echo (int)$r->id; ?>">
-                <i class="fas fa-edit"></i> Editar
-              </a>
-              <!--<a class="btn btn-sm btn-outline-success mb-1"
-                 href="<?php echo URL_ROOT; ?>/modulos/recibos/imprimir.php?recibo_id=<?php echo (int)$r->id; ?>" target="_blank">
-                <i class="fas fa-print"></i> Imprimir
-              </a>
-              -->
-              <?php if ((float)$r->monto_pagado ): ?>
-                <a class="btn btn-sm btn-outline-danger mb-1"
-                   href="<?php echo URL_ROOT; ?>/modulos/recibos/cancelar.php?id=<?php echo (int)$r->id; ?>"
-                   onclick="return confirm('¿Cancelar este recibo? Esta acción no se puede deshacer.');">
-                  <i class="fas fa-ban"></i> Cancelar
-                </a>
-              <?php else: ?>
-                <button type="button" class="btn btn-sm btn-outline-secondary mb-1" disabled
-                        title="No se puede cancelar: tiene pagos">
-                  <i class="fas fa-ban"></i> Cancelar
+            <tr>
+              <td><?php echo htmlspecialchars($r->razon_social ?? '—', ENT_QUOTES, 'UTF-8'); ?></td>
+              <td><?php echo htmlspecialchars($r->rfc ?? '—', ENT_QUOTES, 'UTF-8'); ?></td>
+              <td><?php echo htmlspecialchars($r->concepto ?? '', ENT_QUOTES, 'UTF-8'); ?></td>
+              <td><?php echo formatDate($r->periodo_inicio) . (($r->periodo_inicio !== $r->periodo_fin) ? (' — ' . formatDate($r->periodo_fin)) : ''); ?></td>
+              <td class="text-end"><?php echo formatMoney((float)$r->monto); ?></td>
+              <td class="text-end"><?php echo formatMoney((float)$r->monto_pagado); ?></td>
+              <td class="text-end fw-bold <?php echo ($saldo > 0 ? 'text-danger' : 'text-success'); ?>">
+                <?php echo formatMoney($saldo); ?>
+              </td>
+              <td><span class="badge <?php echo $badge; ?>"><?php echo ucfirst($estadoRow); ?></span></td>
+              <td class="text-center">
+                <button class="btn btn-sm btn-primary mb-1" data-bs-toggle="modal" data-bs-target="#modalPago"
+                  data-id="<?php echo (int)$r->id; ?>"
+                  data-cliente="<?php echo htmlspecialchars($r->razon_social ?? '', ENT_QUOTES, 'UTF-8'); ?>"
+                  data-saldo="<?php echo number_format($saldo, 2, '.', ''); ?>">
+                  <i class="fas fa-dollar-sign"></i> Pago
                 </button>
-              <?php endif; ?>
-            </td>
-          </tr>
-        <?php endforeach; else: ?>
+                <a class="btn btn-sm btn-outline-secondary mb-1"
+                  href="<?php echo URL_ROOT; ?>/modulos/recibos/pagos.php?recibo_id=<?php echo (int)$r->id; ?>">
+                  <i class="fas fa-list"></i> Historial
+                </a>
+                <a class="btn btn-sm btn-outline-primary mb-1"
+                  href="<?php echo URL_ROOT; ?>/modulos/recibos/editar.php?id=<?php echo (int)$r->id; ?>">
+                  <i class="fas fa-edit"></i> Editar
+                </a>
+                <?php if ($r->ultimo_pago_id): ?>
+                  <a class="btn btn-sm btn-outline-success mb-1"
+                    href="<?php echo URL_ROOT; ?>/modulos/recibos/imprimir.php?pago_id=<?php echo (int)$r->ultimo_pago_id; ?>" target="_blank">
+                    <i class="fas fa-print"></i> Imprimir
+                  </a>
+                <?php else: ?>
+                  <span class="btn btn-sm btn-outline-secondary mb-1 disabled" title="Sin pagos">
+                    <i class="fas fa-print"></i> Imprimir
+                  </span>
+                <?php endif; ?>
+
+                <?php if ((float)$r->monto_pagado): ?>
+                  <a class="btn btn-sm btn-outline-danger mb-1"
+                    href="<?php echo URL_ROOT; ?>/modulos/recibos/cancelar.php?id=<?php echo (int)$r->id; ?>"
+                    onclick="return confirm('¿Cancelar este recibo? Esta acción no se puede deshacer.');">
+                    <i class="fas fa-ban"></i> Cancelar
+                  </a>
+                <?php else: ?>
+                  <button type="button" class="btn btn-sm btn-outline-secondary mb-1" disabled
+                    title="No se puede cancelar: tiene pagos">
+                    <i class="fas fa-ban"></i> Cancelar
+                  </button>
+                <?php endif; ?>
+              </td>
+            </tr>
+          <?php endforeach;
+        else: ?>
           <tr>
             <td colspan="9" class="text-center text-muted">Sin recibos en el periodo.</td>
           </tr>
@@ -313,29 +325,30 @@ include_once __DIR__ . '/../../includes/header.php';
 </div>
 
 <script>
-const modalPago = document.getElementById('modalPago');
-modalPago.addEventListener('show.bs.modal', function(event) {
-  const btn = event.relatedTarget;
-  const id = btn.getAttribute('data-id');
-  const cliente = btn.getAttribute('data-cliente');
-  const saldo = parseFloat(btn.getAttribute('data-saldo') || '0') || 0;
+  const modalPago = document.getElementById('modalPago');
+  modalPago.addEventListener('show.bs.modal', function(event) {
+    const btn = event.relatedTarget;
+    const id = btn.getAttribute('data-id');
+    const cliente = btn.getAttribute('data-cliente');
+    const saldo = parseFloat(btn.getAttribute('data-saldo') || '0') || 0;
 
-  document.getElementById('pago_recibo_id').value = id;
-  document.getElementById('pago_cliente').textContent = cliente;
-  document.getElementById('pago_saldo').textContent = new Intl.NumberFormat('es-MX', {
-    style: 'currency', currency: 'MXN'
-  }).format(saldo);
+    document.getElementById('pago_recibo_id').value = id;
+    document.getElementById('pago_cliente').textContent = cliente;
+    document.getElementById('pago_saldo').textContent = new Intl.NumberFormat('es-MX', {
+      style: 'currency',
+      currency: 'MXN'
+    }).format(saldo);
 
-  const input = document.getElementById('pago_monto');
-  input.value = saldo.toFixed(2);
-  input.setAttribute('max', saldo.toFixed(2));
-  input.oninput = function() {
-    let v = parseFloat(this.value || '0');
-    if (v > saldo) v = saldo;
-    if (v < 0) v = 0;
-    this.value = (isNaN(v) ? 0 : v).toFixed(2);
-  };
-});
+    const input = document.getElementById('pago_monto');
+    input.value = saldo.toFixed(2);
+    input.setAttribute('max', saldo.toFixed(2));
+    input.oninput = function() {
+      let v = parseFloat(this.value || '0');
+      if (v > saldo) v = saldo;
+      if (v < 0) v = 0;
+      this.value = (isNaN(v) ? 0 : v).toFixed(2);
+    };
+  });
 </script>
 
 <?php include_once __DIR__ . '/../../includes/footer.php'; ?>

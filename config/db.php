@@ -7,7 +7,7 @@ class Database {
     private $pass = "";
     private $dbname = "despacho_contable";
     
-    private $dbh;
+    public $dbh;
     private $stmt;
     private $error;
     

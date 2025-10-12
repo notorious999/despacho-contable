@@ -87,7 +87,7 @@ include_once __DIR__ . '/../../includes/header.php';
         <a href="<?php echo URL_ROOT; ?>/modulos/reportes/index.php?tipo=<?php echo $tipo; ?>" class="btn btn-secondary me-2">
             <i class="fas fa-arrow-left"></i> Volver
         </a>
-        <?php if($factura->estado == 'vigente'): ?>
+        <?php if($factura->estado_sat == 'vigente'): ?>
         <a href="<?php echo URL_ROOT; ?>/modulos/reportes/cancelar_factura.php?id=<?php echo $factura->id; ?>&tipo=<?php echo $tipo; ?>" class="btn btn-danger">
             <i class="fas fa-ban"></i> Cancelar Factura
         </a>
@@ -103,7 +103,7 @@ include_once __DIR__ . '/../../includes/header.php';
             </div>
             <div>
                 <span class="badge bg-primary me-2">Tipo: <?php echo $tipo_comprobante; ?></span>
-                <?php if($factura->estado == 'cancelado'): ?>
+                <?php if($factura->estado_sat == 'Cancelado'): ?>
                 <span class="badge bg-danger">CANCELADA</span>
                 <?php else: ?>
                 <span class="badge bg-success">VIGENTE</span>

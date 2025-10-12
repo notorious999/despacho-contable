@@ -15,20 +15,20 @@ if (!isLoggedIn() && basename($_SERVER['PHP_SELF']) != 'login.php') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo SITE_NAME; ?></title>
-    <!-- Bootstrap CSS -->
+    <link rel="icon" type="image/png" href="<?php echo URL_ROOT; ?>/uploads/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- DataTables CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo URL_ROOT; ?>/assets/css/styles.css">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="<?php echo URL_ROOT; ?>"><?php echo SITE_NAME; ?></a>
+            <a class="navbar-brand d-flex align-items-center" href="<?php echo URL_ROOT; ?>">
+                <img src="<?php echo URL_ROOT; ?>/uploads/logo.png" alt="Logo de <?php echo SITE_NAME; ?>" class="navbar-logo me-2">
+                <?php echo SITE_NAME; ?>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
