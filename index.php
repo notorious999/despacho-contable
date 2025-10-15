@@ -225,7 +225,7 @@ include_once __DIR__ . '/includes/header.php';
                     <h2 class="text-primary"><?php echo isset($recibosStats->total_pagado) ? formatMoney($recibosStats->total_pagado) : '$0.00'; ?></h2>
                 </div>
                 <div class="d-grid gap-2 mt-3">
-                    <a href="<?php echo URL_ROOT; ?>/modulos/recibos/agregar.php" class="btn btn-primary">
+                    <a href="<?php echo URL_ROOT; ?>/modulos/recibos/nuevo_externo.php" class="btn btn-primary">
                         <i class="fas fa-plus"></i> Nuevo Recibo
                     </a>
                 </div>

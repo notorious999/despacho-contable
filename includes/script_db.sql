@@ -153,7 +153,6 @@ CREATE TABLE `clientes` (
   `responsable_id` int(11) DEFAULT NULL,
   `honorarios` decimal(12,2) DEFAULT 0.00,
   `periodicidad` enum('mensual','anual') NOT NULL DEFAULT 'mensual',
-  `nivel` tinyint(3) UNSIGNED NOT NULL DEFAULT 2,
   `ultima_declaracion_mes` tinyint(3) UNSIGNED DEFAULT NULL,
   `ultima_declaracion_anio` smallint(5) UNSIGNED DEFAULT NULL,
   `limite_declaracion_dia` tinyint(3) UNSIGNED DEFAULT 17,

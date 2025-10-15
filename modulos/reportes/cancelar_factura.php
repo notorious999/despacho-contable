@@ -28,7 +28,7 @@ $database = new Database();
 
 // Verificar que la factura existe
 $tabla = ($tipo == 'emitida') ? 'CFDIs_Emitidas' : 'CFDIs_Recibidas';
-$database->query("SELECT id, estado FROM $tabla WHERE id = :id");
+$database->query("SELECT id, estado_sat FROM $tabla WHERE id = :id");
 $database->bind(':id', $id);
 $factura = $database->single();
 
@@ -37,7 +37,7 @@ if (!$factura) {
     redirect(URL_ROOT . '/modulos/reportes/index.php?tipo=' . $tipo);
 }
 
-if ($factura->estado == 'cancelado') {
+if ($factura->estado_sat == 'cancelado') {
     flash('mensaje', 'La factura ya está cancelada', 'alert alert-warning');
     redirect(URL_ROOT . '/modulos/reportes/index.php?tipo=' . $tipo);
 }
@@ -49,10 +49,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     // Actualizar la factura a cancelada y poner a cero los montos
     $database->query("UPDATE $tabla SET 
-                     estado = 'cancelado', 
+                     estado_sat = 'Cancelado', 
                      fecha_cancelacion = NOW(), 
                      motivo_cancelacion = :motivo_cancelacion,
                      total = 0,
+                     tasa16 = 0,
+                     iva = 0,
                      subtotal = 0,
                      iva_importe = 0,
                      tasa0_base = 0,

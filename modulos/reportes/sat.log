@@ -15376,3 +15376,900 @@
 [2025-10-11 08:27:19] RESP tipo=emitida id=72 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
 [2025-10-11 08:27:19] REQ tipo=emitida id=73 re=XAXX010101000 rr=DIF930104SM0 tt=0000012892.000000 uuid=8D742366-EB7F-4614-9C6B-E3AA9307CB75
 [2025-10-11 08:27:20] RESP tipo=emitida id=73 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:22] REQ tipo=emitida id=21 re=XAXX010101000 rr=SFA010213FR0 tt=0000000350.000000 uuid=C899E8A5-D60E-48D5-81A7-5DDFB2E826D6
+[2025-10-12 22:17:23] RESP tipo=emitida id=21 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:23] REQ tipo=emitida id=20 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=31C1002E-EBCD-4DD9-95AC-4BBAC271E7A0
+[2025-10-12 22:17:24] RESP tipo=emitida id=20 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:24] REQ tipo=emitida id=19 re=XAXX010101000 rr=CSU0208141W0 tt=0000000225.000000 uuid=CBCCAC7F-5592-43AA-871B-9DD56D34E534
+[2025-10-12 22:17:25] RESP tipo=emitida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:25] REQ tipo=emitida id=18 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=F14DC20D-2103-4FD6-A406-7004E3BE0383
+[2025-10-12 22:17:26] RESP tipo=emitida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:26] REQ tipo=emitida id=17 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=65C63E37-FA15-4E6F-BF2C-25C643A830BE
+[2025-10-12 22:17:27] RESP tipo=emitida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:27] REQ tipo=emitida id=16 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=422A4F77-AAFA-4859-A4FE-8F11A183D131
+[2025-10-12 22:17:28] RESP tipo=emitida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:28] REQ tipo=emitida id=15 re=XAXX010101000 rr=CRA011109LSA tt=0000000754.000000 uuid=97B24DC8-1F4C-4758-BF0E-1476791112A1
+[2025-10-12 22:17:29] RESP tipo=emitida id=15 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:29] REQ tipo=emitida id=14 re=XAXX010101000 rr=SFA010213FR0 tt=0000000500.000000 uuid=12F00359-8299-4BB6-97CC-4860C23E8B1B
+[2025-10-12 22:17:30] RESP tipo=emitida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:30] REQ tipo=emitida id=13 re=XAXX010101000 rr=SFA010213FR0 tt=0000000326.000000 uuid=DB020C39-B537-42F4-BC38-62D9ED7EB071
+[2025-10-12 22:17:31] RESP tipo=emitida id=13 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:31] REQ tipo=emitida id=12 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000142.000000 uuid=9326840F-4D94-438B-9C51-1B5B91E70600
+[2025-10-12 22:17:32] RESP tipo=emitida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:32] REQ tipo=emitida id=11 re=XAXX010101000 rr=PNP9003312C9 tt=0000000174.000000 uuid=0C2ED07C-2ACB-41E0-90D1-BAC3549D97BD
+[2025-10-12 22:17:33] RESP tipo=emitida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:33] REQ tipo=emitida id=10 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=9AB706CB-0F6B-499D-8214-A1818C79E48E
+[2025-10-12 22:17:33] RESP tipo=emitida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:33] REQ tipo=emitida id=9 re=XAXX010101000 rr=IIN850215MIA tt=0000000550.000000 uuid=AC547668-3289-4784-BC2A-2A69C663328F
+[2025-10-12 22:17:34] RESP tipo=emitida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:34] REQ tipo=emitida id=8 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=C03F56C2-D84D-4550-9971-7A1D98C9231E
+[2025-10-12 22:17:35] RESP tipo=emitida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:35] REQ tipo=emitida id=7 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=A0F6E88B-E0EA-4EE9-B42C-F1E98DC2AFC1
+[2025-10-12 22:17:36] RESP tipo=emitida id=7 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-12 22:17:36] REQ tipo=emitida id=6 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=7DD5596B-A201-478B-AF9D-447E40D68163
+[2025-10-12 22:17:37] RESP tipo=emitida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:37] REQ tipo=emitida id=5 re=XAXX010101000 rr=SFA010213FR0 tt=0000000354.000000 uuid=C56B97BA-4A44-401E-8052-EC680D500D16
+[2025-10-12 22:17:38] RESP tipo=emitida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:38] REQ tipo=emitida id=4 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=07B431E2-BC3E-4C5A-9AA1-A8FB91A077E2
+[2025-10-12 22:17:39] RESP tipo=emitida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:39] REQ tipo=emitida id=3 re=XAXX010101000 rr=IIN850215MIA tt=0000000696.000000 uuid=04D5C060-1AAA-440B-B6CB-52CFFEEBEA1F
+[2025-10-12 22:17:40] RESP tipo=emitida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:40] REQ tipo=emitida id=2 re=XAXX010101000 rr=IIN850215MIA tt=0000000395.000000 uuid=D4D3CAF0-03E1-4932-90B8-610C7FDF0537
+[2025-10-12 22:17:41] RESP tipo=emitida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-12 22:17:41] REQ tipo=emitida id=1 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000145.000000 uuid=96482038-7298-47AA-A1FA-D0D9651893D5
+[2025-10-12 22:17:42] RESP tipo=emitida id=1 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:18] REQ tipo=emitida id=21 re=XAXX010101000 rr=SFA010213FR0 tt=0000000000.000000 uuid=C899E8A5-D60E-48D5-81A7-5DDFB2E826D6
+[2025-10-13 00:27:19] RESP tipo=emitida id=21 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:19] REQ tipo=emitida id=20 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=31C1002E-EBCD-4DD9-95AC-4BBAC271E7A0
+[2025-10-13 00:27:19] RESP tipo=emitida id=20 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:20] REQ tipo=emitida id=19 re=XAXX010101000 rr=CSU0208141W0 tt=0000000225.000000 uuid=CBCCAC7F-5592-43AA-871B-9DD56D34E534
+[2025-10-13 00:27:20] RESP tipo=emitida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:20] REQ tipo=emitida id=18 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=F14DC20D-2103-4FD6-A406-7004E3BE0383
+[2025-10-13 00:27:21] RESP tipo=emitida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:21] REQ tipo=emitida id=17 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=65C63E37-FA15-4E6F-BF2C-25C643A830BE
+[2025-10-13 00:27:21] RESP tipo=emitida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:22] REQ tipo=emitida id=16 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=422A4F77-AAFA-4859-A4FE-8F11A183D131
+[2025-10-13 00:27:22] RESP tipo=emitida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:22] REQ tipo=emitida id=24 re=XAXX010101000 rr=CRA011109LSA tt=0000000754.000000 uuid=97B24DC8-1F4C-4758-BF0E-1476791112A1
+[2025-10-13 00:27:23] RESP tipo=emitida id=24 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:23] REQ tipo=emitida id=14 re=XAXX010101000 rr=SFA010213FR0 tt=0000000500.000000 uuid=12F00359-8299-4BB6-97CC-4860C23E8B1B
+[2025-10-13 00:27:24] RESP tipo=emitida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:24] REQ tipo=emitida id=23 re=XAXX010101000 rr=SFA010213FR0 tt=0000000326.000000 uuid=DB020C39-B537-42F4-BC38-62D9ED7EB071
+[2025-10-13 00:27:24] RESP tipo=emitida id=23 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:24] REQ tipo=emitida id=12 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000142.000000 uuid=9326840F-4D94-438B-9C51-1B5B91E70600
+[2025-10-13 00:27:25] RESP tipo=emitida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:25] REQ tipo=emitida id=11 re=XAXX010101000 rr=PNP9003312C9 tt=0000000174.000000 uuid=0C2ED07C-2ACB-41E0-90D1-BAC3549D97BD
+[2025-10-13 00:27:26] RESP tipo=emitida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:26] REQ tipo=emitida id=10 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=9AB706CB-0F6B-499D-8214-A1818C79E48E
+[2025-10-13 00:27:26] RESP tipo=emitida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:26] REQ tipo=emitida id=9 re=XAXX010101000 rr=IIN850215MIA tt=0000000550.000000 uuid=AC547668-3289-4784-BC2A-2A69C663328F
+[2025-10-13 00:27:27] RESP tipo=emitida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:27] REQ tipo=emitida id=8 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=C03F56C2-D84D-4550-9971-7A1D98C9231E
+[2025-10-13 00:27:28] RESP tipo=emitida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:28] REQ tipo=emitida id=25 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=A0F6E88B-E0EA-4EE9-B42C-F1E98DC2AFC1
+[2025-10-13 00:27:28] RESP tipo=emitida id=25 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 00:27:28] REQ tipo=emitida id=6 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=7DD5596B-A201-478B-AF9D-447E40D68163
+[2025-10-13 00:27:29] RESP tipo=emitida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:29] REQ tipo=emitida id=5 re=XAXX010101000 rr=SFA010213FR0 tt=0000000354.000000 uuid=C56B97BA-4A44-401E-8052-EC680D500D16
+[2025-10-13 00:27:30] RESP tipo=emitida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:30] REQ tipo=emitida id=4 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=07B431E2-BC3E-4C5A-9AA1-A8FB91A077E2
+[2025-10-13 00:27:30] RESP tipo=emitida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:30] REQ tipo=emitida id=3 re=XAXX010101000 rr=IIN850215MIA tt=0000000696.000000 uuid=04D5C060-1AAA-440B-B6CB-52CFFEEBEA1F
+[2025-10-13 00:27:31] RESP tipo=emitida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:31] REQ tipo=emitida id=2 re=XAXX010101000 rr=IIN850215MIA tt=0000000395.000000 uuid=D4D3CAF0-03E1-4932-90B8-610C7FDF0537
+[2025-10-13 00:27:32] RESP tipo=emitida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:27:32] REQ tipo=emitida id=22 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000145.000000 uuid=96482038-7298-47AA-A1FA-D0D9651893D5
+[2025-10-13 00:27:32] RESP tipo=emitida id=22 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:00] REQ tipo=emitida id=28 re=XAXX010101000 rr=SFA010213FR0 tt=0000000350.000000 uuid=C899E8A5-D60E-48D5-81A7-5DDFB2E826D6
+[2025-10-13 00:42:01] RESP tipo=emitida id=28 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:01] REQ tipo=emitida id=27 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=31C1002E-EBCD-4DD9-95AC-4BBAC271E7A0
+[2025-10-13 00:42:01] RESP tipo=emitida id=27 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:01] REQ tipo=emitida id=19 re=XAXX010101000 rr=CSU0208141W0 tt=0000000225.000000 uuid=CBCCAC7F-5592-43AA-871B-9DD56D34E534
+[2025-10-13 00:42:02] RESP tipo=emitida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:02] REQ tipo=emitida id=18 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=F14DC20D-2103-4FD6-A406-7004E3BE0383
+[2025-10-13 00:42:03] RESP tipo=emitida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:03] REQ tipo=emitida id=17 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=65C63E37-FA15-4E6F-BF2C-25C643A830BE
+[2025-10-13 00:42:04] RESP tipo=emitida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:04] REQ tipo=emitida id=16 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=422A4F77-AAFA-4859-A4FE-8F11A183D131
+[2025-10-13 00:42:04] RESP tipo=emitida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:04] REQ tipo=emitida id=24 re=XAXX010101000 rr=CRA011109LSA tt=0000000754.000000 uuid=97B24DC8-1F4C-4758-BF0E-1476791112A1
+[2025-10-13 00:42:05] RESP tipo=emitida id=24 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:05] REQ tipo=emitida id=14 re=XAXX010101000 rr=SFA010213FR0 tt=0000000500.000000 uuid=12F00359-8299-4BB6-97CC-4860C23E8B1B
+[2025-10-13 00:42:06] RESP tipo=emitida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:06] REQ tipo=emitida id=23 re=XAXX010101000 rr=SFA010213FR0 tt=0000000326.000000 uuid=DB020C39-B537-42F4-BC38-62D9ED7EB071
+[2025-10-13 00:42:06] RESP tipo=emitida id=23 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:06] REQ tipo=emitida id=12 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000142.000000 uuid=9326840F-4D94-438B-9C51-1B5B91E70600
+[2025-10-13 00:42:07] RESP tipo=emitida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:07] REQ tipo=emitida id=11 re=XAXX010101000 rr=PNP9003312C9 tt=0000000174.000000 uuid=0C2ED07C-2ACB-41E0-90D1-BAC3549D97BD
+[2025-10-13 00:42:09] RESP tipo=emitida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:09] REQ tipo=emitida id=10 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=9AB706CB-0F6B-499D-8214-A1818C79E48E
+[2025-10-13 00:42:11] RESP tipo=emitida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:11] REQ tipo=emitida id=9 re=XAXX010101000 rr=IIN850215MIA tt=0000000550.000000 uuid=AC547668-3289-4784-BC2A-2A69C663328F
+[2025-10-13 00:42:12] RESP tipo=emitida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:12] REQ tipo=emitida id=8 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=C03F56C2-D84D-4550-9971-7A1D98C9231E
+[2025-10-13 00:42:13] RESP tipo=emitida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:13] REQ tipo=emitida id=26 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=A0F6E88B-E0EA-4EE9-B42C-F1E98DC2AFC1
+[2025-10-13 00:42:13] RESP tipo=emitida id=26 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 00:42:13] REQ tipo=emitida id=6 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=7DD5596B-A201-478B-AF9D-447E40D68163
+[2025-10-13 00:42:14] RESP tipo=emitida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:14] REQ tipo=emitida id=5 re=XAXX010101000 rr=SFA010213FR0 tt=0000000354.000000 uuid=C56B97BA-4A44-401E-8052-EC680D500D16
+[2025-10-13 00:42:15] RESP tipo=emitida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:15] REQ tipo=emitida id=4 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=07B431E2-BC3E-4C5A-9AA1-A8FB91A077E2
+[2025-10-13 00:42:15] RESP tipo=emitida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:15] REQ tipo=emitida id=3 re=XAXX010101000 rr=IIN850215MIA tt=0000000696.000000 uuid=04D5C060-1AAA-440B-B6CB-52CFFEEBEA1F
+[2025-10-13 00:42:16] RESP tipo=emitida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:16] REQ tipo=emitida id=2 re=XAXX010101000 rr=IIN850215MIA tt=0000000395.000000 uuid=D4D3CAF0-03E1-4932-90B8-610C7FDF0537
+[2025-10-13 00:42:17] RESP tipo=emitida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:42:17] REQ tipo=emitida id=22 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000145.000000 uuid=96482038-7298-47AA-A1FA-D0D9651893D5
+[2025-10-13 00:42:17] RESP tipo=emitida id=22 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:13] REQ tipo=emitida id=28 re=XAXX010101000 rr=SFA010213FR0 tt=0000000350.000000 uuid=C899E8A5-D60E-48D5-81A7-5DDFB2E826D6
+[2025-10-13 00:51:13] RESP tipo=emitida id=28 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:13] REQ tipo=emitida id=27 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=31C1002E-EBCD-4DD9-95AC-4BBAC271E7A0
+[2025-10-13 00:51:14] RESP tipo=emitida id=27 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:14] REQ tipo=emitida id=19 re=XAXX010101000 rr=CSU0208141W0 tt=0000000225.000000 uuid=CBCCAC7F-5592-43AA-871B-9DD56D34E534
+[2025-10-13 00:51:15] RESP tipo=emitida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:15] REQ tipo=emitida id=18 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=F14DC20D-2103-4FD6-A406-7004E3BE0383
+[2025-10-13 00:51:16] RESP tipo=emitida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:16] REQ tipo=emitida id=17 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=65C63E37-FA15-4E6F-BF2C-25C643A830BE
+[2025-10-13 00:51:16] RESP tipo=emitida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:16] REQ tipo=emitida id=16 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=422A4F77-AAFA-4859-A4FE-8F11A183D131
+[2025-10-13 00:51:17] RESP tipo=emitida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:17] REQ tipo=emitida id=24 re=XAXX010101000 rr=CRA011109LSA tt=0000000754.000000 uuid=97B24DC8-1F4C-4758-BF0E-1476791112A1
+[2025-10-13 00:51:18] RESP tipo=emitida id=24 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:18] REQ tipo=emitida id=14 re=XAXX010101000 rr=SFA010213FR0 tt=0000000500.000000 uuid=12F00359-8299-4BB6-97CC-4860C23E8B1B
+[2025-10-13 00:51:18] RESP tipo=emitida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:18] REQ tipo=emitida id=23 re=XAXX010101000 rr=SFA010213FR0 tt=0000000326.000000 uuid=DB020C39-B537-42F4-BC38-62D9ED7EB071
+[2025-10-13 00:51:19] RESP tipo=emitida id=23 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:19] REQ tipo=emitida id=12 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000142.000000 uuid=9326840F-4D94-438B-9C51-1B5B91E70600
+[2025-10-13 00:51:20] RESP tipo=emitida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:20] REQ tipo=emitida id=11 re=XAXX010101000 rr=PNP9003312C9 tt=0000000174.000000 uuid=0C2ED07C-2ACB-41E0-90D1-BAC3549D97BD
+[2025-10-13 00:51:20] RESP tipo=emitida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:20] REQ tipo=emitida id=10 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=9AB706CB-0F6B-499D-8214-A1818C79E48E
+[2025-10-13 00:51:21] RESP tipo=emitida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:21] REQ tipo=emitida id=9 re=XAXX010101000 rr=IIN850215MIA tt=0000000550.000000 uuid=AC547668-3289-4784-BC2A-2A69C663328F
+[2025-10-13 00:51:22] RESP tipo=emitida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:22] REQ tipo=emitida id=8 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=C03F56C2-D84D-4550-9971-7A1D98C9231E
+[2025-10-13 00:51:23] RESP tipo=emitida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:23] REQ tipo=emitida id=29 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=A0F6E88B-E0EA-4EE9-B42C-F1E98DC2AFC1
+[2025-10-13 00:51:23] RESP tipo=emitida id=29 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 00:51:23] REQ tipo=emitida id=6 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=7DD5596B-A201-478B-AF9D-447E40D68163
+[2025-10-13 00:51:24] RESP tipo=emitida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:24] REQ tipo=emitida id=5 re=XAXX010101000 rr=SFA010213FR0 tt=0000000354.000000 uuid=C56B97BA-4A44-401E-8052-EC680D500D16
+[2025-10-13 00:51:25] RESP tipo=emitida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:25] REQ tipo=emitida id=4 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=07B431E2-BC3E-4C5A-9AA1-A8FB91A077E2
+[2025-10-13 00:51:25] RESP tipo=emitida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:25] REQ tipo=emitida id=3 re=XAXX010101000 rr=IIN850215MIA tt=0000000696.000000 uuid=04D5C060-1AAA-440B-B6CB-52CFFEEBEA1F
+[2025-10-13 00:51:26] RESP tipo=emitida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:26] REQ tipo=emitida id=2 re=XAXX010101000 rr=IIN850215MIA tt=0000000395.000000 uuid=D4D3CAF0-03E1-4932-90B8-610C7FDF0537
+[2025-10-13 00:51:26] RESP tipo=emitida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:51:26] REQ tipo=emitida id=22 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000145.000000 uuid=96482038-7298-47AA-A1FA-D0D9651893D5
+[2025-10-13 00:51:27] RESP tipo=emitida id=22 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:53:55] REQ tipo=emitida id=27 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=31C1002E-EBCD-4DD9-95AC-4BBAC271E7A0
+[2025-10-13 00:53:55] RESP tipo=emitida id=27 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:53:55] REQ tipo=emitida id=28 re=XAXX010101000 rr=SFA010213FR0 tt=0000000350.000000 uuid=C899E8A5-D60E-48D5-81A7-5DDFB2E826D6
+[2025-10-13 00:53:56] RESP tipo=emitida id=28 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:53:56] REQ tipo=emitida id=19 re=XAXX010101000 rr=CSU0208141W0 tt=0000000225.000000 uuid=CBCCAC7F-5592-43AA-871B-9DD56D34E534
+[2025-10-13 00:53:57] RESP tipo=emitida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:53:57] REQ tipo=emitida id=18 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=F14DC20D-2103-4FD6-A406-7004E3BE0383
+[2025-10-13 00:53:57] RESP tipo=emitida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:53:57] REQ tipo=emitida id=17 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=65C63E37-FA15-4E6F-BF2C-25C643A830BE
+[2025-10-13 00:53:58] RESP tipo=emitida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:53:58] REQ tipo=emitida id=16 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=422A4F77-AAFA-4859-A4FE-8F11A183D131
+[2025-10-13 00:53:59] RESP tipo=emitida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:53:59] REQ tipo=emitida id=24 re=XAXX010101000 rr=CRA011109LSA tt=0000000754.000000 uuid=97B24DC8-1F4C-4758-BF0E-1476791112A1
+[2025-10-13 00:53:59] RESP tipo=emitida id=24 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:53:59] REQ tipo=emitida id=14 re=XAXX010101000 rr=SFA010213FR0 tt=0000000500.000000 uuid=12F00359-8299-4BB6-97CC-4860C23E8B1B
+[2025-10-13 00:54:00] RESP tipo=emitida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:54:00] REQ tipo=emitida id=23 re=XAXX010101000 rr=SFA010213FR0 tt=0000000326.000000 uuid=DB020C39-B537-42F4-BC38-62D9ED7EB071
+[2025-10-13 00:54:00] RESP tipo=emitida id=23 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:54:00] REQ tipo=emitida id=12 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000142.000000 uuid=9326840F-4D94-438B-9C51-1B5B91E70600
+[2025-10-13 00:54:01] RESP tipo=emitida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:54:01] REQ tipo=emitida id=11 re=XAXX010101000 rr=PNP9003312C9 tt=0000000174.000000 uuid=0C2ED07C-2ACB-41E0-90D1-BAC3549D97BD
+[2025-10-13 00:54:02] RESP tipo=emitida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:54:02] REQ tipo=emitida id=10 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=9AB706CB-0F6B-499D-8214-A1818C79E48E
+[2025-10-13 00:54:02] RESP tipo=emitida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:54:02] REQ tipo=emitida id=9 re=XAXX010101000 rr=IIN850215MIA tt=0000000550.000000 uuid=AC547668-3289-4784-BC2A-2A69C663328F
+[2025-10-13 00:54:03] RESP tipo=emitida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:54:03] REQ tipo=emitida id=8 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=C03F56C2-D84D-4550-9971-7A1D98C9231E
+[2025-10-13 00:54:04] RESP tipo=emitida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:54:04] REQ tipo=emitida id=30 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=A0F6E88B-E0EA-4EE9-B42C-F1E98DC2AFC1
+[2025-10-13 00:54:04] RESP tipo=emitida id=30 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 00:54:04] REQ tipo=emitida id=6 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=7DD5596B-A201-478B-AF9D-447E40D68163
+[2025-10-13 00:54:05] RESP tipo=emitida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:54:05] REQ tipo=emitida id=5 re=XAXX010101000 rr=SFA010213FR0 tt=0000000354.000000 uuid=C56B97BA-4A44-401E-8052-EC680D500D16
+[2025-10-13 00:54:06] RESP tipo=emitida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:54:06] REQ tipo=emitida id=4 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=07B431E2-BC3E-4C5A-9AA1-A8FB91A077E2
+[2025-10-13 00:54:06] RESP tipo=emitida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:54:06] REQ tipo=emitida id=3 re=XAXX010101000 rr=IIN850215MIA tt=0000000696.000000 uuid=04D5C060-1AAA-440B-B6CB-52CFFEEBEA1F
+[2025-10-13 00:54:07] RESP tipo=emitida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:54:07] REQ tipo=emitida id=2 re=XAXX010101000 rr=IIN850215MIA tt=0000000395.000000 uuid=D4D3CAF0-03E1-4932-90B8-610C7FDF0537
+[2025-10-13 00:54:08] RESP tipo=emitida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:54:08] REQ tipo=emitida id=22 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000145.000000 uuid=96482038-7298-47AA-A1FA-D0D9651893D5
+[2025-10-13 00:54:09] RESP tipo=emitida id=22 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:46] REQ tipo=emitida id=27 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=31C1002E-EBCD-4DD9-95AC-4BBAC271E7A0
+[2025-10-13 00:55:47] RESP tipo=emitida id=27 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:47] REQ tipo=emitida id=28 re=XAXX010101000 rr=SFA010213FR0 tt=0000000350.000000 uuid=C899E8A5-D60E-48D5-81A7-5DDFB2E826D6
+[2025-10-13 00:55:47] RESP tipo=emitida id=28 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:47] REQ tipo=emitida id=19 re=XAXX010101000 rr=CSU0208141W0 tt=0000000225.000000 uuid=CBCCAC7F-5592-43AA-871B-9DD56D34E534
+[2025-10-13 00:55:48] RESP tipo=emitida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:48] REQ tipo=emitida id=18 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=F14DC20D-2103-4FD6-A406-7004E3BE0383
+[2025-10-13 00:55:49] RESP tipo=emitida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:49] REQ tipo=emitida id=17 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=65C63E37-FA15-4E6F-BF2C-25C643A830BE
+[2025-10-13 00:55:49] RESP tipo=emitida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:49] REQ tipo=emitida id=16 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=422A4F77-AAFA-4859-A4FE-8F11A183D131
+[2025-10-13 00:55:50] RESP tipo=emitida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:50] REQ tipo=emitida id=24 re=XAXX010101000 rr=CRA011109LSA tt=0000000754.000000 uuid=97B24DC8-1F4C-4758-BF0E-1476791112A1
+[2025-10-13 00:55:50] RESP tipo=emitida id=24 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:50] REQ tipo=emitida id=14 re=XAXX010101000 rr=SFA010213FR0 tt=0000000500.000000 uuid=12F00359-8299-4BB6-97CC-4860C23E8B1B
+[2025-10-13 00:55:51] RESP tipo=emitida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:51] REQ tipo=emitida id=23 re=XAXX010101000 rr=SFA010213FR0 tt=0000000326.000000 uuid=DB020C39-B537-42F4-BC38-62D9ED7EB071
+[2025-10-13 00:55:52] RESP tipo=emitida id=23 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:52] REQ tipo=emitida id=12 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000142.000000 uuid=9326840F-4D94-438B-9C51-1B5B91E70600
+[2025-10-13 00:55:52] RESP tipo=emitida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:52] REQ tipo=emitida id=11 re=XAXX010101000 rr=PNP9003312C9 tt=0000000174.000000 uuid=0C2ED07C-2ACB-41E0-90D1-BAC3549D97BD
+[2025-10-13 00:55:53] RESP tipo=emitida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:53] REQ tipo=emitida id=10 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=9AB706CB-0F6B-499D-8214-A1818C79E48E
+[2025-10-13 00:55:54] RESP tipo=emitida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:54] REQ tipo=emitida id=9 re=XAXX010101000 rr=IIN850215MIA tt=0000000550.000000 uuid=AC547668-3289-4784-BC2A-2A69C663328F
+[2025-10-13 00:55:54] RESP tipo=emitida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:54] REQ tipo=emitida id=8 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=C03F56C2-D84D-4550-9971-7A1D98C9231E
+[2025-10-13 00:55:55] RESP tipo=emitida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:55] REQ tipo=emitida id=31 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=A0F6E88B-E0EA-4EE9-B42C-F1E98DC2AFC1
+[2025-10-13 00:55:56] RESP tipo=emitida id=31 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 00:55:56] REQ tipo=emitida id=6 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=7DD5596B-A201-478B-AF9D-447E40D68163
+[2025-10-13 00:55:56] RESP tipo=emitida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:56] REQ tipo=emitida id=5 re=XAXX010101000 rr=SFA010213FR0 tt=0000000354.000000 uuid=C56B97BA-4A44-401E-8052-EC680D500D16
+[2025-10-13 00:55:57] RESP tipo=emitida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:57] REQ tipo=emitida id=4 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=07B431E2-BC3E-4C5A-9AA1-A8FB91A077E2
+[2025-10-13 00:55:58] RESP tipo=emitida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:58] REQ tipo=emitida id=3 re=XAXX010101000 rr=IIN850215MIA tt=0000000696.000000 uuid=04D5C060-1AAA-440B-B6CB-52CFFEEBEA1F
+[2025-10-13 00:55:58] RESP tipo=emitida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:58] REQ tipo=emitida id=2 re=XAXX010101000 rr=IIN850215MIA tt=0000000395.000000 uuid=D4D3CAF0-03E1-4932-90B8-610C7FDF0537
+[2025-10-13 00:55:59] RESP tipo=emitida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 00:55:59] REQ tipo=emitida id=22 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000145.000000 uuid=96482038-7298-47AA-A1FA-D0D9651893D5
+[2025-10-13 00:56:01] RESP tipo=emitida id=22 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:10] REQ tipo=emitida id=28 re=XAXX010101000 rr=SFA010213FR0 tt=0000000350.000000 uuid=C899E8A5-D60E-48D5-81A7-5DDFB2E826D6
+[2025-10-13 01:01:11] RESP tipo=emitida id=28 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:11] REQ tipo=emitida id=27 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=31C1002E-EBCD-4DD9-95AC-4BBAC271E7A0
+[2025-10-13 01:01:11] RESP tipo=emitida id=27 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:11] REQ tipo=emitida id=19 re=XAXX010101000 rr=CSU0208141W0 tt=0000000225.000000 uuid=CBCCAC7F-5592-43AA-871B-9DD56D34E534
+[2025-10-13 01:01:12] RESP tipo=emitida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:12] REQ tipo=emitida id=18 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=F14DC20D-2103-4FD6-A406-7004E3BE0383
+[2025-10-13 01:01:13] RESP tipo=emitida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:13] REQ tipo=emitida id=17 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=65C63E37-FA15-4E6F-BF2C-25C643A830BE
+[2025-10-13 01:01:13] RESP tipo=emitida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:13] REQ tipo=emitida id=16 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=422A4F77-AAFA-4859-A4FE-8F11A183D131
+[2025-10-13 01:01:14] RESP tipo=emitida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:14] REQ tipo=emitida id=24 re=XAXX010101000 rr=CRA011109LSA tt=0000000754.000000 uuid=97B24DC8-1F4C-4758-BF0E-1476791112A1
+[2025-10-13 01:01:15] RESP tipo=emitida id=24 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:15] REQ tipo=emitida id=14 re=XAXX010101000 rr=SFA010213FR0 tt=0000000500.000000 uuid=12F00359-8299-4BB6-97CC-4860C23E8B1B
+[2025-10-13 01:01:15] RESP tipo=emitida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:15] REQ tipo=emitida id=23 re=XAXX010101000 rr=SFA010213FR0 tt=0000000326.000000 uuid=DB020C39-B537-42F4-BC38-62D9ED7EB071
+[2025-10-13 01:01:16] RESP tipo=emitida id=23 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:16] REQ tipo=emitida id=12 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000142.000000 uuid=9326840F-4D94-438B-9C51-1B5B91E70600
+[2025-10-13 01:01:17] RESP tipo=emitida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:17] REQ tipo=emitida id=11 re=XAXX010101000 rr=PNP9003312C9 tt=0000000174.000000 uuid=0C2ED07C-2ACB-41E0-90D1-BAC3549D97BD
+[2025-10-13 01:01:17] RESP tipo=emitida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:17] REQ tipo=emitida id=10 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=9AB706CB-0F6B-499D-8214-A1818C79E48E
+[2025-10-13 01:01:18] RESP tipo=emitida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:18] REQ tipo=emitida id=9 re=XAXX010101000 rr=IIN850215MIA tt=0000000550.000000 uuid=AC547668-3289-4784-BC2A-2A69C663328F
+[2025-10-13 01:01:19] RESP tipo=emitida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:19] REQ tipo=emitida id=8 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=C03F56C2-D84D-4550-9971-7A1D98C9231E
+[2025-10-13 01:01:19] RESP tipo=emitida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:20] REQ tipo=emitida id=31 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=A0F6E88B-E0EA-4EE9-B42C-F1E98DC2AFC1
+[2025-10-13 01:01:21] RESP tipo=emitida id=31 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 01:01:21] REQ tipo=emitida id=6 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=7DD5596B-A201-478B-AF9D-447E40D68163
+[2025-10-13 01:01:22] RESP tipo=emitida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:22] REQ tipo=emitida id=5 re=XAXX010101000 rr=SFA010213FR0 tt=0000000354.000000 uuid=C56B97BA-4A44-401E-8052-EC680D500D16
+[2025-10-13 01:01:22] RESP tipo=emitida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:22] REQ tipo=emitida id=4 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=07B431E2-BC3E-4C5A-9AA1-A8FB91A077E2
+[2025-10-13 01:01:23] RESP tipo=emitida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:23] REQ tipo=emitida id=3 re=XAXX010101000 rr=IIN850215MIA tt=0000000696.000000 uuid=04D5C060-1AAA-440B-B6CB-52CFFEEBEA1F
+[2025-10-13 01:01:24] RESP tipo=emitida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:24] REQ tipo=emitida id=2 re=XAXX010101000 rr=IIN850215MIA tt=0000000395.000000 uuid=D4D3CAF0-03E1-4932-90B8-610C7FDF0537
+[2025-10-13 01:01:24] RESP tipo=emitida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:01:24] REQ tipo=emitida id=22 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000145.000000 uuid=96482038-7298-47AA-A1FA-D0D9651893D5
+[2025-10-13 01:01:25] RESP tipo=emitida id=22 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:36] REQ tipo=emitida id=28 re=XAXX010101000 rr=SFA010213FR0 tt=0000000350.000000 uuid=C899E8A5-D60E-48D5-81A7-5DDFB2E826D6
+[2025-10-13 01:02:37] RESP tipo=emitida id=28 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:37] REQ tipo=emitida id=27 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=31C1002E-EBCD-4DD9-95AC-4BBAC271E7A0
+[2025-10-13 01:02:38] RESP tipo=emitida id=27 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:38] REQ tipo=emitida id=19 re=XAXX010101000 rr=CSU0208141W0 tt=0000000225.000000 uuid=CBCCAC7F-5592-43AA-871B-9DD56D34E534
+[2025-10-13 01:02:38] RESP tipo=emitida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:38] REQ tipo=emitida id=18 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=F14DC20D-2103-4FD6-A406-7004E3BE0383
+[2025-10-13 01:02:39] RESP tipo=emitida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:39] REQ tipo=emitida id=17 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=65C63E37-FA15-4E6F-BF2C-25C643A830BE
+[2025-10-13 01:02:40] RESP tipo=emitida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:40] REQ tipo=emitida id=16 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=422A4F77-AAFA-4859-A4FE-8F11A183D131
+[2025-10-13 01:02:41] RESP tipo=emitida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:41] REQ tipo=emitida id=24 re=XAXX010101000 rr=CRA011109LSA tt=0000000754.000000 uuid=97B24DC8-1F4C-4758-BF0E-1476791112A1
+[2025-10-13 01:02:41] RESP tipo=emitida id=24 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:41] REQ tipo=emitida id=14 re=XAXX010101000 rr=SFA010213FR0 tt=0000000500.000000 uuid=12F00359-8299-4BB6-97CC-4860C23E8B1B
+[2025-10-13 01:02:42] RESP tipo=emitida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:42] REQ tipo=emitida id=23 re=XAXX010101000 rr=SFA010213FR0 tt=0000000326.000000 uuid=DB020C39-B537-42F4-BC38-62D9ED7EB071
+[2025-10-13 01:02:43] RESP tipo=emitida id=23 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:43] REQ tipo=emitida id=12 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000142.000000 uuid=9326840F-4D94-438B-9C51-1B5B91E70600
+[2025-10-13 01:02:43] RESP tipo=emitida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:43] REQ tipo=emitida id=11 re=XAXX010101000 rr=PNP9003312C9 tt=0000000174.000000 uuid=0C2ED07C-2ACB-41E0-90D1-BAC3549D97BD
+[2025-10-13 01:02:44] RESP tipo=emitida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:44] REQ tipo=emitida id=10 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=9AB706CB-0F6B-499D-8214-A1818C79E48E
+[2025-10-13 01:02:45] RESP tipo=emitida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:45] REQ tipo=emitida id=9 re=XAXX010101000 rr=IIN850215MIA tt=0000000550.000000 uuid=AC547668-3289-4784-BC2A-2A69C663328F
+[2025-10-13 01:02:45] RESP tipo=emitida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:45] REQ tipo=emitida id=8 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=C03F56C2-D84D-4550-9971-7A1D98C9231E
+[2025-10-13 01:02:46] RESP tipo=emitida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:46] REQ tipo=emitida id=32 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=A0F6E88B-E0EA-4EE9-B42C-F1E98DC2AFC1
+[2025-10-13 01:02:47] RESP tipo=emitida id=32 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 01:02:47] REQ tipo=emitida id=6 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=7DD5596B-A201-478B-AF9D-447E40D68163
+[2025-10-13 01:02:47] RESP tipo=emitida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:47] REQ tipo=emitida id=5 re=XAXX010101000 rr=SFA010213FR0 tt=0000000354.000000 uuid=C56B97BA-4A44-401E-8052-EC680D500D16
+[2025-10-13 01:02:48] RESP tipo=emitida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:48] REQ tipo=emitida id=4 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=07B431E2-BC3E-4C5A-9AA1-A8FB91A077E2
+[2025-10-13 01:02:49] RESP tipo=emitida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:49] REQ tipo=emitida id=3 re=XAXX010101000 rr=IIN850215MIA tt=0000000696.000000 uuid=04D5C060-1AAA-440B-B6CB-52CFFEEBEA1F
+[2025-10-13 01:02:49] RESP tipo=emitida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:49] REQ tipo=emitida id=2 re=XAXX010101000 rr=IIN850215MIA tt=0000000395.000000 uuid=D4D3CAF0-03E1-4932-90B8-610C7FDF0537
+[2025-10-13 01:02:50] RESP tipo=emitida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:02:50] REQ tipo=emitida id=22 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000145.000000 uuid=96482038-7298-47AA-A1FA-D0D9651893D5
+[2025-10-13 01:02:51] RESP tipo=emitida id=22 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:01] REQ tipo=emitida id=28 re=XAXX010101000 rr=SFA010213FR0 tt=0000000350.000000 uuid=C899E8A5-D60E-48D5-81A7-5DDFB2E826D6
+[2025-10-13 01:05:01] RESP tipo=emitida id=28 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:01] REQ tipo=emitida id=27 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=31C1002E-EBCD-4DD9-95AC-4BBAC271E7A0
+[2025-10-13 01:05:02] RESP tipo=emitida id=27 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:02] REQ tipo=emitida id=19 re=XAXX010101000 rr=CSU0208141W0 tt=0000000225.000000 uuid=CBCCAC7F-5592-43AA-871B-9DD56D34E534
+[2025-10-13 01:05:03] RESP tipo=emitida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:03] REQ tipo=emitida id=18 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=F14DC20D-2103-4FD6-A406-7004E3BE0383
+[2025-10-13 01:05:03] RESP tipo=emitida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:03] REQ tipo=emitida id=17 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=65C63E37-FA15-4E6F-BF2C-25C643A830BE
+[2025-10-13 01:05:04] RESP tipo=emitida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:04] REQ tipo=emitida id=16 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=422A4F77-AAFA-4859-A4FE-8F11A183D131
+[2025-10-13 01:05:04] RESP tipo=emitida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:04] REQ tipo=emitida id=24 re=XAXX010101000 rr=CRA011109LSA tt=0000000754.000000 uuid=97B24DC8-1F4C-4758-BF0E-1476791112A1
+[2025-10-13 01:05:05] RESP tipo=emitida id=24 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:05] REQ tipo=emitida id=14 re=XAXX010101000 rr=SFA010213FR0 tt=0000000500.000000 uuid=12F00359-8299-4BB6-97CC-4860C23E8B1B
+[2025-10-13 01:05:05] RESP tipo=emitida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:05] REQ tipo=emitida id=23 re=XAXX010101000 rr=SFA010213FR0 tt=0000000326.000000 uuid=DB020C39-B537-42F4-BC38-62D9ED7EB071
+[2025-10-13 01:05:06] RESP tipo=emitida id=23 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:06] REQ tipo=emitida id=12 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000142.000000 uuid=9326840F-4D94-438B-9C51-1B5B91E70600
+[2025-10-13 01:05:06] RESP tipo=emitida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:06] REQ tipo=emitida id=11 re=XAXX010101000 rr=PNP9003312C9 tt=0000000174.000000 uuid=0C2ED07C-2ACB-41E0-90D1-BAC3549D97BD
+[2025-10-13 01:05:07] RESP tipo=emitida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:07] REQ tipo=emitida id=10 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=9AB706CB-0F6B-499D-8214-A1818C79E48E
+[2025-10-13 01:05:07] RESP tipo=emitida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:07] REQ tipo=emitida id=9 re=XAXX010101000 rr=IIN850215MIA tt=0000000550.000000 uuid=AC547668-3289-4784-BC2A-2A69C663328F
+[2025-10-13 01:05:08] RESP tipo=emitida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:08] REQ tipo=emitida id=8 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=C03F56C2-D84D-4550-9971-7A1D98C9231E
+[2025-10-13 01:05:08] RESP tipo=emitida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:08] REQ tipo=emitida id=32 re=XAXX010101000 rr=SFA010213FR0 tt=0000000000.000000 uuid=A0F6E88B-E0EA-4EE9-B42C-F1E98DC2AFC1
+[2025-10-13 01:05:09] RESP tipo=emitida id=32 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 01:05:09] ERROR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'tasa0_base = 0.00,
+            tasa16_base = 0.00,
+            iva_importe ...' at line 12
+[2025-10-13 01:05:09] REQ tipo=emitida id=6 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=7DD5596B-A201-478B-AF9D-447E40D68163
+[2025-10-13 01:05:10] RESP tipo=emitida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:10] REQ tipo=emitida id=5 re=XAXX010101000 rr=SFA010213FR0 tt=0000000354.000000 uuid=C56B97BA-4A44-401E-8052-EC680D500D16
+[2025-10-13 01:05:10] RESP tipo=emitida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:10] REQ tipo=emitida id=4 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=07B431E2-BC3E-4C5A-9AA1-A8FB91A077E2
+[2025-10-13 01:05:11] RESP tipo=emitida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:11] REQ tipo=emitida id=3 re=XAXX010101000 rr=IIN850215MIA tt=0000000696.000000 uuid=04D5C060-1AAA-440B-B6CB-52CFFEEBEA1F
+[2025-10-13 01:05:11] RESP tipo=emitida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:11] REQ tipo=emitida id=2 re=XAXX010101000 rr=IIN850215MIA tt=0000000395.000000 uuid=D4D3CAF0-03E1-4932-90B8-610C7FDF0537
+[2025-10-13 01:05:12] RESP tipo=emitida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:12] REQ tipo=emitida id=22 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000145.000000 uuid=96482038-7298-47AA-A1FA-D0D9651893D5
+[2025-10-13 01:05:12] RESP tipo=emitida id=22 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:46] REQ tipo=emitida id=28 re=XAXX010101000 rr=SFA010213FR0 tt=0000000350.000000 uuid=C899E8A5-D60E-48D5-81A7-5DDFB2E826D6
+[2025-10-13 01:05:46] RESP tipo=emitida id=28 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:46] REQ tipo=emitida id=27 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=31C1002E-EBCD-4DD9-95AC-4BBAC271E7A0
+[2025-10-13 01:05:47] RESP tipo=emitida id=27 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:47] REQ tipo=emitida id=19 re=XAXX010101000 rr=CSU0208141W0 tt=0000000225.000000 uuid=CBCCAC7F-5592-43AA-871B-9DD56D34E534
+[2025-10-13 01:05:47] RESP tipo=emitida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:47] REQ tipo=emitida id=18 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=F14DC20D-2103-4FD6-A406-7004E3BE0383
+[2025-10-13 01:05:48] RESP tipo=emitida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:48] REQ tipo=emitida id=17 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=65C63E37-FA15-4E6F-BF2C-25C643A830BE
+[2025-10-13 01:05:48] RESP tipo=emitida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:48] REQ tipo=emitida id=16 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=422A4F77-AAFA-4859-A4FE-8F11A183D131
+[2025-10-13 01:05:49] RESP tipo=emitida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:49] REQ tipo=emitida id=24 re=XAXX010101000 rr=CRA011109LSA tt=0000000754.000000 uuid=97B24DC8-1F4C-4758-BF0E-1476791112A1
+[2025-10-13 01:05:49] RESP tipo=emitida id=24 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:49] REQ tipo=emitida id=14 re=XAXX010101000 rr=SFA010213FR0 tt=0000000500.000000 uuid=12F00359-8299-4BB6-97CC-4860C23E8B1B
+[2025-10-13 01:05:50] RESP tipo=emitida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:50] REQ tipo=emitida id=23 re=XAXX010101000 rr=SFA010213FR0 tt=0000000326.000000 uuid=DB020C39-B537-42F4-BC38-62D9ED7EB071
+[2025-10-13 01:05:51] RESP tipo=emitida id=23 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:51] REQ tipo=emitida id=12 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000142.000000 uuid=9326840F-4D94-438B-9C51-1B5B91E70600
+[2025-10-13 01:05:51] RESP tipo=emitida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:51] REQ tipo=emitida id=11 re=XAXX010101000 rr=PNP9003312C9 tt=0000000174.000000 uuid=0C2ED07C-2ACB-41E0-90D1-BAC3549D97BD
+[2025-10-13 01:05:52] RESP tipo=emitida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:52] REQ tipo=emitida id=10 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=9AB706CB-0F6B-499D-8214-A1818C79E48E
+[2025-10-13 01:05:52] RESP tipo=emitida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:52] REQ tipo=emitida id=9 re=XAXX010101000 rr=IIN850215MIA tt=0000000550.000000 uuid=AC547668-3289-4784-BC2A-2A69C663328F
+[2025-10-13 01:05:53] RESP tipo=emitida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:53] REQ tipo=emitida id=8 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=C03F56C2-D84D-4550-9971-7A1D98C9231E
+[2025-10-13 01:05:53] RESP tipo=emitida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:53] REQ tipo=emitida id=32 re=XAXX010101000 rr=SFA010213FR0 tt=0000000000.000000 uuid=A0F6E88B-E0EA-4EE9-B42C-F1E98DC2AFC1
+[2025-10-13 01:05:54] RESP tipo=emitida id=32 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 01:05:54] REQ tipo=emitida id=6 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=7DD5596B-A201-478B-AF9D-447E40D68163
+[2025-10-13 01:05:54] RESP tipo=emitida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:54] REQ tipo=emitida id=5 re=XAXX010101000 rr=SFA010213FR0 tt=0000000354.000000 uuid=C56B97BA-4A44-401E-8052-EC680D500D16
+[2025-10-13 01:05:55] RESP tipo=emitida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:55] REQ tipo=emitida id=4 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=07B431E2-BC3E-4C5A-9AA1-A8FB91A077E2
+[2025-10-13 01:05:55] RESP tipo=emitida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:55] REQ tipo=emitida id=3 re=XAXX010101000 rr=IIN850215MIA tt=0000000696.000000 uuid=04D5C060-1AAA-440B-B6CB-52CFFEEBEA1F
+[2025-10-13 01:05:56] RESP tipo=emitida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:56] REQ tipo=emitida id=2 re=XAXX010101000 rr=IIN850215MIA tt=0000000395.000000 uuid=D4D3CAF0-03E1-4932-90B8-610C7FDF0537
+[2025-10-13 01:05:56] RESP tipo=emitida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:05:56] REQ tipo=emitida id=22 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000145.000000 uuid=96482038-7298-47AA-A1FA-D0D9651893D5
+[2025-10-13 01:05:57] RESP tipo=emitida id=22 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:31] REQ tipo=recibida id=24 re=PPA831231GI0 rr=XAXX010101000 tt=0000001756.040000 uuid=A6664415-5C7D-4EF5-8FCC-141D48775D6F
+[2025-10-13 01:06:32] RESP tipo=recibida id=24 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:32] REQ tipo=recibida id=23 re=PPA831231GI0 rr=XAXX010101000 tt=0000000919.400000 uuid=C9523DA5-4112-47CA-A9DF-30EBD60EB18A
+[2025-10-13 01:06:32] RESP tipo=recibida id=23 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:32] REQ tipo=recibida id=22 re=PPA831231GI0 rr=XAXX010101000 tt=0000001159.650000 uuid=46745676-A92C-4C02-BDB2-FC8FB4C165A7
+[2025-10-13 01:06:33] RESP tipo=recibida id=22 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:33] REQ tipo=recibida id=25 re=PPA831231GI0 rr=XAXX010101000 tt=0000001433.330000 uuid=6ED20004-485B-4250-A4BF-BB2A23378737
+[2025-10-13 01:06:33] RESP tipo=recibida id=25 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:33] REQ tipo=recibida id=20 re=PPA831231GI0 rr=XAXX010101000 tt=0000000000.000000 uuid=6695A3A9-DA0B-4F35-BA44-BB9D9ADE92BE
+[2025-10-13 01:06:34] RESP tipo=recibida id=20 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:34] REQ tipo=recibida id=19 re=PPA831231GI0 rr=XAXX010101000 tt=0000000139.010000 uuid=A3282790-968F-4F74-A507-B6F49576092C
+[2025-10-13 01:06:34] RESP tipo=recibida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:34] REQ tipo=recibida id=18 re=PPA831231GI0 rr=XAXX010101000 tt=0000000290.090000 uuid=23117C21-DAB4-4E19-A6BD-6EDE8CAC129F
+[2025-10-13 01:06:35] RESP tipo=recibida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:35] REQ tipo=recibida id=17 re=PPA831231GI0 rr=XAXX010101000 tt=0000000299.000000 uuid=9E0E204E-8996-4813-8B73-1B079DB847FA
+[2025-10-13 01:06:35] RESP tipo=recibida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:35] REQ tipo=recibida id=16 re=PPA831231GI0 rr=XAXX010101000 tt=0000000474.870000 uuid=F5A8317A-1F17-4A23-9EFE-2B0F8D362DFD
+[2025-10-13 01:06:36] RESP tipo=recibida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:36] REQ tipo=recibida id=15 re=AUAA621211PYA rr=XAXX010101000 tt=0000000753.300000 uuid=8B5D25A0-E439-4697-95C2-3909681B6B1F
+[2025-10-13 01:06:36] RESP tipo=recibida id=15 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:36] REQ tipo=recibida id=14 re=GPC780113EI2 rr=XAXX010101000 tt=0000000602.810000 uuid=06100D5C-D43D-F64D-9A54-4C4F767BB6B5
+[2025-10-13 01:06:37] RESP tipo=recibida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:37] REQ tipo=recibida id=13 re=SWI9912167A3 rr=XAXX010101000 tt=0000000097.800000 uuid=B8B143B5-02BA-4A8C-B10F-E2E395FEF42A
+[2025-10-13 01:06:37] RESP tipo=recibida id=13 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:37] REQ tipo=recibida id=12 re=PPA831231GI0 rr=XAXX010101000 tt=0000000483.610000 uuid=2BE847B0-A6CF-4237-A388-CDF014E17162
+[2025-10-13 01:06:38] RESP tipo=recibida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:38] REQ tipo=recibida id=11 re=PPA831231GI0 rr=XAXX010101000 tt=0000000378.220000 uuid=E33DE5E2-9B70-40BF-B1C5-21F756B104F8
+[2025-10-13 01:06:38] RESP tipo=recibida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:38] REQ tipo=recibida id=10 re=PPA831231GI0 rr=XAXX010101000 tt=0000000347.570000 uuid=4DABCA63-F9BC-4A85-AE75-0583B322E992
+[2025-10-13 01:06:39] RESP tipo=recibida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:39] REQ tipo=recibida id=9 re=GPC780113EI2 rr=XAXX010101000 tt=0000000405.520000 uuid=FDB0E64B-B992-D342-8DF9-F3FFCCB1D8C3
+[2025-10-13 01:06:40] RESP tipo=recibida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:40] REQ tipo=recibida id=8 re=PPA831231GI0 rr=XAXX010101000 tt=0000000157.500000 uuid=2D538750-E932-4845-AC40-E8161A4FA8B0
+[2025-10-13 01:06:40] RESP tipo=recibida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:40] REQ tipo=recibida id=7 re=PPA831231GI0 rr=XAXX010101000 tt=0000000360.810000 uuid=A9C69CD0-5CDB-4362-9187-BD37ADC76C15
+[2025-10-13 01:06:41] RESP tipo=recibida id=7 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:41] REQ tipo=recibida id=6 re=SON990511MI0 rr=XAXX010101000 tt=0000000405.520000 uuid=198BC67B-5D59-494C-8A34-745EB8B19D0C
+[2025-10-13 01:06:41] RESP tipo=recibida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:41] REQ tipo=recibida id=5 re=BBA830831LJ2 rr=XAXX010101000 tt=0000000000.000000 uuid=9896AA86-18F7-42A4-8148-39EA4A8CACBB
+[2025-10-13 01:06:42] RESP tipo=recibida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:42] REQ tipo=recibida id=4 re=PPA831231GI0 rr=XAXX010101000 tt=0000000102.800000 uuid=F5C1BE60-9900-4141-A0C6-30BDA24D5208
+[2025-10-13 01:06:42] RESP tipo=recibida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:42] REQ tipo=recibida id=2 re=PPA831231GI0 rr=XAXX010101000 tt=0000000393.750000 uuid=752CD19C-FE3D-4696-9817-DAD550A42639
+[2025-10-13 01:06:43] RESP tipo=recibida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:43] REQ tipo=recibida id=3 re=SWI9912167A3 rr=XAXX010101000 tt=0000000133.900000 uuid=4791C58A-0CC9-48E9-A1A6-C7169364C8E5
+[2025-10-13 01:06:43] RESP tipo=recibida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:06:43] REQ tipo=recibida id=1 re=SWI9912167A3 rr=XAXX010101000 tt=0000000128.100000 uuid=02EAE002-CB60-41CE-88B1-BD1A0564D2A7
+[2025-10-13 01:06:44] RESP tipo=recibida id=1 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:07:49] REQ tipo=recibida id=31 re=PICP821209752 rr=XAXX010101000 tt=0000095637.270000 uuid=96FF57F8-2502-47C2-B448-A561376AFEAB
+[2025-10-13 01:07:50] RESP tipo=recibida id=31 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:07:50] REQ tipo=recibida id=32 re=PICP821209752 rr=XAXX010101000 tt=0000117017.410000 uuid=A21BBFD7-1B2C-4A4E-8460-B2BBD412309A
+[2025-10-13 01:07:50] RESP tipo=recibida id=32 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:07:50] REQ tipo=recibida id=33 re=PICP821209752 rr=XAXX010101000 tt=0000001000.000000 uuid=AA5176E5-8FFE-4C8F-B93E-6FE91BC34345
+[2025-10-13 01:07:51] RESP tipo=recibida id=33 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 01:07:51] REQ tipo=recibida id=34 re=PICP821209752 rr=XAXX010101000 tt=0000001000.000000 uuid=17362840-8276-4FC2-B7B1-3E4F3A65EC45
+[2025-10-13 01:07:52] RESP tipo=recibida id=34 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:07:52] REQ tipo=recibida id=35 re=PICP821209752 rr=XAXX010101000 tt=0000106136.200000 uuid=4DA82389-DBA2-4672-93DE-375C4E1308BF
+[2025-10-13 01:07:52] RESP tipo=recibida id=35 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:07:52] REQ tipo=recibida id=27 re=PICP821209752 rr=XAXX010101000 tt=0000065200.000000 uuid=9EBB65A3-F3F8-4CB8-B0BD-944B52C0F05E
+[2025-10-13 01:07:53] RESP tipo=recibida id=27 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 01:07:53] REQ tipo=recibida id=26 re=PICP821209752 rr=XAXX010101000 tt=0000062157.310000 uuid=A481A1D0-31A1-4E1C-8288-35479E8A74FD
+[2025-10-13 01:07:53] RESP tipo=recibida id=26 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:07:53] REQ tipo=recibida id=28 re=PICP821209752 rr=XAXX010101000 tt=0000011409.490000 uuid=EA1B7B14-4A48-42F4-845D-EA1F73F24245
+[2025-10-13 01:07:54] RESP tipo=recibida id=28 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:07:54] REQ tipo=recibida id=36 re=PICP821209752 rr=XAXX010101000 tt=0000000000.000000 uuid=A883A14E-2207-4839-B9DD-20E2AEC65467
+[2025-10-13 01:07:54] RESP tipo=recibida id=36 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 01:07:54] REQ tipo=recibida id=37 re=PICP821209752 rr=XAXX010101000 tt=0000000000.000000 uuid=3A916E96-25EB-4A07-9B5C-0FFEE15C3AC4
+[2025-10-13 01:07:55] RESP tipo=recibida id=37 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:07:55] REQ tipo=recibida id=29 re=PICP821209752 rr=XAXX010101000 tt=0000000000.000000 uuid=F9FA3CFA-585A-4B09-86D8-873694AD0F70
+[2025-10-13 01:07:55] RESP tipo=recibida id=29 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:07:55] REQ tipo=recibida id=30 re=PICP821209752 rr=XAXX010101000 tt=0000002436.000000 uuid=75AF7A10-6C45-480A-800E-E8F18B390AAC
+[2025-10-13 01:07:56] RESP tipo=recibida id=30 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:26] REQ tipo=emitida id=45 re=XAXX010101000 rr=SFA010213FR0 tt=0000000350.000000 uuid=C899E8A5-D60E-48D5-81A7-5DDFB2E826D6
+[2025-10-13 01:25:26] RESP tipo=emitida id=45 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:26] REQ tipo=emitida id=44 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=31C1002E-EBCD-4DD9-95AC-4BBAC271E7A0
+[2025-10-13 01:25:27] RESP tipo=emitida id=44 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:27] REQ tipo=emitida id=43 re=XAXX010101000 rr=CSU0208141W0 tt=0000000225.000000 uuid=CBCCAC7F-5592-43AA-871B-9DD56D34E534
+[2025-10-13 01:25:28] RESP tipo=emitida id=43 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:28] REQ tipo=emitida id=42 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=F14DC20D-2103-4FD6-A406-7004E3BE0383
+[2025-10-13 01:25:28] RESP tipo=emitida id=42 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:28] REQ tipo=emitida id=41 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=65C63E37-FA15-4E6F-BF2C-25C643A830BE
+[2025-10-13 01:25:29] RESP tipo=emitida id=41 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:29] REQ tipo=emitida id=40 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=422A4F77-AAFA-4859-A4FE-8F11A183D131
+[2025-10-13 01:25:29] RESP tipo=emitida id=40 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:29] REQ tipo=emitida id=39 re=XAXX010101000 rr=CRA011109LSA tt=0000000754.000000 uuid=97B24DC8-1F4C-4758-BF0E-1476791112A1
+[2025-10-13 01:25:30] RESP tipo=emitida id=39 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:30] REQ tipo=emitida id=38 re=XAXX010101000 rr=SFA010213FR0 tt=0000000500.000000 uuid=12F00359-8299-4BB6-97CC-4860C23E8B1B
+[2025-10-13 01:25:30] RESP tipo=emitida id=38 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:30] REQ tipo=emitida id=37 re=XAXX010101000 rr=SFA010213FR0 tt=0000000326.000000 uuid=DB020C39-B537-42F4-BC38-62D9ED7EB071
+[2025-10-13 01:25:31] RESP tipo=emitida id=37 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:31] REQ tipo=emitida id=12 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000142.000000 uuid=9326840F-4D94-438B-9C51-1B5B91E70600
+[2025-10-13 01:25:31] RESP tipo=emitida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:31] REQ tipo=emitida id=11 re=XAXX010101000 rr=PNP9003312C9 tt=0000000174.000000 uuid=0C2ED07C-2ACB-41E0-90D1-BAC3549D97BD
+[2025-10-13 01:25:32] RESP tipo=emitida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:32] REQ tipo=emitida id=10 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=9AB706CB-0F6B-499D-8214-A1818C79E48E
+[2025-10-13 01:25:32] RESP tipo=emitida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:32] REQ tipo=emitida id=9 re=XAXX010101000 rr=IIN850215MIA tt=0000000550.000000 uuid=AC547668-3289-4784-BC2A-2A69C663328F
+[2025-10-13 01:25:33] RESP tipo=emitida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:33] REQ tipo=emitida id=8 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=C03F56C2-D84D-4550-9971-7A1D98C9231E
+[2025-10-13 01:25:33] RESP tipo=emitida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:33] REQ tipo=emitida id=35 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=A0F6E88B-E0EA-4EE9-B42C-F1E98DC2AFC1
+[2025-10-13 01:25:34] RESP tipo=emitida id=35 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 01:25:34] REQ tipo=emitida id=34 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=7DD5596B-A201-478B-AF9D-447E40D68163
+[2025-10-13 01:25:34] RESP tipo=emitida id=34 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:34] REQ tipo=emitida id=5 re=XAXX010101000 rr=SFA010213FR0 tt=0000000354.000000 uuid=C56B97BA-4A44-401E-8052-EC680D500D16
+[2025-10-13 01:25:35] RESP tipo=emitida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:35] REQ tipo=emitida id=4 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=07B431E2-BC3E-4C5A-9AA1-A8FB91A077E2
+[2025-10-13 01:25:35] RESP tipo=emitida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:35] REQ tipo=emitida id=3 re=XAXX010101000 rr=IIN850215MIA tt=0000000696.000000 uuid=04D5C060-1AAA-440B-B6CB-52CFFEEBEA1F
+[2025-10-13 01:25:36] RESP tipo=emitida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:36] REQ tipo=emitida id=2 re=XAXX010101000 rr=IIN850215MIA tt=0000000395.000000 uuid=D4D3CAF0-03E1-4932-90B8-610C7FDF0537
+[2025-10-13 01:25:37] RESP tipo=emitida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:25:37] REQ tipo=emitida id=33 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000145.000000 uuid=96482038-7298-47AA-A1FA-D0D9651893D5
+[2025-10-13 01:25:37] RESP tipo=emitida id=33 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:40] REQ tipo=emitida id=21 re=XAXX010101000 rr=SFA010213FR0 tt=0000000350.000000 uuid=C899E8A5-D60E-48D5-81A7-5DDFB2E826D6
+[2025-10-13 01:42:40] RESP tipo=emitida id=21 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:40] REQ tipo=emitida id=20 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=31C1002E-EBCD-4DD9-95AC-4BBAC271E7A0
+[2025-10-13 01:42:41] RESP tipo=emitida id=20 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:41] REQ tipo=emitida id=19 re=XAXX010101000 rr=CSU0208141W0 tt=0000000225.000000 uuid=CBCCAC7F-5592-43AA-871B-9DD56D34E534
+[2025-10-13 01:42:41] RESP tipo=emitida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:41] REQ tipo=emitida id=18 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=F14DC20D-2103-4FD6-A406-7004E3BE0383
+[2025-10-13 01:42:42] RESP tipo=emitida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:42] REQ tipo=emitida id=17 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=65C63E37-FA15-4E6F-BF2C-25C643A830BE
+[2025-10-13 01:42:43] RESP tipo=emitida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:43] REQ tipo=emitida id=16 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=422A4F77-AAFA-4859-A4FE-8F11A183D131
+[2025-10-13 01:42:44] RESP tipo=emitida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:44] REQ tipo=emitida id=15 re=XAXX010101000 rr=CRA011109LSA tt=0000000754.000000 uuid=97B24DC8-1F4C-4758-BF0E-1476791112A1
+[2025-10-13 01:42:44] RESP tipo=emitida id=15 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:44] REQ tipo=emitida id=14 re=XAXX010101000 rr=SFA010213FR0 tt=0000000500.000000 uuid=12F00359-8299-4BB6-97CC-4860C23E8B1B
+[2025-10-13 01:42:45] RESP tipo=emitida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:45] REQ tipo=emitida id=13 re=XAXX010101000 rr=SFA010213FR0 tt=0000000326.000000 uuid=DB020C39-B537-42F4-BC38-62D9ED7EB071
+[2025-10-13 01:42:46] RESP tipo=emitida id=13 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:46] REQ tipo=emitida id=12 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000142.000000 uuid=9326840F-4D94-438B-9C51-1B5B91E70600
+[2025-10-13 01:42:46] RESP tipo=emitida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:46] REQ tipo=emitida id=11 re=XAXX010101000 rr=PNP9003312C9 tt=0000000174.000000 uuid=0C2ED07C-2ACB-41E0-90D1-BAC3549D97BD
+[2025-10-13 01:42:47] RESP tipo=emitida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:47] REQ tipo=emitida id=10 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=9AB706CB-0F6B-499D-8214-A1818C79E48E
+[2025-10-13 01:42:48] RESP tipo=emitida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:48] REQ tipo=emitida id=9 re=XAXX010101000 rr=IIN850215MIA tt=0000000550.000000 uuid=AC547668-3289-4784-BC2A-2A69C663328F
+[2025-10-13 01:42:48] RESP tipo=emitida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:48] REQ tipo=emitida id=8 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=C03F56C2-D84D-4550-9971-7A1D98C9231E
+[2025-10-13 01:42:49] RESP tipo=emitida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:49] REQ tipo=emitida id=7 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=A0F6E88B-E0EA-4EE9-B42C-F1E98DC2AFC1
+[2025-10-13 01:42:50] RESP tipo=emitida id=7 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 01:42:50] REQ tipo=emitida id=6 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=7DD5596B-A201-478B-AF9D-447E40D68163
+[2025-10-13 01:42:50] RESP tipo=emitida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:50] REQ tipo=emitida id=5 re=XAXX010101000 rr=SFA010213FR0 tt=0000000354.000000 uuid=C56B97BA-4A44-401E-8052-EC680D500D16
+[2025-10-13 01:42:51] RESP tipo=emitida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:51] REQ tipo=emitida id=4 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=07B431E2-BC3E-4C5A-9AA1-A8FB91A077E2
+[2025-10-13 01:42:52] RESP tipo=emitida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:52] REQ tipo=emitida id=3 re=XAXX010101000 rr=IIN850215MIA tt=0000000696.000000 uuid=04D5C060-1AAA-440B-B6CB-52CFFEEBEA1F
+[2025-10-13 01:42:52] RESP tipo=emitida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:52] REQ tipo=emitida id=2 re=XAXX010101000 rr=IIN850215MIA tt=0000000395.000000 uuid=D4D3CAF0-03E1-4932-90B8-610C7FDF0537
+[2025-10-13 01:42:53] RESP tipo=emitida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:42:53] REQ tipo=emitida id=1 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000145.000000 uuid=96482038-7298-47AA-A1FA-D0D9651893D5
+[2025-10-13 01:42:53] RESP tipo=emitida id=1 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:28] REQ tipo=recibida id=19 re=PPA831231GI0 rr=XAXX010101000 tt=0000000139.010000 uuid=A3282790-968F-4F74-A507-B6F49576092C
+[2025-10-13 01:43:29] RESP tipo=recibida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:29] REQ tipo=recibida id=18 re=PPA831231GI0 rr=XAXX010101000 tt=0000000290.090000 uuid=23117C21-DAB4-4E19-A6BD-6EDE8CAC129F
+[2025-10-13 01:43:30] RESP tipo=recibida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:30] REQ tipo=recibida id=17 re=PPA831231GI0 rr=XAXX010101000 tt=0000000299.000000 uuid=9E0E204E-8996-4813-8B73-1B079DB847FA
+[2025-10-13 01:43:30] RESP tipo=recibida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:30] REQ tipo=recibida id=16 re=PPA831231GI0 rr=XAXX010101000 tt=0000000474.870000 uuid=F5A8317A-1F17-4A23-9EFE-2B0F8D362DFD
+[2025-10-13 01:43:31] RESP tipo=recibida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:31] REQ tipo=recibida id=15 re=AUAA621211PYA rr=XAXX010101000 tt=0000000753.300000 uuid=8B5D25A0-E439-4697-95C2-3909681B6B1F
+[2025-10-13 01:43:32] RESP tipo=recibida id=15 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:32] REQ tipo=recibida id=14 re=GPC780113EI2 rr=XAXX010101000 tt=0000000602.810000 uuid=06100D5C-D43D-F64D-9A54-4C4F767BB6B5
+[2025-10-13 01:43:32] RESP tipo=recibida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:32] REQ tipo=recibida id=13 re=SWI9912167A3 rr=XAXX010101000 tt=0000000097.800000 uuid=B8B143B5-02BA-4A8C-B10F-E2E395FEF42A
+[2025-10-13 01:43:33] RESP tipo=recibida id=13 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:33] REQ tipo=recibida id=12 re=PPA831231GI0 rr=XAXX010101000 tt=0000000483.610000 uuid=2BE847B0-A6CF-4237-A388-CDF014E17162
+[2025-10-13 01:43:34] RESP tipo=recibida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:34] REQ tipo=recibida id=11 re=PPA831231GI0 rr=XAXX010101000 tt=0000000378.220000 uuid=E33DE5E2-9B70-40BF-B1C5-21F756B104F8
+[2025-10-13 01:43:34] RESP tipo=recibida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:34] REQ tipo=recibida id=10 re=PPA831231GI0 rr=XAXX010101000 tt=0000000347.570000 uuid=4DABCA63-F9BC-4A85-AE75-0583B322E992
+[2025-10-13 01:43:35] RESP tipo=recibida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:35] REQ tipo=recibida id=9 re=GPC780113EI2 rr=XAXX010101000 tt=0000000405.520000 uuid=FDB0E64B-B992-D342-8DF9-F3FFCCB1D8C3
+[2025-10-13 01:43:36] RESP tipo=recibida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:36] REQ tipo=recibida id=8 re=PPA831231GI0 rr=XAXX010101000 tt=0000000157.500000 uuid=2D538750-E932-4845-AC40-E8161A4FA8B0
+[2025-10-13 01:43:36] RESP tipo=recibida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:36] REQ tipo=recibida id=7 re=PPA831231GI0 rr=XAXX010101000 tt=0000000360.810000 uuid=A9C69CD0-5CDB-4362-9187-BD37ADC76C15
+[2025-10-13 01:43:37] RESP tipo=recibida id=7 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:37] REQ tipo=recibida id=6 re=SON990511MI0 rr=XAXX010101000 tt=0000000405.520000 uuid=198BC67B-5D59-494C-8A34-745EB8B19D0C
+[2025-10-13 01:43:38] RESP tipo=recibida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:38] REQ tipo=recibida id=5 re=BBA830831LJ2 rr=XAXX010101000 tt=0000000000.000000 uuid=9896AA86-18F7-42A4-8148-39EA4A8CACBB
+[2025-10-13 01:43:39] RESP tipo=recibida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:39] REQ tipo=recibida id=4 re=PPA831231GI0 rr=XAXX010101000 tt=0000000102.800000 uuid=F5C1BE60-9900-4141-A0C6-30BDA24D5208
+[2025-10-13 01:43:39] RESP tipo=recibida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:39] REQ tipo=recibida id=2 re=PPA831231GI0 rr=XAXX010101000 tt=0000000393.750000 uuid=752CD19C-FE3D-4696-9817-DAD550A42639
+[2025-10-13 01:43:40] RESP tipo=recibida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:40] REQ tipo=recibida id=3 re=SWI9912167A3 rr=XAXX010101000 tt=0000000133.900000 uuid=4791C58A-0CC9-48E9-A1A6-C7169364C8E5
+[2025-10-13 01:43:41] RESP tipo=recibida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 01:43:41] REQ tipo=recibida id=1 re=SWI9912167A3 rr=XAXX010101000 tt=0000000128.100000 uuid=02EAE002-CB60-41CE-88B1-BD1A0564D2A7
+[2025-10-13 01:43:41] RESP tipo=recibida id=1 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 02:58:30] REQ tipo=emitida id=20 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=31C1002E-EBCD-4DD9-95AC-4BBAC271E7A0
+[2025-10-13 02:58:31] RESP tipo=emitida id=20 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 02:58:31] REQ tipo=emitida id=21 re=XAXX010101000 rr=SFA010213FR0 tt=0000000350.000000 uuid=C899E8A5-D60E-48D5-81A7-5DDFB2E826D6
+[2025-10-13 02:58:32] RESP tipo=emitida id=21 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 02:58:32] REQ tipo=emitida id=19 re=XAXX010101000 rr=CSU0208141W0 tt=0000000225.000000 uuid=CBCCAC7F-5592-43AA-871B-9DD56D34E534
+[2025-10-13 02:58:33] RESP tipo=emitida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 02:58:33] REQ tipo=emitida id=18 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=F14DC20D-2103-4FD6-A406-7004E3BE0383
+[2025-10-13 02:58:34] RESP tipo=emitida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 02:58:34] REQ tipo=emitida id=17 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=65C63E37-FA15-4E6F-BF2C-25C643A830BE
+[2025-10-13 02:58:35] RESP tipo=emitida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 02:58:35] REQ tipo=emitida id=16 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=422A4F77-AAFA-4859-A4FE-8F11A183D131
+[2025-10-13 02:58:36] RESP tipo=emitida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 02:58:36] REQ tipo=emitida id=15 re=XAXX010101000 rr=CRA011109LSA tt=0000000754.000000 uuid=97B24DC8-1F4C-4758-BF0E-1476791112A1
+[2025-10-13 02:58:37] RESP tipo=emitida id=15 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 02:58:37] REQ tipo=emitida id=14 re=XAXX010101000 rr=SFA010213FR0 tt=0000000500.000000 uuid=12F00359-8299-4BB6-97CC-4860C23E8B1B
+[2025-10-13 02:58:38] RESP tipo=emitida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 02:58:38] REQ tipo=emitida id=13 re=XAXX010101000 rr=SFA010213FR0 tt=0000000326.000000 uuid=DB020C39-B537-42F4-BC38-62D9ED7EB071
+[2025-10-13 02:58:39] RESP tipo=emitida id=13 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 02:58:39] REQ tipo=emitida id=12 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000142.000000 uuid=9326840F-4D94-438B-9C51-1B5B91E70600
+[2025-10-13 02:58:40] RESP tipo=emitida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 02:58:40] REQ tipo=emitida id=11 re=XAXX010101000 rr=PNP9003312C9 tt=0000000174.000000 uuid=0C2ED07C-2ACB-41E0-90D1-BAC3549D97BD
+[2025-10-13 02:58:40] RESP tipo=emitida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 02:58:40] REQ tipo=emitida id=10 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=9AB706CB-0F6B-499D-8214-A1818C79E48E
+[2025-10-13 02:58:42] RESP tipo=emitida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:16:58] REQ tipo=recibida id=100 re=CPM110719SG3 rr=XAXX010101000 tt=0000000659.040000 uuid=801CB568-C528-4FA3-A01E-C3AEDC4DDBDE
+[2025-10-13 17:16:59] RESP tipo=recibida id=100 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:16:59] REQ tipo=recibida id=83 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000131.430000 uuid=7B5187B1-81E7-43F4-A4B1-9B9D2C51D833
+[2025-10-13 17:17:00] RESP tipo=recibida id=83 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:00] REQ tipo=recibida id=92 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000099.600000 uuid=44FAB1F5-73D1-40B7-9E6F-9B9D2C51306C
+[2025-10-13 17:17:01] RESP tipo=recibida id=92 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:01] REQ tipo=recibida id=128 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000074.700000 uuid=DB4020A3-A498-4F0F-8461-9B9D2C514CCE
+[2025-10-13 17:17:02] RESP tipo=recibida id=128 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:02] REQ tipo=recibida id=93 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000074.700000 uuid=61B3FD86-89D1-44D5-A6B5-9B9D2C518F50
+[2025-10-13 17:17:03] RESP tipo=recibida id=93 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:03] REQ tipo=recibida id=94 re=CPM110719SG3 rr=XAXX010101000 tt=0000000507.850000 uuid=64A4A0EE-C90E-4199-A586-C39326774A79
+[2025-10-13 17:17:04] RESP tipo=recibida id=94 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:04] REQ tipo=recibida id=104 re=RDI841003QJ4 rr=XAXX010101000 tt=0000000000.000000 uuid=3246D843-01DD-4C8E-A965-0C5A163CCE74
+[2025-10-13 17:17:05] RESP tipo=recibida id=104 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:05] REQ tipo=recibida id=108 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000515.130000 uuid=14048B8B-7FBA-45AE-8D9F-9B9D2C51A2E8
+[2025-10-13 17:17:06] RESP tipo=recibida id=108 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:06] REQ tipo=recibida id=110 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000272.240000 uuid=75639C58-925C-45A2-A552-9B9D2C51FE61
+[2025-10-13 17:17:07] RESP tipo=recibida id=110 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:07] REQ tipo=recibida id=90 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000169.320000 uuid=43AF51BF-2409-4A9E-B4B7-9B9D2C510069
+[2025-10-13 17:17:08] RESP tipo=recibida id=90 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:08] REQ tipo=recibida id=72 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000225.490000 uuid=1A128546-FA7A-4877-B2DD-9B9D2C51AA9C
+[2025-10-13 17:17:09] RESP tipo=recibida id=72 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:09] REQ tipo=recibida id=109 re=BAR011108CC6 rr=XAXX010101000 tt=0000000289.640000 uuid=52935C64-CDAF-454C-B8BF-9B9D2C51DF30
+[2025-10-13 17:17:10] RESP tipo=recibida id=109 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:10] REQ tipo=recibida id=96 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000185.410000 uuid=96C96C44-7772-435B-ABF9-9B9D2C513A0E
+[2025-10-13 17:17:11] RESP tipo=recibida id=96 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:11] REQ tipo=recibida id=75 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000072.970000 uuid=2F3C0332-30BE-4562-A9E1-9B9D2C517941
+[2025-10-13 17:17:12] RESP tipo=recibida id=75 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:12] REQ tipo=recibida id=101 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000072.970000 uuid=863F7BE2-A1B1-4B7B-8E23-9B9D2C5154F7
+[2025-10-13 17:17:13] RESP tipo=recibida id=101 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:13] REQ tipo=recibida id=103 re=CPM110719SG3 rr=XAXX010101000 tt=0000000864.510000 uuid=2673E685-D465-486D-9A57-A397B05F9405
+[2025-10-13 17:17:14] RESP tipo=recibida id=103 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:14] REQ tipo=recibida id=119 re=CPM110719SG3 rr=XAXX010101000 tt=0000000303.760000 uuid=B0B0BC2B-CCDC-4EA2-B197-488C14F52A8A
+[2025-10-13 17:17:15] RESP tipo=recibida id=119 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:15] REQ tipo=recibida id=78 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000008.310000 uuid=4FB4A252-14D9-44F6-A63A-9B9D2C5160B1
+[2025-10-13 17:17:16] RESP tipo=recibida id=78 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:16] REQ tipo=recibida id=88 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000353.580000 uuid=23E0FFA3-EC45-44DF-8B57-9B9D2C5177D9
+[2025-10-13 17:17:17] RESP tipo=recibida id=88 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:17] REQ tipo=recibida id=81 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000073.860000 uuid=06F0D87C-E146-45ED-A787-9B9D2C51BA78
+[2025-10-13 17:17:18] RESP tipo=recibida id=81 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:18] REQ tipo=recibida id=82 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000089.640000 uuid=6ACC12E3-3FA0-4C65-B0F7-9B9D2C51F64A
+[2025-10-13 17:17:19] RESP tipo=recibida id=82 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:19] REQ tipo=recibida id=77 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000053.120000 uuid=4EEBA7D2-8191-436A-8EEC-9B9D2C515C76
+[2025-10-13 17:17:20] RESP tipo=recibida id=77 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:20] REQ tipo=recibida id=126 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000061.450000 uuid=D98C256B-9ACA-4C49-83AC-9B9D2C5174BB
+[2025-10-13 17:17:21] RESP tipo=recibida id=126 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:21] REQ tipo=recibida id=138 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000061.450000 uuid=FEC5E74E-E1DA-4714-BA93-9B9D2C51136B
+[2025-10-13 17:17:22] RESP tipo=recibida id=138 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:22] REQ tipo=recibida id=130 re=BAR011108CC6 rr=XAXX010101000 tt=0000000507.400000 uuid=E80F5048-66B3-4BC9-9984-9B9D2C51683C
+[2025-10-13 17:17:23] RESP tipo=recibida id=130 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:23] REQ tipo=recibida id=124 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000431.940000 uuid=CAC39840-9C04-4ABA-BECE-9B9D2C5103E7
+[2025-10-13 17:17:24] RESP tipo=recibida id=124 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:24] REQ tipo=recibida id=133 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000284.670000 uuid=EE5E08FE-0743-4854-A526-9B9D2C51F34F
+[2025-10-13 17:17:25] RESP tipo=recibida id=133 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:25] REQ tipo=recibida id=132 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000284.670000 uuid=EC4AC99A-9FF5-4D5B-957C-9B9D2C510694
+[2025-10-13 17:17:26] RESP tipo=recibida id=132 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:26] REQ tipo=recibida id=97 re=RDI841003QJ4 rr=XAXX010101000 tt=0000000299.000000 uuid=149CB6C9-8E71-43B3-82AD-04F01718D798
+[2025-10-13 17:17:27] RESP tipo=recibida id=97 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:27] REQ tipo=recibida id=89 re=CPM110719SG3 rr=XAXX010101000 tt=0000000938.130000 uuid=32F66C86-7B66-4CAF-AA36-63CB85B76E55
+[2025-10-13 17:17:28] RESP tipo=recibida id=89 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:28] REQ tipo=recibida id=85 re=BSI061110963 rr=XAXX010101000 tt=0000000000.000000 uuid=7E279C1F-1BF7-4CCC-9E78-13B62AA371C9
+[2025-10-13 17:17:28] RESP tipo=recibida id=85 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:28] REQ tipo=recibida id=117 re=PPA831231GI0 rr=XAXX010101000 tt=0000000442.300000 uuid=AD827349-F07C-4470-BFD0-AC52E7B89251
+[2025-10-13 17:17:30] RESP tipo=recibida id=117 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:30] REQ tipo=recibida id=98 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000280.540000 uuid=269BE056-72F3-4644-A76D-9B9D2C5131B4
+[2025-10-13 17:17:31] RESP tipo=recibida id=98 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:31] REQ tipo=recibida id=129 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000313.700000 uuid=E43AA081-0D1E-4CA4-84C4-9B9D2C51DCEE
+[2025-10-13 17:17:32] RESP tipo=recibida id=129 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:32] REQ tipo=recibida id=99 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000053.140000 uuid=581C08DE-CA92-487F-BF27-9B9D2C51268C
+[2025-10-13 17:17:32] RESP tipo=recibida id=99 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:33] REQ tipo=recibida id=116 re=CPM110719SG3 rr=XAXX010101000 tt=0000000544.410000 uuid=A07F3F06-74AC-4395-906F-A7A3CEAFEF3A
+[2025-10-13 17:17:33] RESP tipo=recibida id=116 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:33] REQ tipo=recibida id=113 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000429.960000 uuid=74205331-B57B-4C4A-977B-9B9D2C51DB92
+[2025-10-13 17:17:35] RESP tipo=recibida id=113 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:35] REQ tipo=recibida id=118 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000022.940000 uuid=AFEF5001-77A0-4406-9C67-9B9D2C5143F1
+[2025-10-13 17:17:35] RESP tipo=recibida id=118 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:35] REQ tipo=recibida id=127 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000083.000000 uuid=D7669AF8-44E9-445A-82A9-9B9D2C51FF01
+[2025-10-13 17:17:36] RESP tipo=recibida id=127 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:36] REQ tipo=recibida id=135 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000083.000000 uuid=F7FE64A6-FBD6-4D32-9B39-9B9D2C515CA9
+[2025-10-13 17:17:38] RESP tipo=recibida id=135 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:38] REQ tipo=recibida id=137 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000296.310000 uuid=FBB68BCA-316B-4810-9E15-9B9D2C515470
+[2025-10-13 17:17:39] RESP tipo=recibida id=137 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:39] REQ tipo=recibida id=134 re=CPM110719SG3 rr=XAXX010101000 tt=0000000305.070000 uuid=F5E4D547-2C4E-413F-94D2-1B7941D70D5E
+[2025-10-13 17:17:39] RESP tipo=recibida id=134 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:40] REQ tipo=recibida id=112 re=CPM110719SG3 rr=XAXX010101000 tt=0000000305.070000 uuid=61664623-2937-4326-8FAD-2A04E1328C0F
+[2025-10-13 17:17:40] RESP tipo=recibida id=112 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:41] REQ tipo=recibida id=114 re=BAR011108CC6 rr=XAXX010101000 tt=0000000520.540000 uuid=A1B1C6A4-E7D4-41C8-B141-9B9D2C51F7FA
+[2025-10-13 17:17:42] RESP tipo=recibida id=114 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:42] REQ tipo=recibida id=120 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000043.160000 uuid=B503E6D4-56FE-4631-B0DC-9B9D2C51C8D8
+[2025-10-13 17:17:43] RESP tipo=recibida id=120 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:43] REQ tipo=recibida id=74 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000043.160000 uuid=2BC05D61-98AC-45B1-A037-9B9D2C51E900
+[2025-10-13 17:17:44] RESP tipo=recibida id=74 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:44] REQ tipo=recibida id=95 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000092.960000 uuid=94D8066D-0DEB-4201-A07D-9B9D2C517267
+[2025-10-13 17:17:45] RESP tipo=recibida id=95 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:45] REQ tipo=recibida id=106 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000092.960000 uuid=8718E5C4-899B-44A1-9A97-9B9D2C51F51C
+[2025-10-13 17:17:46] RESP tipo=recibida id=106 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:46] REQ tipo=recibida id=136 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000351.620000 uuid=FADBF189-1114-4F31-9A8B-9B9D2C516EC3
+[2025-10-13 17:17:46] RESP tipo=recibida id=136 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:47] REQ tipo=recibida id=122 re=CPM110719SG3 rr=XAXX010101000 tt=0000000085.590000 uuid=C3EA6263-D47C-4952-9AFF-C348C0FF4521
+[2025-10-13 17:17:48] RESP tipo=recibida id=122 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:48] REQ tipo=recibida id=131 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000611.850000 uuid=E3021416-873D-49E2-A4E1-9B9D2C5138C6
+[2025-10-13 17:17:48] RESP tipo=recibida id=131 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:49] REQ tipo=recibida id=86 re=BSI061110963 rr=XAXX010101000 tt=0000000000.000000 uuid=9C0B8601-1D4F-438D-9267-13B62AA36CAF
+[2025-10-13 17:17:49] RESP tipo=recibida id=86 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:49] REQ tipo=recibida id=80 re=CPM110719SG3 rr=XAXX010101000 tt=0000000895.390000 uuid=5FFA7409-0C62-4ABA-B022-B87A43775CA5
+[2025-10-13 17:17:50] RESP tipo=recibida id=80 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:50] REQ tipo=recibida id=84 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000393.440000 uuid=7C829B8D-55D9-4E56-A5BD-9B9D2C51082B
+[2025-10-13 17:17:51] RESP tipo=recibida id=84 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:51] REQ tipo=recibida id=115 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000081.340000 uuid=A4A4B2A9-CCB1-4701-B103-9B9D2C516EFB
+[2025-10-13 17:17:52] RESP tipo=recibida id=115 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:52] REQ tipo=recibida id=123 re=BAR011108CC6 rr=XAXX010101000 tt=0000000015.120000 uuid=C603B80B-55EE-4AF4-9D25-9B9D2C5170A4
+[2025-10-13 17:17:53] RESP tipo=recibida id=123 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:53] REQ tipo=recibida id=71 re=BAR011108CC6 rr=XAXX010101000 tt=0000000015.120000 uuid=0BD7B5A2-F781-43C3-9FEE-9B9D2C51BD79
+[2025-10-13 17:17:54] RESP tipo=recibida id=71 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:54] REQ tipo=recibida id=105 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000344.190000 uuid=6637DFDE-C008-4ACA-B2FC-9B9D2C51BDEE
+[2025-10-13 17:17:55] RESP tipo=recibida id=105 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:55] REQ tipo=recibida id=79 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000040.670000 uuid=5DEE9C04-C612-45BC-9A4E-9B9D2C51397E
+[2025-10-13 17:17:56] RESP tipo=recibida id=79 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:56] REQ tipo=recibida id=111 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000040.670000 uuid=37068008-A257-4812-AEFC-9B9D2C51E496
+[2025-10-13 17:17:57] RESP tipo=recibida id=111 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:57] REQ tipo=recibida id=73 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000122.010000 uuid=1ABCC121-1CE2-48D5-88BA-9B9D2C51A7E5
+[2025-10-13 17:17:58] RESP tipo=recibida id=73 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:58] REQ tipo=recibida id=107 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000038.180000 uuid=9616C258-AD87-4044-B3DD-9B9D2C51675E
+[2025-10-13 17:17:59] RESP tipo=recibida id=107 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:17:59] REQ tipo=recibida id=121 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000371.840000 uuid=BAF4FCA8-8B5A-4B0F-9262-9B9D2C513790
+[2025-10-13 17:18:00] RESP tipo=recibida id=121 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:18:00] REQ tipo=recibida id=102 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000038.180000 uuid=933AA09B-C70F-429D-90DF-9B9D2C51C093
+[2025-10-13 17:18:01] RESP tipo=recibida id=102 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:18:01] REQ tipo=recibida id=87 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000152.720000 uuid=18A3CEC4-C979-4A75-8796-9B9D2C515CDC
+[2025-10-13 17:18:02] RESP tipo=recibida id=87 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:18:02] REQ tipo=recibida id=91 re=BIM011108DJ5 rr=XAXX010101000 tt=0000000122.010000 uuid=43EB9547-9FA5-45BB-8CB6-9B9D2C51EC82
+[2025-10-13 17:18:03] RESP tipo=recibida id=91 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:18:03] REQ tipo=recibida id=125 re=CPM110719SG3 rr=XAXX010101000 tt=0000000134.400000 uuid=D5B43463-98CD-49B0-8150-4ED14AC18EA0
+[2025-10-13 17:18:04] RESP tipo=recibida id=125 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 17:18:04] REQ tipo=recibida id=76 re=CPM110719SG3 rr=XAXX010101000 tt=0000001325.870000 uuid=03C97926-F184-4679-A683-6F974593D6E7
+[2025-10-13 17:18:05] RESP tipo=recibida id=76 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:20] REQ tipo=emitida id=22 re=XAXX010101000 rr=IBN070115C65 tt=0000002088.000000 uuid=339A59D4-2FFD-41A0-8338-030B13134D07
+[2025-10-13 20:00:21] RESP tipo=emitida id=22 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:21] REQ tipo=emitida id=23 re=XAXX010101000 rr=MAB050505LX2 tt=0000000174.000000 uuid=344EDEEB-9409-4460-AF28-E0C3D95D9691
+[2025-10-13 20:00:22] RESP tipo=emitida id=23 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:22] REQ tipo=emitida id=24 re=XAXX010101000 rr=MAB050505LX2 tt=0000000110.000000 uuid=6C22886F-2F44-4011-82C5-CEDB83C2353B
+[2025-10-13 20:00:23] RESP tipo=emitida id=24 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:23] REQ tipo=emitida id=25 re=XAXX010101000 rr=FCA1611037F8 tt=0000000528.000000 uuid=7680505A-29E3-464A-B6DB-1BE589501467
+[2025-10-13 20:00:24] RESP tipo=emitida id=25 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:24] REQ tipo=emitida id=26 re=XAXX010101000 rr=SFA010213FR0 tt=0000000093.000000 uuid=D11D3E30-5EE1-4DF3-921E-5C07B490E33A
+[2025-10-13 20:00:25] RESP tipo=emitida id=26 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:25] REQ tipo=emitida id=27 re=XAXX010101000 rr=MAB050505LX2 tt=0000000151.000000 uuid=22116060-838C-4455-B2C6-8229EBB82B59
+[2025-10-13 20:00:26] RESP tipo=emitida id=27 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:26] REQ tipo=emitida id=28 re=XAXX010101000 rr=PNP9003312C9 tt=0000000267.000000 uuid=CC75B7B3-9801-4C3A-9016-6E54203DE034
+[2025-10-13 20:00:27] RESP tipo=emitida id=28 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:27] REQ tipo=emitida id=29 re=XAXX010101000 rr=PNP9003312C9 tt=0000000365.000000 uuid=BA792CAF-0DB3-4AF2-ACE7-712BF16A226D
+[2025-10-13 20:00:28] RESP tipo=emitida id=29 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:28] REQ tipo=emitida id=30 re=XAXX010101000 rr=MAB050505LX2 tt=0000000093.000000 uuid=8CDA3FA4-66E7-4E10-905E-9B389D5A9A0C
+[2025-10-13 20:00:28] RESP tipo=emitida id=30 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:28] REQ tipo=emitida id=31 re=XAXX010101000 rr=SND160314QG9 tt=0000000273.000000 uuid=4DF6CF66-7E11-47AE-886F-968EE2011D5E
+[2025-10-13 20:00:30] RESP tipo=emitida id=31 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:30] REQ tipo=emitida id=32 re=XAXX010101000 rr=UPM940315SH3 tt=0000000348.000000 uuid=2AE77234-98FE-470E-A3A9-08D26A1F91C4
+[2025-10-13 20:00:30] RESP tipo=emitida id=32 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:31] REQ tipo=emitida id=33 re=XAXX010101000 rr=GEC950401659 tt=0000000116.000000 uuid=DF995C07-4104-46BE-8F8E-57A0920F5E41
+[2025-10-13 20:00:32] RESP tipo=emitida id=33 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:32] REQ tipo=emitida id=34 re=XAXX010101000 rr=GEC950401659 tt=0000000174.000000 uuid=2500E2B7-0009-4E73-9687-9DEBCA97998D
+[2025-10-13 20:00:33] RESP tipo=emitida id=34 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:33] REQ tipo=emitida id=35 re=XAXX010101000 rr=GEC950401659 tt=0000000116.000000 uuid=521B6FAD-84CF-487B-B9C7-44BCA33E5FE9
+[2025-10-13 20:00:34] RESP tipo=emitida id=35 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:34] REQ tipo=emitida id=36 re=XAXX010101000 rr=MAB050505LX2 tt=0000000093.000000 uuid=B155C87C-9E83-4E84-974A-509E3F613DAE
+[2025-10-13 20:00:35] RESP tipo=emitida id=36 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:35] REQ tipo=emitida id=37 re=XAXX010101000 rr=IIN850215MIA tt=0000000290.000000 uuid=6BE8E44D-7420-48E7-9DB9-E94D236287BC
+[2025-10-13 20:00:36] RESP tipo=emitida id=37 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:36] REQ tipo=emitida id=38 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=B45702F3-3CEE-4938-8E77-01636FA0B822
+[2025-10-13 20:00:37] RESP tipo=emitida id=38 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:37] REQ tipo=emitida id=39 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=343379E3-A9EE-4176-A9DA-10AE4349BEBA
+[2025-10-13 20:00:38] RESP tipo=emitida id=39 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:38] REQ tipo=emitida id=40 re=XAXX010101000 rr=SHZ141008ID4 tt=0000000099.000000 uuid=78A3E48C-75E3-46A2-BDFD-2CE47D7A0947
+[2025-10-13 20:00:39] RESP tipo=emitida id=40 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:39] REQ tipo=emitida id=41 re=XAXX010101000 rr=LPL8603272D4 tt=0000000093.000000 uuid=615A54C8-DD7B-4D81-871F-E497C3549C0B
+[2025-10-13 20:00:40] RESP tipo=emitida id=41 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:40] REQ tipo=emitida id=42 re=XAXX010101000 rr=LPL8603272D4 tt=0000000099.000000 uuid=42280A11-15EB-4503-87D1-0285C8ABD86B
+[2025-10-13 20:00:41] RESP tipo=emitida id=42 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:41] REQ tipo=emitida id=43 re=XAXX010101000 rr=DAP050319RM9 tt=0000000232.000000 uuid=0BA77DE4-55B5-47B7-94D5-E052A8B5102B
+[2025-10-13 20:00:42] RESP tipo=emitida id=43 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:42] REQ tipo=emitida id=44 re=XAXX010101000 rr=MAB050505LX2 tt=0000000095.000000 uuid=387D771F-4CDB-4BAC-B5B3-A22EFA48A0D8
+[2025-10-13 20:00:43] RESP tipo=emitida id=44 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:43] REQ tipo=emitida id=45 re=XAXX010101000 rr=SFA010213FR0 tt=0000000540.000000 uuid=0D971F1B-D416-4C75-9E52-F0A68B00B4D9
+[2025-10-13 20:00:44] RESP tipo=emitida id=45 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:44] REQ tipo=emitida id=46 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=94C9E49F-4568-4A06-914D-051AB7521598
+[2025-10-13 20:00:45] RESP tipo=emitida id=46 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:45] REQ tipo=emitida id=47 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=385E0A97-794C-41B1-A1CE-114CD66DFCAE
+[2025-10-13 20:00:46] RESP tipo=emitida id=47 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:46] REQ tipo=emitida id=48 re=XAXX010101000 rr=CSU0208141W0 tt=0000000136.000000 uuid=380233A3-0D1F-442C-9070-315A6B93B050
+[2025-10-13 20:00:47] RESP tipo=emitida id=48 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:47] REQ tipo=emitida id=49 re=XAXX010101000 rr=MAB050505LX2 tt=0000000142.000000 uuid=60257EA5-D585-4EB4-A6A1-446A3C706220
+[2025-10-13 20:00:48] RESP tipo=emitida id=49 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:48] REQ tipo=emitida id=50 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=FF317E74-225F-4A32-A8D9-6F0042CA6DD6
+[2025-10-13 20:00:49] RESP tipo=emitida id=50 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:49] REQ tipo=emitida id=51 re=XAXX010101000 rr=DAP050319RM9 tt=0000000696.000000 uuid=3D7AAB30-E7D7-442B-9731-7F78ED7D90B7
+[2025-10-13 20:00:50] RESP tipo=emitida id=51 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:50] REQ tipo=emitida id=52 re=XAXX010101000 rr=IIN850215MIA tt=0000000215.000000 uuid=8D2505C8-08B5-4AF8-BAED-C1A56BB128A4
+[2025-10-13 20:00:51] RESP tipo=emitida id=52 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:51] REQ tipo=emitida id=53 re=XAXX010101000 rr=MHC8501011RA tt=0000000430.000000 uuid=30614910-6083-4FA2-A854-0BAC8AA30A50
+[2025-10-13 20:00:52] RESP tipo=emitida id=53 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:52] REQ tipo=emitida id=54 re=XAXX010101000 rr=DAP050319RM9 tt=0000000192.000000 uuid=8CAFC5EB-77D3-4320-B54B-832320911402
+[2025-10-13 20:00:53] RESP tipo=emitida id=54 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:53] REQ tipo=emitida id=55 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=18D289D8-518C-417F-B08D-7F6FEB5A44FE
+[2025-10-13 20:00:53] RESP tipo=emitida id=55 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:53] REQ tipo=emitida id=56 re=XAXX010101000 rr=SHZ141008ID4 tt=0000000250.000000 uuid=9809B75B-C3FC-4F36-948B-AB2761F19C77
+[2025-10-13 20:00:54] RESP tipo=emitida id=56 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:54] REQ tipo=emitida id=57 re=XAXX010101000 rr=UPM940315SH3 tt=0000000116.000000 uuid=939386B7-5DB6-4C6C-A2C9-50B575544589
+[2025-10-13 20:00:55] RESP tipo=emitida id=57 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:55] REQ tipo=emitida id=58 re=XAXX010101000 rr=UPM940315SH3 tt=0000000343.000000 uuid=60A84C88-89CC-4093-A278-73836F6A693F
+[2025-10-13 20:00:56] RESP tipo=emitida id=58 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:56] REQ tipo=emitida id=59 re=XAXX010101000 rr=DAP050319RM9 tt=0000000175.000000 uuid=9CB13DF9-BD8A-49D1-8ABE-7C4DA66001A4
+[2025-10-13 20:00:57] RESP tipo=emitida id=59 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:57] REQ tipo=emitida id=21 re=XAXX010101000 rr=SFA010213FR0 tt=0000000350.000000 uuid=C899E8A5-D60E-48D5-81A7-5DDFB2E826D6
+[2025-10-13 20:00:58] RESP tipo=emitida id=21 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:58] REQ tipo=emitida id=20 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=31C1002E-EBCD-4DD9-95AC-4BBAC271E7A0
+[2025-10-13 20:00:59] RESP tipo=emitida id=20 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:00:59] REQ tipo=emitida id=19 re=XAXX010101000 rr=CSU0208141W0 tt=0000000225.000000 uuid=CBCCAC7F-5592-43AA-871B-9DD56D34E534
+[2025-10-13 20:01:00] RESP tipo=emitida id=19 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:00] REQ tipo=emitida id=18 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=F14DC20D-2103-4FD6-A406-7004E3BE0383
+[2025-10-13 20:01:01] RESP tipo=emitida id=18 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:01] REQ tipo=emitida id=17 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=65C63E37-FA15-4E6F-BF2C-25C643A830BE
+[2025-10-13 20:01:02] RESP tipo=emitida id=17 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:02] REQ tipo=emitida id=16 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=422A4F77-AAFA-4859-A4FE-8F11A183D131
+[2025-10-13 20:01:03] RESP tipo=emitida id=16 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:03] REQ tipo=emitida id=15 re=XAXX010101000 rr=CRA011109LSA tt=0000000754.000000 uuid=97B24DC8-1F4C-4758-BF0E-1476791112A1
+[2025-10-13 20:01:04] RESP tipo=emitida id=15 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:04] REQ tipo=emitida id=14 re=XAXX010101000 rr=SFA010213FR0 tt=0000000500.000000 uuid=12F00359-8299-4BB6-97CC-4860C23E8B1B
+[2025-10-13 20:01:05] RESP tipo=emitida id=14 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:05] REQ tipo=emitida id=13 re=XAXX010101000 rr=SFA010213FR0 tt=0000000326.000000 uuid=DB020C39-B537-42F4-BC38-62D9ED7EB071
+[2025-10-13 20:01:07] RESP tipo=emitida id=13 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:07] REQ tipo=emitida id=12 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000142.000000 uuid=9326840F-4D94-438B-9C51-1B5B91E70600
+[2025-10-13 20:01:08] RESP tipo=emitida id=12 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:08] REQ tipo=emitida id=60 re=XAXX010101000 rr=APH091014R96 tt=0000202306.300000 uuid=F39D2056-9093-4E86-8385-FF672FD349FE
+[2025-10-13 20:01:08] RESP tipo=emitida id=60 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:08] REQ tipo=emitida id=11 re=XAXX010101000 rr=PNP9003312C9 tt=0000000174.000000 uuid=0C2ED07C-2ACB-41E0-90D1-BAC3549D97BD
+[2025-10-13 20:01:09] RESP tipo=emitida id=11 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:09] REQ tipo=emitida id=10 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=9AB706CB-0F6B-499D-8214-A1818C79E48E
+[2025-10-13 20:01:10] RESP tipo=emitida id=10 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:10] REQ tipo=emitida id=9 re=XAXX010101000 rr=IIN850215MIA tt=0000000550.000000 uuid=AC547668-3289-4784-BC2A-2A69C663328F
+[2025-10-13 20:01:11] RESP tipo=emitida id=9 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:11] REQ tipo=emitida id=8 re=XAXX010101000 rr=SFA010213FR0 tt=0000000200.000000 uuid=C03F56C2-D84D-4550-9971-7A1D98C9231E
+[2025-10-13 20:01:12] RESP tipo=emitida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:12] REQ tipo=emitida id=7 re=XAXX010101000 rr=SFA010213FR0 tt=0000000000.000000 uuid=A0F6E88B-E0EA-4EE9-B42C-F1E98DC2AFC1
+[2025-10-13 20:01:13] RESP tipo=emitida id=7 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=Cancelado sin aceptación
+[2025-10-13 20:01:13] REQ tipo=emitida id=6 re=XAXX010101000 rr=DAP050319RM9 tt=0000000200.000000 uuid=7DD5596B-A201-478B-AF9D-447E40D68163
+[2025-10-13 20:01:14] RESP tipo=emitida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:14] REQ tipo=emitida id=5 re=XAXX010101000 rr=SFA010213FR0 tt=0000000354.000000 uuid=C56B97BA-4A44-401E-8052-EC680D500D16
+[2025-10-13 20:01:15] RESP tipo=emitida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:15] REQ tipo=emitida id=4 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000162.000000 uuid=07B431E2-BC3E-4C5A-9AA1-A8FB91A077E2
+[2025-10-13 20:01:17] RESP tipo=emitida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:17] REQ tipo=emitida id=3 re=XAXX010101000 rr=IIN850215MIA tt=0000000696.000000 uuid=04D5C060-1AAA-440B-B6CB-52CFFEEBEA1F
+[2025-10-13 20:01:18] RESP tipo=emitida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:18] REQ tipo=emitida id=2 re=XAXX010101000 rr=IIN850215MIA tt=0000000395.000000 uuid=D4D3CAF0-03E1-4932-90B8-610C7FDF0537
+[2025-10-13 20:01:19] RESP tipo=emitida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-13 20:01:19] REQ tipo=emitida id=1 re=XAXX010101000 rr=VAAJ690904EN2 tt=0000000145.000000 uuid=96482038-7298-47AA-A1FA-D0D9651893D5
+[2025-10-13 20:01:20] RESP tipo=emitida id=1 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=

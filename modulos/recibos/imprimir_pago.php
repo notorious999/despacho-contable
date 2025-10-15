@@ -3,55 +3,78 @@ require_once __DIR__ . '/../../config/config.php';
 require_once __DIR__ . '/../../config/db.php';
 require_once __DIR__ . '/../../includes/functions.php';
 
-
 if (!isLoggedIn()) {
     redirect(URL_ROOT . '/modulos/usuarios/login.php');
 }
 
 $id_pago = isset($_GET['id']) ? (int)$_GET['id'] : 0;
-
 if ($id_pago <= 0) {
-    die('<div class="alert alert-danger">No se encontró el pago especificado.</div>');
+    die('<div class="alert alert-danger">El ID del pago no es válido.</div>');
 }
 
 $db = new Database();
+
+// 1. MODIFICACIÓN: Se añaden r.id y r.tipo a la consulta principal
 $db->query('
-        SELECT 
-            p.id AS id_pago,
-            p.folio,
-            p.monto,
-            p.fecha_pago,
-            r.concepto,
-            r.monto AS precio_servicio,
-            r.estado,
-            c.razon_social AS cliente,
-            c.rfc,
-            c.domicilio_fiscal AS domicilio
-        FROM recibos_pagos p
-        LEFT JOIN recibos r ON r.id = p.recibo_id
-        LEFT JOIN clientes c ON c.id = r.cliente_id
-        WHERE p.id = :id_pago
-        LIMIT 1
-    ');
+    SELECT 
+        p.id AS id_pago,
+        p.folio,
+        p.monto,
+        p.fecha_pago,
+        r.id AS recibo_id, -- ID del recibo para buscar servicios si es necesario
+        r.tipo AS recibo_tipo, -- Tipo de recibo para la lógica condicional
+        r.concepto,
+        r.monto AS precio_servicio,
+        r.estado,
+        c.razon_social AS cliente,
+        c.rfc,
+        c.domicilio_fiscal AS domicilio
+    FROM recibos_pagos p
+    LEFT JOIN recibos r ON r.id = p.recibo_id
+    LEFT JOIN clientes c ON c.id = r.cliente_id
+    WHERE p.id = :id_pago
+    LIMIT 1
+');
 
 $db->bind(':id_pago', $id_pago);
 $data = $db->single();
 
+if (!$data) {
+    die('<div class="alert alert-danger">Pago no encontrado.</div>');
+}
 
-// 4. Asignar las variables desde el objeto de datos
+// 2. LÓGICA CONDICIONAL: Se prepara la descripción según el tipo de recibo
+$descripcion = $data->concepto ?? "_________________________"; // Descripción por defecto
+
+if ($data->recibo_tipo === 'servicio') {
+    // Si es un recibo de servicio, buscamos los detalles
+    $db->query('SELECT descripcion FROM recibo_servicios WHERE recibo_id = :recibo_id');
+    $db->bind(':recibo_id', $data->recibo_id);
+    $servicios = $db->resultSet();
+    
+    if ($servicios) {
+        $cantidad_servicios = count($servicios);
+        $descripciones = array_map(function($s) { return $s->descripcion; }, $servicios);
+        // Se crea el string con el formato "Servicio1, Servicio2 (Cantidad: 2)"
+        $descripcion = implode(', ', $descripciones) . " (Cantidad: " . $cantidad_servicios . ")";
+    } else {
+        $descripcion = "Recibo de servicios sin detalles.";
+    }
+}
+
+// El resto de las variables se asignan como antes
 $folio = $data->folio;
 $fecha = date("d/m/Y", strtotime($data->fecha_pago));
 $cliente = $data->cliente ?? "_________________________";
 $rfc = $data->rfc ?? "_________________________";
 $domicilio = $data->domicilio ?? "_________________________";
-$descripcion = $data->concepto ?? "_________________________";
 $precio_servicio = number_format($data->precio_servicio, 2);
 $importe_pago = number_format($data->monto, 2);
 $saldo = number_format($data->precio_servicio - $data->monto, 2);
 $estado = strtoupper($data->estado);
 $fecha_pago = $fecha;
 
-// Función convertir a letras
+// (El resto del archivo, incluyendo la función numeroALetras y el HTML, se mantiene exactamente igual)
 function numeroALetras($numero)
 {
     $UNIDADES = ['', 'UN', 'DOS', 'TRES', 'CUATRO', 'CINCO', 'SEIS', 'SIETE', 'OCHO', 'NUEVE', 'DIEZ', 'ONCE', 'DOCE', 'TRECE', 'CATORCE', 'QUINCE', 'DIECISÉIS', 'DIECISIETE', 'DIECIOCHO', 'DIECINUEVE', 'VEINTE'];
@@ -93,10 +116,8 @@ $cantidad_letras = numeroALetras($data->monto);
 $logo_path = __DIR__ . '/../../uploads/logo.png';
 $logo_url = file_exists($logo_path) ? '../../uploads/logo.png' : null;
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="utf-8">
     <title>Recibo de Pago</title>
@@ -238,16 +259,13 @@ $logo_url = file_exists($logo_path) ? '../../uploads/logo.png' : null;
         }
     </style>
 </head>
-
 <body>
     <div class="page">
-
         <?php
         $tipos = ['ORIGINAL', 'COPIA'];
         foreach ($tipos as $index => $tipo): ?>
             <div class="recibo">
                 <span class="copy-label"><?= $tipo ?></span>
-
                 <div class="header">
                     <div class="logo">
                         <?php if ($logo_url): ?>
@@ -263,17 +281,11 @@ $logo_url = file_exists($logo_path) ? '../../uploads/logo.png' : null;
                         Correo: jlchan@multitekmx.com / jlchandespacho@gmail.com
                     </div>
                 </div>
-
                 <div class="info">
-                    <!--<b>Comprobante:</b> Pago de honorarios<br>!-->
                     <b>Folio:</b> <?= $folio ?><br>
-                    <!--<b>Fecha:</b> <?= $fecha ?><br>!-->
                     <b>Cliente:</b> <?= $cliente ?><br>
                     <b>RFC:</b> <?= $rfc ?><br>
-                    <!--<b>Domicilio:</b> <?= $domicilio ?> !-->
                 </div>
-
-
                 <table>
                     <tr>
                         <th>Descripción</th>
@@ -286,22 +298,21 @@ $logo_url = file_exists($logo_path) ? '../../uploads/logo.png' : null;
                     <tr>
                         <th>Importe Pago</th>
                         <td>$<?= $importe_pago ?></td>
+                        
                     </tr>
-                    <tr>
-                        <th>Cantidad en letras</th>
-                        <td><?= $cantidad_letras ?></td>
-                    </tr>
-                    <!--<tr><th>Saldo</th><td>$<?= $saldo ?></td></tr>!-->
-                    <tr>
-                        <th>Estado</th>
-                        <td><?= $estado ?></td>
-                    </tr>
-                    <tr>
-                        <th>Fecha Pago</th>
-                        <td><?= $fecha_pago ?></td>
-                    </tr>
+                <tr>
+                    <th>Cantidad en letras</th>
+                    <td><?= $cantidad_letras ?></td>
+                </tr>
+                <tr>
+                    <th>Estado</th>
+                    <td><?= $estado ?></td>
+                </tr>
+                <tr>
+                    <th>Fecha Pago</th>
+                    <td><?= $fecha_pago ?></td>
+                </tr>
                 </table>
-
                 <div class="mensaje">
                     Estimado cliente, agradecemos su depósito por los servicios prestados a las siguientes cuentas:<br>
                     <b>Banco:</b> BANCOMER<br>
@@ -309,25 +320,19 @@ $logo_url = file_exists($logo_path) ? '../../uploads/logo.png' : null;
                     <b>CLABE:</b> 0120-5502-9451-3105-70<br>
                     <b>Beneficiario:</b> JORGE LUIS CHAN GONZÁLEZ
                 </div>
-
                 <div class="firma">
                     <p>Atentamente,</p>
                     <hr>
                     <p><b>L.C. JORGE LUIS CHAN GONZÁLEZ</b><br>Cédula Profesional 7224903</p>
                 </div>
             </div>
-
             <?php if ($index === 0): ?>
                 <div class="divisor"></div>
             <?php endif; ?>
-
         <?php endforeach; ?>
-
     </div>
-
     <script>
         window.print();
     </script>
 </body>
-
 </html>

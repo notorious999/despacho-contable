@@ -35,23 +35,19 @@ try {
     $db = new Database();
 
     if ($tipo === 'emitida') {
-        // Emisor/Receptor y totales de la tabla
-        $db->query('SELECT e.id, e.folio_fiscal, e.total, e.total_raw, e.rfc_emisor, e.rfc_receptor
-                    FROM CFDIs_Emitidas e WHERE e.id = :id');
+        $db->query('SELECT e.id, e.folio_fiscal, e.total, e.total_raw, e.rfc_emisor, e.rfc_receptor FROM cfdis_emitidas e WHERE e.id = :id');
         $db->bind(':id', $id);
         $row = $db->single();
         if (!$row) throw new RuntimeException('Factura emitida no encontrada');
 
-        // Si tienes RFC_PROPIO, puedes usarlo como respaldo si rfc_emisor es NULL:
         $re = strtoupper(trim((string)($row->rfc_emisor ?: (defined('RFC_PROPIO') ? RFC_PROPIO : ''))));
         $rr = strtoupper(trim((string)$row->rfc_receptor));
         $uuid = (string)$row->folio_fiscal;
         $totalRaw = (string)($row->total_raw ?? '');
         $totalNum = (string)$row->total;
 
-    } else {
-        $db->query('SELECT r.id, r.folio_fiscal, r.total, r.total_raw, r.rfc_emisor
-                    FROM CFDIs_Recibidas r WHERE r.id = :id');
+    } else { // recibida
+        $db->query('SELECT r.id, r.folio_fiscal, r.total, r.total_raw, r.rfc_emisor FROM cfdis_recibidas r WHERE r.id = :id');
         $db->bind(':id', $id);
         $row = $db->single();
         if (!$row) throw new RuntimeException('Factura recibida no encontrada');
@@ -63,7 +59,6 @@ try {
         $totalNum = (string)$row->total;
     }
 
-    // Normaliza total (si no hay total_raw, usa total)
     $tt = sat_normalizeTotal($totalRaw !== '' ? $totalRaw : $totalNum);
     $expr = sat_buildExpresion($re, $rr, $tt, $uuid);
     sat_log("REQ tipo=$tipo id=$id re=$re rr=$rr tt=$tt uuid=$uuid");
@@ -71,24 +66,43 @@ try {
     $resp = sat_consultaSoapPost($expr, false);
     sat_log("RESP tipo=$tipo id=$id estado=" . ($resp['estado'] ?? 'N/D') . " codigo=" . ($resp['codigoEstatus'] ?? 'N/D') . " estatusCancelacion=" . ($resp['estatusCancelacion'] ?? 'N/D'));
 
-    // Deriva el estado solo con estatusCancelacion (tu regla)
     $estatusCancelacion = $resp['estatusCancelacion'] ?? null;
     $estadoDerivado = (!empty($estatusCancelacion)) ? 'Cancelado' : 'Vigente';
 
-    // Guarda cache en BD con el estado derivado
-    if ($tipo === 'emitida') {
-        $db->query('UPDATE CFDIs_Emitidas
-                    SET estado_sat = :estado, codigo_estatus_sat = :codigo,
-                        es_cancelable_sat = :esc, estatus_cancelacion_sat = :ec,
-                        fecha_consulta_sat = NOW()
-                    WHERE id = :id');
-    } else {
-        $db->query('UPDATE CFDIs_Recibidas
-                    SET estado_sat = :estado, codigo_estatus_sat = :codigo,
-                        es_cancelable_sat = :esc, estatus_cancelacion_sat = :ec,
-                        fecha_consulta_sat = NOW()
-                    WHERE id = :id');
+    // --- **LÓGICA DE ACTUALIZACIÓN MODIFICADA** ---
+
+    // 1. Preparamos la parte base de la consulta que siempre se actualiza.
+    $set_clause = "
+        estado_sat = :estado, 
+        codigo_estatus_sat = :codigo,
+        es_cancelable_sat = :esc, 
+        estatus_cancelacion_sat = :ec,
+        fecha_consulta_sat = NOW()
+    ";
+
+    // 2. Si el estado es "Cancelado", añadimos los campos de totales a cero.
+    if (strtolower($estadoDerivado) === 'cancelado') {
+        $set_clause .= ",
+            subtotal = 0.00,
+            total = 0.00,
+            tasa0_base = 0.00,
+            tasa16_base = 0.00,
+            iva_importe = 0.00,
+            ieps_importe = 0.00,
+            isr_importe = 0.00,
+            retencion_iva = 0.00,
+            retencion_ieps = 0.00,
+            retencion_isr = 0.00
+        ";
     }
+
+    // 3. Determinamos la tabla y construimos la consulta final.
+    $tabla = ($tipo === 'emitida') ? 'cfdis_emitidas' : 'cfdis_recibidas';
+    $sql = "UPDATE {$tabla} SET {$set_clause} WHERE id = :id";
+
+    $db->query($sql);
+    
+    // 4. Hacemos el bind de los parámetros.
     $db->bind(':estado', $estadoDerivado);
     $db->bind(':codigo', $resp['codigoEstatus'] ?? null);
     $db->bind(':esc',    $resp['esCancelable'] ?? null);
@@ -98,7 +112,7 @@ try {
 
     echo json_encode([
         'success' => true,
-        'estado' => $estadoDerivado, // devolvemos el derivado
+        'estado' => $estadoDerivado,
         'codigoEstatus' => $resp['codigoEstatus'] ?? null,
         'esCancelable' => $resp['esCancelable'] ?? null,
         'estatusCancelacion' => $estatusCancelacion,

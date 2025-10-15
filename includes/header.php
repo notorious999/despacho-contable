@@ -49,13 +49,14 @@ if (!isLoggedIn() && basename($_SERVER['PHP_SELF']) != 'login.php') {
                                 <i class=""></i> Totales
                             </a>
                         </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="<?php echo URL_ROOT; ?>/modulos/recibos/index.php">Recibos</a>
+                            </li>
                         <?php if (hasRole('administrador')) : ?>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo URL_ROOT; ?>/modulos/usuarios/index.php">Usuarios</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?php echo URL_ROOT; ?>/modulos/recibos/index.php">Recibos</a>
-                            </li>
+                            
 
 
                         <?php endif; ?>

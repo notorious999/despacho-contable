@@ -192,15 +192,15 @@ include_once __DIR__ . '/../../includes/header.php';
                     </tr>
                     <tr>
                         <th>Tasa 0%:</th>
-                        <td class="text-end"><?php echo formatMoney($factura->tasa0); ?></td>
+                        <td class="text-end"><?php echo formatMoney($factura->tasa0_base); ?></td>
                     </tr>
                     <tr>
                         <th>Tasa 16%:</th>
-                        <td class="text-end"><?php echo formatMoney($factura->tasa16); ?></td>
+                        <td class="text-end"><?php echo formatMoney($factura->tasa16_base); ?></td>
                     </tr>
                     <tr>
                         <th>IVA:</th>
-                        <td class="text-end"><?php echo formatMoney($factura->iva); ?></td>
+                        <td class="text-end"><?php echo formatMoney($factura->iva_importe); ?></td>
                     </tr>
                     <?php if($tipo == 'recibida'): ?>
                     <tr>

@@ -199,13 +199,13 @@ function procesarCFDIEmitido(SimpleXMLElement $xml, array $namespaces, $cliente_
         $database->query('INSERT INTO CFDIs_Emitidas (
             cliente_id, tipo_comprobante, folio_interno, forma_pago, metodo_pago, folio_fiscal,
             fecha_emision, nombre_receptor, rfc_receptor, descripcion,
-            subtotal, tasa0, tasa16, iva, total,
+            subtotal, total,
             tasa0_base, tasa16_base, iva_importe, ieps_importe, isr_importe,
             retencion_iva, retencion_ieps, retencion_isr
         ) VALUES (
             :cliente_id, :tipo_comprobante, :folio_interno, :forma_pago, :metodo_pago, :folio_fiscal,
             :fecha_emision, :nombre_receptor, :rfc_receptor, :descripcion,
-            :subtotal, :tasa0, :tasa16, :iva, :total,
+            :subtotal, :total,
             :tasa0_base, :tasa16_base, :iva_importe, :ieps_importe, :isr_importe,
             :retencion_iva, :retencion_ieps, :retencion_isr
         )');
@@ -221,9 +221,6 @@ function procesarCFDIEmitido(SimpleXMLElement $xml, array $namespaces, $cliente_
         $database->bind(':rfc_receptor', $rfc_receptor);
         $database->bind(':descripcion', $descripcion);
         $database->bind(':subtotal', $subtotal);
-        $database->bind(':tasa0', $tasa0);
-        $database->bind(':tasa16', $tasa16);
-        $database->bind(':iva', $iva);
         $database->bind(':total', $total);
 
         $database->bind(':tasa0_base',   $tasa0_base);
@@ -312,13 +309,13 @@ function procesarCFDIRecibido(SimpleXMLElement $xml, array $namespaces, $cliente
         $database->query('INSERT INTO CFDIs_Recibidas (
             cliente_id, tipo_comprobante, forma_pago, metodo_pago, folio_fiscal,
             fecha_certificacion, nombre_emisor, rfc_emisor, descripcion,
-            subtotal, tasa0, tasa16, iva, total,
+            subtotal, total,
             retencion_iva, retencion_isr, retencion_ieps, uuid_relacionado,
             tasa0_base, tasa16_base, iva_importe, ieps_importe, isr_importe
         ) VALUES (
             :cliente_id, :tipo_comprobante, :forma_pago, :metodo_pago, :folio_fiscal,
             :fecha_certificacion, :nombre_emisor, :rfc_emisor, :descripcion,
-            :subtotal, :tasa0, :tasa16, :iva, :total,
+            :subtotal, :total,
             :retencion_iva, :retencion_isr, :retencion_ieps, :uuid_relacionado,
             :tasa0_base, :tasa16_base, :iva_importe, :ieps_importe, :isr_importe
         )');
@@ -333,9 +330,6 @@ function procesarCFDIRecibido(SimpleXMLElement $xml, array $namespaces, $cliente
         $database->bind(':rfc_emisor', $rfc_emisor);
         $database->bind(':descripcion', $descripcion);
         $database->bind(':subtotal', $subtotal);
-        $database->bind(':tasa0', $tasa0);
-        $database->bind(':tasa16', $tasa16);
-        $database->bind(':iva', $iva);
         $database->bind(':total', $total);
 
         $database->bind(':retencion_iva', $ret_iva);
