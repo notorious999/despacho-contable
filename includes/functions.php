@@ -165,3 +165,82 @@ if (!function_exists('getMetodoPago')) {
         return isset($metodosPago[$codigo]) ? ($codigo . ' - ' . $metodosPago[$codigo]) : (string)$codigo;
     }
 }
+
+// En el archivo: /includes/functions.php
+
+// ... (todo tu código existente)
+
+/**
+ * Convierte un número a su representación en letras en español (formato moneda MXN).
+ * @param float $numero El número a convertir.
+ * @return string La cantidad en letras.
+ */
+function numeroALetrasMX(float $numero): string {
+  $numero = round($numero, 2);
+  $entero = (int)floor($numero);
+  $centavos = (int)round(($numero - $entero) * 100);
+
+  $unidades = ['', 'UNO', 'DOS', 'TRES', 'CUATRO', 'CINCO', 'SEIS', 'SIETE', 'OCHO', 'NUEVE',
+               'DIEZ', 'ONCE', 'DOCE', 'TRECE', 'CATORCE', 'QUINCE', 'DIECISEIS', 'DIECISIETE', 'DIECIOCHO', 'DIECINUEVE', 'VEINTE'];
+  $decenas = ['', 'DIEZ', 'VEINTE', 'TREINTA', 'CUARENTA', 'CINCUENTA', 'SESENTA', 'SETENTA', 'OCHENTA', 'NOVENTA'];
+  $centenas = ['', 'CIENTO', 'DOSCIENTOS', 'TRESCIENTOS', 'CUATROCIENTOS', 'QUINIENTOS', 'SEISCIENTOS', 'SETECIENTOS', 'OCHOCIENTOS', 'NOVECIENTOS'];
+
+  $toWords999 = function(int $n) use ($unidades, $decenas, $centenas): string {
+    if ($n === 0) return 'CERO';
+    if ($n === 100) return 'CIEN';
+    $c = (int)floor($n / 100);
+    $d = (int)floor(($n % 100) / 10);
+    $u = $n % 10;
+    $out = [];
+
+    if ($c > 0) $out[] = $centenas[$c];
+
+    $du = $n % 100;
+    if ($du <= 20) {
+      if ($du > 0) $out[] = $unidades[$du];
+    } else {
+      $textoDecena = $decenas[$d];
+      if ($u === 0) {
+        $out[] = $textoDecena;
+      } else {
+        $out[] = $textoDecena . ' Y ' . $unidades[$u];
+      }
+    }
+    return trim(implode(' ', array_filter($out)));
+  };
+
+  $texto = '';
+  if ($entero === 0) {
+    $texto = 'CERO';
+  } else {
+    $millones = (int)floor($entero / 1000000);
+    $miles    = (int)floor(($entero % 1000000) / 1000);
+    $resto    = $entero % 1000;
+
+    if ($millones > 0) $texto .= ($millones === 1) ? 'UN MILLON' : ($toWords999($millones) . ' MILLONES');
+    if ($miles > 0)   $texto .= ($texto ? ' ' : '') . ($miles === 1 ? 'MIL' : $toWords999($miles) . ' MIL');
+    if ($resto > 0)   $texto .= ($texto ? ' ' : '') . $toWords999($resto);
+  }
+
+  $cent = str_pad((string)$centavos, 2, '0', STR_PAD_LEFT);
+  return $texto . ' ' . $cent . '/100 M.N.';
+}
+
+/**
+ * Convierte una fecha en formato 'YYYY-MM-DD' a un formato largo en español.
+ * @param string $fechaYmd La fecha a convertir.
+ * @return string La fecha en formato "día, DD de mes de AAAA".
+ */
+function fechaLargaES(string $fechaYmd): string {
+  if (empty($fechaYmd)) return '';
+  $ts = strtotime($fechaYmd);
+  $dias = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+  $meses = [1=>'enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  
+  $diaSemana = $dias[(int)date('w', $ts)];
+  $dia = (int)date('j', $ts);
+  $mes = $meses[(int)date('n', $ts)];
+  $anio = date('Y', $ts);
+  
+  return ucfirst($diaSemana) . ', ' . $dia . ' de ' . $mes . ' de ' . $anio;
+}

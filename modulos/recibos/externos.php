@@ -40,18 +40,57 @@ foreach ($recibos as $r) {
 
 include_once __DIR__ . '/../../includes/header.php';
 ?>
-<div class="row mb-4">
+<div class="row mb-4 align-items-center">
   <div class="col-md-6">
-    <h2>Recibos externos</h2>
-    <p class="text-muted mb-0">Recibos generados para no clientes.</p>
+    <h2 class="mb-0">Recibos Externos</h2>
   </div>
   <div class="col-md-6 text-end">
-    <a href="<?php echo URL_ROOT; ?>/modulos/recibos/index.php" class="btn btn-outline-dark me-2">
-      <i class="fas fa-list"></i> Recibos de clientes
-    </a>
-    <a href="<?php echo URL_ROOT; ?>/modulos/recibos/nuevo_externo.php" class="btn btn-primary">
-      <i class="fas fa-file-circle-plus"></i> Nuevo recibo (externo)
-    </a>
+
+    <div class="btn-group me-2" role="group" aria-label="Acciones Principales">
+      <a href="?desde=<?php echo htmlspecialchars($desde, ENT_QUOTES, 'UTF-8'); ?>&hasta=<?php echo htmlspecialchars($hasta, ENT_QUOTES, 'UTF-8'); ?>&generar=1"
+         class="btn btn-primary" onclick="return confirm('¿Generar recibos para el periodo seleccionado?');">
+        <i class="fas fa-magic"></i> Generar del Periodo
+      </a>
+      
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-plus"></i> Nuevo
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/nuevo_servicio.php">
+            <i class="fas fa-file-circle-plus me-2""></i>Nuevo Recibo (Clientes)
+          </a></li>
+          <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/nuevo_externo.php">
+            <i class="fas fa-file-circle-plus me-2"></i>Nuevo Recibo (Externo)
+          </a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/pago_adelantado.php">
+            <i class="fas fa-forward me-2"></i>Pago Adelantado
+          </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-eye"></i> Ver
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/clientes/index.php">
+          <i class="fas fa-users me-2"></i>Clientes
+        </a></li>
+        <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/servicios.php">
+          <i class="fas fa-file-invoice-dollar me-2"></i>Recibos (Clientes)
+        </a></li>
+        <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/externos.php">
+          <i class="fas fa-file-invoice-dollar me-2"></i>Recibos (Externos)
+        </a></li>
+        <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/pagos_adelantados.php">
+          <i class="fas fa-forward"></i>Pagos Adelantados
+        </a></li>
+      </ul>
+    </div>
+
   </div>
 </div>
 

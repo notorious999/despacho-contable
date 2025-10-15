@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         newItem.classList.add('row', 'servicio-item', 'mb-2');
         newItem.innerHTML = `
             <div class="col-md-7"><input type="text" name="descripcion[]" class="form-control" placeholder="Descripción del servicio" required></div>
-            <div class="col-md-3"><input type="number" name="importe[]" class="form-control importe" placeholder="Importe" step="0.01" min="0.01" required></div>
+            <div class="col-md-3"><input type="number" name="importe[]" class="form-control importe" placeholder="Importe" step="0.01" min="0.00" required></div>
             <div class="col-md-2"><button type="button" class="btn btn-danger remove-servicio">Eliminar</button></div>
         `;
         container.appendChild(newItem);

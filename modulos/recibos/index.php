@@ -107,7 +107,7 @@ include_once __DIR__ . '/../../includes/header.php';
         </button>
         <ul class="dropdown-menu dropdown-menu-end">
           <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/nuevo_servicio.php">
-            <i class="fas fa-cogs me-2"></i>Nuevo Recibo (Clientes)
+            <i class="fas fa-file-circle-plus me-2""></i>Nuevo Recibo (Clientes)
           </a></li>
           <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/nuevo_externo.php">
             <i class="fas fa-file-circle-plus me-2"></i>Nuevo Recibo (Externo)
@@ -129,10 +129,13 @@ include_once __DIR__ . '/../../includes/header.php';
           <i class="fas fa-users me-2"></i>Clientes
         </a></li>
         <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/servicios.php">
-          <i class="fas fa-cogs me-2"></i>Recibos (Clientes)
+          <i class="fas fa-file-invoice-dollar me-2"></i>Recibos (Clientes)
         </a></li>
         <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/externos.php">
           <i class="fas fa-file-invoice-dollar me-2"></i>Recibos (Externos)
+        </a></li>
+        <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/pagos_adelantados.php">
+          <i class="fas fa-forward"></i>Pagos Adelantados
         </a></li>
       </ul>
     </div>

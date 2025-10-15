@@ -4,89 +4,51 @@ require_once __DIR__ . '/../../config/db.php';
 require_once __DIR__ . '/../../includes/functions.php';
 require_once __DIR__ . '/../../includes/recibos_service.php';
 
+// Validar que el usuario esté logueado
 if (!isLoggedIn()) {
-    redirect(URL_ROOT . '/modulos/usuarios/login.php');
+  redirect(URL_ROOT . '/modulos/usuarios/login.php');
 }
+
+// Validar que la petición sea por método POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    redirect(URL_ROOT . '/modulos/recibos/index.php');
+  redirect(URL_ROOT . '/modulos/recibos/index.php');
+  exit;
 }
 
-$db = new Database();
+// 1. Sanitizar y validar los datos del formulario
+$recibo_id = isset($_POST['recibo_id']) ? (int)$_POST['recibo_id'] : 0;
+$monto = isset($_POST['monto']) ? (float)$_POST['monto'] : 0;
+$fecha_pago = sanitize($_POST['fecha_pago'] ?? date('Y-m-d'));
+$metodo = sanitize($_POST['metodo'] ?? '');
+$referencia = sanitize($_POST['referencia'] ?? '');
+$observaciones = sanitize($_POST['observaciones'] ?? '');
+$usuario_id = $_SESSION['user_id'] ?? null;
 
-$recibo_id   = (int)sanitize($_POST['recibo_id'] ?? 0);
-$fecha_pago  = sanitize($_POST['fecha_pago'] ?? date('Y-m-d'));
-$monto       = (float)sanitize($_POST['monto'] ?? 0);
-$metodo      = sanitize($_POST['metodo'] ?? '');
-$referencia  = sanitize($_POST['referencia'] ?? '');
-$obs         = sanitize($_POST['observaciones'] ?? '');
-$usuario_id  =  ($_SESSION['user_id'] ?? null);
-
+// Validaciones básicas
 if ($recibo_id <= 0 || $monto <= 0) {
-    flash('mensaje', 'Datos de pago inválidos.', 'alert alert-danger');
-    redirect(URL_ROOT . '/modulos/recibos/index.php');
-    exit;
+  flash('mensaje', 'Datos inválidos para registrar el pago. El monto debe ser mayor a cero.', 'alert alert-danger');
+  redirect(URL_ROOT . '/modulos/recibos/index.php');
+  exit;
 }
 
-// Obtener saldo
-$db->query('SELECT monto, monto_pagado FROM recibos WHERE id = :id');
-$db->bind(':id', $recibo_id);
-$rec = $db->single();
-if (!$rec) {
-    flash('mensaje', 'Recibo no encontrado.', 'alert alert-danger');
-    redirect(URL_ROOT . '/modulos/recibos/index.php');
-    exit;
-}
-
-$total = (float)$rec->monto;
-$pagado= (float)$rec->monto_pagado;
-$saldo = max($total - $pagado, 0.0);
-
-// Clamp en servidor para evitar sobrepago
-if ($monto > $saldo) {
-    $monto = $saldo;
-    $ajustado = true;
-}
-// Si prefieres RECHAZAR en lugar de ajustar, usa esto en vez de lo anterior:
-// if ($monto > $saldo + 0.00001) { flash('mensaje', 'El monto excede el saldo del recibo.', 'alert alert-danger'); redirect(URL_ROOT.'/modulos/recibos/index.php'); exit; }
-
-if ($monto <= 0) {
-    flash('mensaje', 'No hay saldo por cobrar en este recibo.', 'alert alert-info');
-    redirect(URL_ROOT . '/modulos/recibos/index.php');
-    exit;
-}
-
-// Asignar folio (MAX(folio)+1). Para baja concurrencia es suficiente.
-$db->query('SELECT COALESCE(MAX(folio),0) AS next_folio FROM recibos_pagos');
-$next = $db->single();
-$folio = ((int)($next->next_folio ?? 0)) + 1;
-
-// Insert pago
-$db->query('INSERT INTO recibos_pagos (recibo_id, fecha_pago, monto, metodo, referencia, observaciones, usuario_id, folio)
-            VALUES (:rid, :fp, :m, :mt, :ref, :obs, :uid, :folio)');
-$db->bind(':rid', $recibo_id);
-$db->bind(':fp', $fecha_pago);
-$db->bind(':m', $monto);
-$db->bind(':mt', $metodo);
-$db->bind(':ref', $referencia);
-$db->bind(':obs', $obs);
-$db->bind(':uid', $usuario_id);
-$db->bind(':folio', $folio);
-
-if (!$db->execute()) {
-    flash('mensaje', 'No se pudo registrar el pago.', 'alert alert-danger');
-    redirect(URL_ROOT . '/modulos/recibos/index.php');
-    exit;
-}
-
-// Recalcular estado
+// 2. Usar el servicio para registrar el pago
 $service = new RecibosService();
-$service->recalcularEstado($recibo_id);
+$exito = $service->registrarPago(
+    $recibo_id,
+    $monto,
+    $fecha_pago,
+    $metodo,
+    $referencia,
+    $observaciones,
+    $usuario_id
+);
 
-$msg = 'Pago registrado correctamente. Folio: ' . $folio;
-if (!empty($ajustado)) { $msg .= ' (el monto se ajustó al saldo disponible)'; }
-flash('mensaje', $msg, 'alert alert-success');
+// 3. Redirigir con el mensaje correspondiente
+if ($exito) {
+  flash('mensaje', 'Pago registrado correctamente.');
+} else {
+  flash('mensaje', 'Error al registrar el pago.', 'alert alert-danger');
+}
 
-// Redirigir a imprimir ese pago directamente (opcional):
-// redirect(URL_ROOT . '/modulos/recibos/pagos.php?recibo_id=' . $recibo_id);
-$back = $_SERVER['HTTP_REFERER'] ?? (URL_ROOT . '/modulos/recibos/index.php');
-redirect($back);
+redirect(URL_ROOT . '/modulos/recibos/index.php');
+exit;

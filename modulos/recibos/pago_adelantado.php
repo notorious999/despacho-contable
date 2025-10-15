@@ -44,11 +44,6 @@ include_once __DIR__ . '/../../includes/header.php';
           </div>
           <input type="hidden" name="cliente_id" id="pa_cliente_id" required>
           <div class="form-text">Haz clic en un resultado para seleccionarlo.</div>
-
-          <div class="mt-3">
-            <label class="form-label">Vencimiento para nuevos recibos (opcional)</label>
-            <input type="date" name="fecha_vencimiento" class="form-control">
-          </div>
         </div>
 
         <div class="col-md-12">

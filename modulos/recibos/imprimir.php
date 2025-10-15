@@ -143,7 +143,7 @@ function numeroALetras($numero) {
 
                 <div class="info">
                     <b>Folio:</b> <?= $folio ?><br>
-                    <b>Fecha:</b> <?= $fecha ?><br>
+                    <!--<b>Fecha:</b> <?= $fecha ?><br>!-->
                     <b>Cliente:</b> <?= $cliente ?><br>
                     <b>RFC:</b> <?= $rfc ?><br>
                 </div>
