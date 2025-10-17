@@ -280,19 +280,6 @@ include_once __DIR__ . '/../../includes/header.php';
                     <i class="fas fa-print"></i> Imprimir
                   </span>
                 <?php endif; ?>
-
-                <?php if ((float)$r->monto_pagado): ?>
-                  <a class="btn btn-sm btn-outline-danger mb-1"
-                    href="<?php echo URL_ROOT; ?>/modulos/recibos/cancelar.php?id=<?php echo (int)$r->id; ?>"
-                    onclick="return confirm('¿Cancelar este recibo? Esta acción no se puede deshacer.');">
-                    <i class="fas fa-ban"></i> Cancelar
-                  </a>
-                <?php else: ?>
-                  <button type="button" class="btn btn-sm btn-outline-secondary mb-1" disabled
-                    title="No se puede cancelar: tiene pagos">
-                    <i class="fas fa-ban"></i> Cancelar
-                  </button>
-                <?php endif; ?>
               </td>
             </tr>
           <?php endforeach;

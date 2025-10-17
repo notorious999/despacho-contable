@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-10-2025 a las 05:44:05
+-- Tiempo de generación: 17-10-2025 a las 21:15:30
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -120,7 +120,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `username`, `password`, `email`, `nombre`, `apellidos`, `rol_id`, `estatus`, `ultimo_acceso`, `intentos_fallidos`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '$2y$10$b4Pib.sQEkPG2Fbbe1.T4.OBsZ/58C2zqK6qdjE7WY9UxBn1Ndfyy', 'admin@gmail.com', 'Admin', 'Principal', 1, 'activo', '2025-10-16 10:50:41', 0, '2025-10-12 17:43:59', '2025-10-16 16:50:41'),
+(1, 'admin', '$2y$10$b4Pib.sQEkPG2Fbbe1.T4.OBsZ/58C2zqK6qdjE7WY9UxBn1Ndfyy', 'admin@gmail.com', 'Admin', 'Principal', 1, 'activo', '2025-10-17 13:06:35', 0, '2025-10-12 17:43:59', '2025-10-17 19:06:35'),
 (3, 'angel', '$2y$10$lkKmKpVXZTSya0DTjgkplOzIE7FNE2qilrztAQy6UErXSWyXi/mU.', 'angelriveroqwer23@gmail.com', 'Angel Enrique', 'Rivero Chuc', 2, 'activo', '2025-10-12 19:07:12', 0, '2025-10-12 19:43:03', '2025-10-13 01:07:12');
 
 --

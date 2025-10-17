@@ -224,10 +224,10 @@ include_once __DIR__ . '/../../includes/header.php';
     <p class="lead mb-0"><?php echo ($tipo === 'emitida') ? 'Facturas Emitidas' : 'Facturas Recibidas'; ?></p>
   </div>
   <div class="col-md-6 text-end">
-    <a href="<?php echo URL_ROOT; ?>/index.php" class="btn btn-secondary me-2"><i class="fas fa-arrow-left"></i> Volver</a>
+    <!--<a href="<?php echo URL_ROOT; ?>/index.php" class="btn btn-secondary me-2"><i class="fas fa-arrow-left"></i> Volver</a>-->
     <a href="cargar_xml.php" class="btn btn-primary me-2"><i class="fas fa-upload"></i> Cargar XML</a>
     <button id="btn-actualizar-sat" class="btn btn-outline-secondary me-2" title="Consultar al SAT el estado de todos los CFDI del listado actual"><i class="fas fa-sync"></i> Consultar estados (cancelados)</button>
-    <button id="exportarExcel" class="btn btn-success"><i class="fas fa-file-excel"></i> Exportar a Excel (.xlsx)</button>
+    <button id="exportarExcel" class="btn btn-success"><i class="fas fa-file-excel"></i> Exportar a Excel</button>
   </div>
 </div>
 

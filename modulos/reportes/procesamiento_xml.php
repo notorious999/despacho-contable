@@ -56,6 +56,17 @@ function procesarCFDIEmitido($xml, $namespaces, $cliente_id, $database) {
             $rfc_receptor = isset($receptor[0]['Rfc']) ? (string)$receptor[0]['Rfc'] : '';
         }
 
+        // Extraer datos del emisor
+        $emisor = $xml->xpath('//cfdi:Emisor');
+        $nombre_emisor = '';
+        $rfc_emisor = '';
+        
+        if (!empty($emisor)) {
+            $nombre_emisor = isset($emisor[0]['Nombre']) ? (string)$emisor[0]['Nombre'] : '';
+            $rfc_emisor = isset($emisor[0]['Rfc']) ? (string)$emisor[0]['Rfc'] : '';
+        }
+        
+
         // Buscar CFDIs relacionados
         $uuid_relacionado = '';
         $cfdiRelacionados = $xml->xpath('//cfdi:CfdiRelacionados/cfdi:CfdiRelacionado');
@@ -170,11 +181,11 @@ function procesarCFDIEmitido($xml, $namespaces, $cliente_id, $database) {
         // Insertar en la base de datos
         $database->query('INSERT INTO CFDIs_Emitidas (
                           cliente_id, tipo_comprobante, folio_interno, forma_pago, metodo_pago, folio_fiscal, 
-                          fecha_emision, nombre_receptor, rfc_receptor, descripcion, 
+                          fecha_emision, nombre_receptor, rfc_receptor, rfc_emisor, nombre_emisor, descripcion, 
                           subtotal, tasa0, tasa16, iva, total, uuid_relacionado) 
                           VALUES (
                           :cliente_id, :tipo_comprobante, :folio_interno, :forma_pago, :metodo_pago, :folio_fiscal, 
-                          :fecha_emision, :nombre_receptor, :rfc_receptor, :descripcion, 
+                          :fecha_emision, :nombre_receptor, :rfc_receptor, :rfc_emisor, :nombre_emisor, :descripcion, 
                           :subtotal, :tasa0, :tasa16, :iva, :total, :uuid_relacionado)');
         
         $database->bind(':cliente_id', $cliente_id);
@@ -186,6 +197,8 @@ function procesarCFDIEmitido($xml, $namespaces, $cliente_id, $database) {
         $database->bind(':fecha_emision', $fecha_emision);
         $database->bind(':nombre_receptor', $nombre_receptor);
         $database->bind(':rfc_receptor', $rfc_receptor);
+        $database->bind(':rfc_emisor', $rfc_emisor);
+        $database->bind(':nombre_emisor', $nombre_emisor);
         $database->bind(':descripcion', $descripcion);
         $database->bind(':subtotal', $subtotal);
         $database->bind(':tasa0', $tasa0);
@@ -260,6 +273,16 @@ function procesarCFDIRecibido($xml, $namespaces, $cliente_id, $database) {
         if (!empty($emisor)) {
             $nombre_emisor = isset($emisor[0]['Nombre']) ? (string)$emisor[0]['Nombre'] : '';
             $rfc_emisor = isset($emisor[0]['Rfc']) ? (string)$emisor[0]['Rfc'] : '';
+        }
+
+        // Extraer datos del receptor
+        $receptor = $xml->xpath('//cfdi:Receptor');
+        $nombre_receptor = '';
+        $rfc_receptor = '';
+        
+        if (!empty($receptor)) {
+            $nombre_receptor = isset($receptor[0]['Nombre']) ? (string)$receptor[0]['Nombre'] : '';
+            $rfc_receptor = isset($receptor[0]['Rfc']) ? (string)$receptor[0]['Rfc'] : '';
         }
         
         // Buscar CFDIs relacionados
@@ -429,12 +452,12 @@ function procesarCFDIRecibido($xml, $namespaces, $cliente_id, $database) {
         // Insertar en la base de datos
         $database->query('INSERT INTO CFDIs_Recibidas (
                           cliente_id, tipo_comprobante, forma_pago, metodo_pago, folio_fiscal, 
-                          fecha_certificacion, nombre_emisor, rfc_emisor, descripcion, 
+                          fecha_certificacion, nombre_emisor, rfc_emisor, rfc_receptor, nombre_receptor, descripcion, 
                           subtotal, tasa0, tasa16, iva, total, 
                           retencion_iva, retencion_isr, retencion_ieps, uuid_relacionado) 
                           VALUES (
                           :cliente_id, :tipo_comprobante, :forma_pago, :metodo_pago, :folio_fiscal, 
-                          :fecha_certificacion, :nombre_emisor, :rfc_emisor, :descripcion, 
+                          :fecha_certificacion, :nombre_emisor, :rfc_emisor, :rfc_receptor, :nombre_receptor, :descripcion, 
                           :subtotal, :tasa0, :tasa16, :iva, :total, 
                           :retencion_iva, :retencion_isr, :retencion_ieps, :uuid_relacionado)');
         
@@ -446,6 +469,8 @@ function procesarCFDIRecibido($xml, $namespaces, $cliente_id, $database) {
         $database->bind(':fecha_certificacion', $fecha_certificacion);
         $database->bind(':nombre_emisor', $nombre_emisor);
         $database->bind(':rfc_emisor', $rfc_emisor);
+        $database->bind(':rfc_receptor', $rfc_receptor);
+        $database->bind(':nombre_receptor', $nombre_receptor);
         $database->bind(':descripcion', $descripcion);
         $database->bind(':subtotal', $subtotal);
         $database->bind(':tasa0', $tasa0);

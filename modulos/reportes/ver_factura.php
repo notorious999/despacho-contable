@@ -45,32 +45,34 @@ if (!$factura) {
 $tipo_comprobante = '';
 if ($tipo == 'emitida') {
     // Determinar tipo de comprobante por el método de pago
-    if ($factura->metodo_pago == 'PUE') {
+    if ($factura->tipo_comprobante == 'Ingreso') {
         $tipo_comprobante = 'Ingreso';
-    } elseif ($factura->metodo_pago == 'PPD') {
-        $tipo_comprobante = 'Crédito';
-    }elseif (!empty($factura->uuid_relacionado)) {
+    } elseif ($factura->tipo_comprobante == 'Egreso') {
+        $tipo_comprobante = 'Egreso';
+    } elseif ($factura->tipo_comprobante == 'Nomina') {
+        $tipo_comprobante = 'Nómina';
+    } elseif ($factura->tipo_comprobante == 'Pago'){
         $tipo_comprobante = 'Pago';
-    }else {
+    } else {
         // Verificar si hay relacionados (Nota de crédito)
         $database->query("SELECT uuid_relacionado FROM CFDIs_Recibidas WHERE uuid_relacionado = :folio_fiscal");
         $database->bind(':folio_fiscal', $factura->folio_fiscal);
-        if ($database->single()) {
+        /*if ($database->single()) {
             $tipo_comprobante = 'Crédito';
         } else {
             $tipo_comprobante = 'Otro';
-        }
+        }*/
     }
 } else {
     // Si es una factura recibida
-    if ($factura->metodo_pago == 'PUE') {
+    if ($factura->tipo_comprobante == 'Ingreso') {
         $tipo_comprobante = 'Ingreso';
-    } elseif ($factura->metodo_pago == 'PPD') {
-        $tipo_comprobante = 'Crédito';
-    } elseif (!empty($factura->uuid_relacionado)) {
+    } elseif ($factura->tipo_comprobante == 'Egreso') {
+        $tipo_comprobante = 'Egreso';
+    } elseif ($factura->tipo_comprobante == 'Nomina') {
+        $tipo_comprobante = 'Nómina';
+    }elseif ($factura->tipo_comprobante == 'Pago'){
         $tipo_comprobante = 'Pago';
-    } else {
-        $tipo_comprobante = 'Otro';
     }
 }
 
@@ -89,11 +91,17 @@ include_once __DIR__ . '/../../includes/header.php';
         <a href="<?php echo URL_ROOT; ?>/modulos/reportes/index.php?tipo=<?php echo $tipo; ?>" class="btn btn-secondary me-2">
             <i class="fas fa-arrow-left"></i> Volver
         </a>
-        <?php if($factura->estado_sat == 'vigente'): ?>
-        <a href="<?php echo URL_ROOT; ?>/modulos/reportes/cancelar_factura.php?id=<?php echo $factura->id; ?>&tipo=<?php echo $tipo; ?>" class="btn btn-danger">
-            <i class="fas fa-ban"></i> Cancelar Factura
-        </a>
+        <a href="<?php echo URL_ROOT; ?>/modulos/reportes/imprimir_factura.php?id=<?php echo (int)$factura->id; ?>&tipo=<?php echo htmlspecialchars($tipo); ?>"
+   class="btn btn-info"
+   target="_blank">
+    <i class="fas fa-print"></i> Ver PDF
+</a>
+        <?php if ($factura->estado_sat == 'vigente'): ?>
+            <a href="<?php echo URL_ROOT; ?>/modulos/reportes/cancelar_factura.php?id=<?php echo $factura->id; ?>&tipo=<?php echo $tipo; ?>" class="btn btn-danger">
+                <i class="fas fa-ban"></i> Cancelar Factura
+            </a>
         <?php endif; ?>
+
     </div>
 </div>
 
@@ -105,10 +113,10 @@ include_once __DIR__ . '/../../includes/header.php';
             </div>
             <div>
                 <span class="badge bg-primary me-2">Tipo: <?php echo $tipo_comprobante; ?></span>
-                <?php if($factura->estado_sat == 'Cancelado'): ?>
-                <span class="badge bg-danger">CANCELADA</span>
+                <?php if ($factura->estado_sat == 'Cancelado'): ?>
+                    <span class="badge bg-danger">CANCELADA</span>
                 <?php else: ?>
-                <span class="badge bg-success">VIGENTE</span>
+                    <span class="badge bg-success">VIGENTE</span>
                 <?php endif; ?>
             </div>
         </div>
@@ -126,20 +134,20 @@ include_once __DIR__ . '/../../includes/header.php';
                         <th>Folio Fiscal (UUID):</th>
                         <td><?php echo $factura->folio_fiscal; ?></td>
                     </tr>
-                    <?php if($tipo == 'emitida'): ?>
-                    <tr>
-                        <th>Folio Interno:</th>
-                        <td><?php echo !empty($factura->folio_interno) ? $factura->folio_interno : 'N/A'; ?></td>
-                    </tr>
-                    <tr>
-                        <th>Fecha de Emisión:</th>
-                        <td><?php echo formatDate($factura->fecha_emision); ?></td>
-                    </tr>
+                    <?php if ($tipo == 'emitida'): ?>
+                        <tr>
+                            <th>Folio Interno:</th>
+                            <td><?php echo !empty($factura->folio_interno) ? $factura->folio_interno : 'N/A'; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Fecha de Emisión:</th>
+                            <td><?php echo formatDate($factura->fecha_emision); ?></td>
+                        </tr>
                     <?php else: ?>
-                    <tr>
-                        <th>Fecha de Certificación:</th>
-                        <td><?php echo formatDate($factura->fecha_certificacion); ?></td>
-                    </tr>
+                        <tr>
+                            <th>Fecha de Certificación:</th>
+                            <td><?php echo formatDate($factura->fecha_certificacion); ?></td>
+                        </tr>
                     <?php endif; ?>
                     <tr>
                         <th>Forma de Pago:</th>
@@ -155,43 +163,59 @@ include_once __DIR__ . '/../../includes/header.php';
                     </tr>
                 </table>
             </div>
-            
+
             <div class="col-md-6">
                 <h5><?php echo ($tipo == 'emitida') ? 'Datos del Receptor' : 'Datos del Emisor'; ?></h5>
                 <table class="table table-bordered">
-                    <?php if($tipo == 'emitida'): ?>
-                    <tr>
-                        <th width="40%">Receptor:</th>
-                        <td><?php echo $factura->nombre_receptor; ?></td>
-                    </tr>
-                    <tr>
-                        <th>RFC Receptor:</th>
-                        <td><?php echo $factura->rfc_receptor; ?></td>
-                    </tr>
-                    <?php if(!empty($factura->uuid_relacionado)): ?>
-                    <tr>
-                        <th>CFDI Relacionado:</th>
-                        <td><?php echo strtoupper($factura->uuid_relacionado); ?></td>
-                    </tr>
-                    <?php endif; ?>
+                    <?php if ($tipo == 'emitida'): ?>
+                        <tr>
+                            <th width="40%">Receptor:</th>
+                            <td><?php echo $factura->nombre_receptor; ?></td>
+                        </tr>
+                        <tr>
+                            <th>RFC Receptor:</th>
+                            <td><?php echo $factura->rfc_receptor; ?></td>
+                        </tr>
+                        <tr>
+                            <th width="40%">Emisor:</th>
+                            <td><?php echo $factura->nombre_emisor; ?></td>
+                        </tr>
+                        <tr>
+                            <th>RFC Emisor:</th>
+                            <td><?php echo $factura->rfc_emisor; ?></td>
+                        </tr>
+                        <?php if (!empty($factura->uuid_relacionado)): ?>
+                            <tr>
+                                <th>CFDI Relacionado:</th>
+                                <td><?php echo strtoupper($factura->uuid_relacionado); ?></td>
+                            </tr>
+                        <?php endif; ?>
                     <?php else: ?>
-                    <tr>
-                        <th width="40%">Emisor:</th>
-                        <td><?php echo $factura->nombre_emisor; ?></td>
-                    </tr>
-                    <tr>
-                        <th>RFC Emisor:</th>
-                        <td><?php echo $factura->rfc_emisor; ?></td>
-                    </tr>
-                    <?php if(!empty($factura->uuid_relacionado)): ?>
-                    <tr>
-                        <th>CFDI Relacionado:</th>
-                        <td><?php echo strtoupper($factura->uuid_relacionado); ?></td>
-                    </tr>
-                    <?php endif; ?>
+                        <tr>
+                            <th width="40%">Emisor:</th>
+                            <td><?php echo $factura->nombre_emisor; ?></td>
+                        </tr>
+                        <tr>
+                            <th>RFC Emisor:</th>
+                            <td><?php echo $factura->rfc_emisor; ?></td>
+                        </tr>
+                        <tr>
+                            <th width="40%">Receptor:</th>
+                            <td><?php echo $factura->nombre_receptor; ?></td>
+                        </tr>
+                        <tr>
+                            <th>RFC Receptor:</th>
+                            <td><?php echo $factura->rfc_receptor; ?></td>
+                        </tr>
+                        <?php if (!empty($factura->uuid_relacionado)): ?>
+                            <tr>
+                                <th>CFDI Relacionado:</th>
+                                <td><?php echo strtoupper($factura->uuid_relacionado); ?></td>
+                            </tr>
+                        <?php endif; ?>
                     <?php endif; ?>
                 </table>
-                
+
                 <h5 class="mt-4">Importes</h5>
                 <table class="table table-bordered">
                     <tr>
@@ -218,7 +242,7 @@ include_once __DIR__ . '/../../includes/header.php';
                         <th>ISR:</th>
                         <td class="text-end"><?php echo formatMoney($factura->isr_importe); ?></td>
                     </tr>
-                     <tr>
+                    <tr>
                         <th>Retención IVA:</th>
                         <td class="text-end"><?php echo formatMoney($factura->retencion_iva); ?></td>
                     </tr>
@@ -230,13 +254,13 @@ include_once __DIR__ . '/../../includes/header.php';
                         <th>Retención IEPS:</th>
                         <td class="text-end"><?php echo formatMoney($factura->retencion_ieps); ?></td>
                     </tr>
-                        <th>Total:</th>
-                        <td class="text-end"><strong><?php echo formatMoney($factura->total); ?></strong></td>
+                    <th>Total:</th>
+                    <td class="text-end"><strong><?php echo formatMoney($factura->total); ?></strong></td>
                     </tr>
                 </table>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-12">
                 <h5>Conceptos</h5>
@@ -245,24 +269,25 @@ include_once __DIR__ . '/../../includes/header.php';
                 </div>
             </div>
         </div>
-        
-        <?php if($factura->estado == 'cancelado' && !empty($factura->motivo_cancelacion)): ?>
-        <div class="row mt-4">
-            <div class="col-12">
-                <div class="alert alert-danger">
-                    <h5><i class="fas fa-exclamation-triangle"></i> Factura Cancelada</h5>
-                    <p><strong>Fecha de Cancelación:</strong> <?php echo formatDate($factura->fecha_cancelacion); ?></p>
-                    <p><strong>Motivo:</strong> <?php echo $factura->motivo_cancelacion; ?></p>
+
+        <?php if ($factura->estado == 'cancelado' && !empty($factura->motivo_cancelacion)): ?>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="alert alert-danger">
+                        <h5><i class="fas fa-exclamation-triangle"></i> Factura Cancelada</h5>
+                        <p><strong>Fecha de Cancelación:</strong> <?php echo formatDate($factura->fecha_cancelacion); ?></p>
+                        <p><strong>Motivo:</strong> <?php echo $factura->motivo_cancelacion; ?></p>
+                    </div>
                 </div>
             </div>
-        </div>
         <?php endif; ?>
     </div>
 </div>
 
 <?php
 // Función para obtener la descripción de la forma de pago
-function getFormaPago($codigo) {
+function getFormaPago($codigo)
+{
     $formasPago = [
         '01' => 'Efectivo',
         '02' => 'Cheque nominativo',
@@ -287,25 +312,26 @@ function getFormaPago($codigo) {
         '31' => 'Intermediario pagos',
         '99' => 'Por definir',
     ];
-    
+
     if (isset($formasPago[$codigo])) {
         return $codigo . ' - ' . $formasPago[$codigo];
     }
-    
+
     return $codigo;
 }
 
 // Función para obtener la descripción del método de pago
-function getMetodoPago($codigo) {
+function getMetodoPago($codigo)
+{
     $metodosPago = [
         'PUE' => 'Pago en una sola exhibición',
         'PPD' => 'Pago en parcialidades o diferido',
     ];
-    
+
     if (isset($metodosPago[$codigo])) {
         return $codigo . ' - ' . $metodosPago[$codigo];
     }
-    
+
     return $codigo;
 }
 

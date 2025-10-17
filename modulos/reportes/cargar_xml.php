@@ -180,6 +180,11 @@ function procesarCFDIEmitido(SimpleXMLElement $xml, array $namespaces, $cliente_
         $ret_iva         = $imp['retencion_iva'];
         $ret_ieps        = $imp['retencion_ieps'];
         $ret_isr         = $imp['retencion_isr'];
+        
+        //Emisor
+        $emiNodes = $xml->xpath('/*[local-name()="Comprobante"]/*[local-name()="Emisor"]');
+        $nombre_emisor = $emiNodes && isset($emiNodes[0]['Nombre']) ? (string)$emiNodes[0]['Nombre'] : '';
+        $rfc_emisor    = $emiNodes ? ((isset($emiNodes[0]['Rfc']) ? (string)$emiNodes[0]['Rfc'] : (isset($emiNodes[0]['RFC']) ? (string)$emiNodes[0]['RFC'] : ''))) : '';
 
         // Receptor
         $recNodes = $xml->xpath('/*[local-name()="Comprobante"]/*[local-name()="Receptor"]');
@@ -206,13 +211,13 @@ function procesarCFDIEmitido(SimpleXMLElement $xml, array $namespaces, $cliente_
         // Insert
         $database->query('INSERT INTO CFDIs_Emitidas (
             cliente_id, tipo_comprobante, folio_interno, forma_pago, metodo_pago, folio_fiscal,
-            fecha_emision, nombre_receptor, rfc_receptor, descripcion,
+            fecha_emision, nombre_receptor, rfc_receptor, rfc_emisor, nombre_emisor, descripcion,
             subtotal, total, uuid_relacionado,
             tasa0_base, tasa16_base, iva_importe, ieps_importe, isr_importe,
             retencion_iva, retencion_ieps, retencion_isr
         ) VALUES (
             :cliente_id, :tipo_comprobante, :folio_interno, :forma_pago, :metodo_pago, :folio_fiscal,
-            :fecha_emision, :nombre_receptor, :rfc_receptor, :descripcion,
+            :fecha_emision, :nombre_receptor, :rfc_receptor, :rfc_emisor, :nombre_emisor, :descripcion,
             :subtotal, :total, :uuid_relacionado,
             :tasa0_base, :tasa16_base, :iva_importe, :ieps_importe, :isr_importe,
             :retencion_iva, :retencion_ieps, :retencion_isr
@@ -227,6 +232,8 @@ function procesarCFDIEmitido(SimpleXMLElement $xml, array $namespaces, $cliente_
         $database->bind(':fecha_emision', $fecha_emision);
         $database->bind(':nombre_receptor', $nombre_receptor);
         $database->bind(':rfc_receptor', $rfc_receptor);
+        $database->bind(':rfc_emisor', $rfc_emisor);
+        $database->bind(':nombre_emisor', $nombre_emisor);
         $database->bind(':descripcion', $descripcion);
         $database->bind(':subtotal', $subtotal);
         $database->bind(':total', $total);
@@ -296,6 +303,11 @@ function procesarCFDIRecibido(SimpleXMLElement $xml, array $namespaces, $cliente
         $nombre_emisor = $emiNodes && isset($emiNodes[0]['Nombre']) ? (string)$emiNodes[0]['Nombre'] : '';
         $rfc_emisor    = $emiNodes ? ((isset($emiNodes[0]['Rfc']) ? (string)$emiNodes[0]['Rfc'] : (isset($emiNodes[0]['RFC']) ? (string)$emiNodes[0]['RFC'] : ''))) : '';
 
+        // Receptor
+        $recNodes = $xml->xpath('/*[local-name()="Comprobante"]/*[local-name()="Receptor"]');
+        $nombre_receptor = $recNodes && isset($recNodes[0]['Nombre']) ? (string)$recNodes[0]['Nombre'] : '';
+        $rfc_receptor    = $recNodes ? ((isset($recNodes[0]['Rfc']) ? (string)$recNodes[0]['Rfc'] : (isset($recNodes[0]['RFC']) ? (string)$recNodes[0]['RFC'] : ''))) : '';
+
         // Relacionados
         $uuid_relacionado = '';
         $rel = $xml->xpath('/*[local-name()="Comprobante"]/*[local-name()="CfdiRelacionados"]/*[local-name()="CfdiRelacionado"]');
@@ -317,13 +329,13 @@ function procesarCFDIRecibido(SimpleXMLElement $xml, array $namespaces, $cliente
         // Insert
         $database->query('INSERT INTO CFDIs_Recibidas (
             cliente_id, tipo_comprobante, forma_pago, metodo_pago, folio_fiscal,
-            fecha_certificacion, nombre_emisor, rfc_emisor, descripcion,
+            fecha_certificacion, nombre_emisor, rfc_emisor, rfc_receptor, nombre_receptor, descripcion,
             subtotal, total,
             retencion_iva, retencion_isr, retencion_ieps, uuid_relacionado,
             tasa0_base, tasa16_base, iva_importe, ieps_importe, isr_importe
         ) VALUES (
             :cliente_id, :tipo_comprobante, :forma_pago, :metodo_pago, :folio_fiscal,
-            :fecha_certificacion, :nombre_emisor, :rfc_emisor, :descripcion,
+            :fecha_certificacion, :nombre_emisor, :rfc_emisor, :rfc_receptor, :nombre_receptor, :descripcion,
             :subtotal, :total,
             :retencion_iva, :retencion_isr, :retencion_ieps, :uuid_relacionado,
             :tasa0_base, :tasa16_base, :iva_importe, :ieps_importe, :isr_importe
@@ -337,6 +349,8 @@ function procesarCFDIRecibido(SimpleXMLElement $xml, array $namespaces, $cliente
         $database->bind(':fecha_certificacion', $fecha_certificacion);
         $database->bind(':nombre_emisor', $nombre_emisor);
         $database->bind(':rfc_emisor', $rfc_emisor);
+        $database->bind(':rfc_receptor', $rfc_receptor);
+        $database->bind(':nombre_receptor', $nombre_receptor);
         $database->bind(':descripcion', $descripcion);
         $database->bind(':subtotal', $subtotal);
         $database->bind(':total', $total);

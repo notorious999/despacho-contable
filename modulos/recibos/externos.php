@@ -19,11 +19,17 @@ $sql = 'SELECT r.*
         FROM recibos r
         WHERE r.estatus = "activo" AND r.cliente_id IS NULL';
 $params = [];
-if ($desde !== '') { $sql .= ' AND r.periodo_inicio >= :desde'; $params[':desde'] = $desde; }
-if ($hasta !== '') { $sql .= ' AND r.periodo_fin <= :hasta';   $params[':hasta'] = $hasta; }
+if ($desde !== '') {
+  $sql .= ' AND r.periodo_inicio >= :desde';
+  $params[':desde'] = $desde;
+}
+if ($hasta !== '') {
+  $sql .= ' AND r.periodo_fin <= :hasta';
+  $params[':hasta'] = $hasta;
+}
 if ($q !== '') {
   $sql .= ' AND (r.externo_nombre LIKE :q OR r.externo_rfc LIKE :q OR r.concepto LIKE :q)';
-  $params[':q'] = '%'.$q.'%';
+  $params[':q'] = '%' . $q . '%';
 }
 $sql .= ' ORDER BY r.periodo_inicio DESC, r.externo_nombre ASC';
 
@@ -32,7 +38,8 @@ foreach ($params as $k => $v) $db->bind($k, $v);
 $recibos = $db->resultSet();
 
 // Totales
-$tot_monto = 0; $tot_pagado = 0;
+$tot_monto = 0;
+$tot_pagado = 0;
 foreach ($recibos as $r) {
   $tot_monto  += (float)$r->monto;
   $tot_pagado += (float)$r->monto_pagado;
@@ -48,25 +55,27 @@ include_once __DIR__ . '/../../includes/header.php';
 
     <div class="btn-group me-2" role="group" aria-label="Acciones Principales">
       <a href="?desde=<?php echo htmlspecialchars($desde, ENT_QUOTES, 'UTF-8'); ?>&hasta=<?php echo htmlspecialchars($hasta, ENT_QUOTES, 'UTF-8'); ?>&generar=1"
-         class="btn btn-primary" onclick="return confirm('¿Generar recibos para el periodo seleccionado?');">
+        class="btn btn-primary" onclick="return confirm('¿Generar recibos para el periodo seleccionado?');">
         <i class="fas fa-magic"></i> Generar del Periodo
       </a>
-      
+
       <div class="btn-group" role="group">
         <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fas fa-plus"></i> Nuevo
         </button>
         <ul class="dropdown-menu dropdown-menu-end">
           <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/nuevo_servicio.php">
-            <i class="fas fa-file-circle-plus me-2""></i>Nuevo Recibo (Clientes)
+              <i class="fas fa-file-circle-plus me-2""></i>Nuevo Recibo (Clientes)
           </a></li>
-          <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/nuevo_externo.php">
-            <i class="fas fa-file-circle-plus me-2"></i>Nuevo Recibo (Externo)
-          </a></li>
-          <li><hr class="dropdown-divider"></li>
+          <li><a class=" dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/nuevo_externo.php">
+                <i class="fas fa-file-circle-plus me-2"></i>Nuevo Recibo (Externo)
+            </a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
           <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/pago_adelantado.php">
-            <i class="fas fa-forward me-2"></i>Pago Adelantado
-          </a></li>
+              <i class="fas fa-forward me-2"></i>Pago Adelantado
+            </a></li>
         </ul>
       </div>
     </div>
@@ -77,17 +86,17 @@ include_once __DIR__ . '/../../includes/header.php';
       </button>
       <ul class="dropdown-menu dropdown-menu-end">
         <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/clientes/index.php">
-          <i class="fas fa-users me-2"></i>Clientes
-        </a></li>
+            <i class="fas fa-users me-2"></i>Clientes
+          </a></li>
         <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/servicios.php">
-          <i class="fas fa-file-invoice-dollar me-2"></i>Recibos (Clientes)
-        </a></li>
+            <i class="fas fa-file-invoice-dollar me-2"></i>Recibos (Clientes)
+          </a></li>
         <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/externos.php">
-          <i class="fas fa-file-invoice-dollar me-2"></i>Recibos (Externos)
-        </a></li>
+            <i class="fas fa-file-invoice-dollar me-2"></i>Recibos (Externos)
+          </a></li>
         <li><a class="dropdown-item" href="<?php echo URL_ROOT; ?>/modulos/recibos/pagos_adelantados.php">
-          <i class="fas fa-forward"></i>Pagos Adelantados
-        </a></li>
+            <i class="fas fa-forward"></i>Pagos Adelantados
+          </a></li>
       </ul>
     </div>
 
@@ -151,25 +160,31 @@ include_once __DIR__ . '/../../includes/header.php';
       </thead>
       <tbody>
         <?php if (!empty($recibos)): foreach ($recibos as $r): ?>
-          <tr>
-            <td><?php echo htmlspecialchars($r->externo_nombre ?? '—', ENT_QUOTES, 'UTF-8'); ?></td>
-            <td><?php echo htmlspecialchars($r->externo_rfc ?? '—', ENT_QUOTES, 'UTF-8'); ?></td>
-            <td><?php echo formatDate($r->periodo_inicio); ?></td>
-            <td><?php echo htmlspecialchars($r->concepto ?? '', ENT_QUOTES, 'UTF-8'); ?></td>
-            <td class="text-end"><?php echo formatMoney((float)$r->monto); ?></td>
-            <td class="text-end"><?php echo formatMoney((float)$r->monto_pagado); ?></td>
-            <td class="text-center">
-              <a class="btn btn-sm btn-outline-primary mb-1"
-                 href="<?php echo URL_ROOT; ?>/modulos/recibos/editar.php?id=<?php echo (int)$r->id; ?>">
-                <i class="fas fa-edit"></i> Editar
-              </a>
-              <a class="btn btn-sm btn-outline-success mb-1"
-                 href="<?php echo URL_ROOT; ?>/modulos/recibos/imprimir_externo.php?recibo_id=<?php echo (int)$r->id; ?>" target="_blank">
-                <i class="fas fa-print"></i> Imprimir
-              </a>
-            </td>
-          </tr>
-        <?php endforeach; else: ?>
+            <tr>
+              <td><?php echo htmlspecialchars($r->externo_nombre ?? '—', ENT_QUOTES, 'UTF-8'); ?></td>
+              <td><?php echo htmlspecialchars($r->externo_rfc ?? '—', ENT_QUOTES, 'UTF-8'); ?></td>
+              <td><?php echo formatDate($r->periodo_inicio); ?></td>
+              <td><?php echo htmlspecialchars($r->concepto ?? '', ENT_QUOTES, 'UTF-8'); ?></td>
+              <td class="text-end"><?php echo formatMoney((float)$r->monto); ?></td>
+              <td class="text-end"><?php echo formatMoney((float)$r->monto_pagado); ?></td>
+              <td class="text-center">
+                <a class="btn btn-sm btn-outline-primary mb-1"
+                  href="<?php echo URL_ROOT; ?>/modulos/recibos/editar_externo.php?id=<?php echo (int)$r->id; ?>">
+                  <i class="fas fa-edit"></i> Editar
+                </a>
+                <a class="btn btn-sm btn-outline-success mb-1"
+                  href="<?php echo URL_ROOT; ?>/modulos/recibos/imprimir_externo.php?recibo_id=<?php echo (int)$r->id; ?>" target="_blank">
+                  <i class="fas fa-print"></i> Imprimir
+                </a>
+                <a class="btn btn-sm btn-outline-danger mb-1"
+                  href="<?php echo URL_ROOT; ?>/modulos/recibos/cancelar_externo.php?id=<?php echo (int)$r->id; ?>"
+                  onclick="return confirm('¿Estás seguro de que quieres cancelar este recibo?');">
+                  <i class="fas fa-ban"></i> Cancelar
+                </a>
+              </td>
+            </tr>
+          <?php endforeach;
+        else: ?>
           <tr>
             <td colspan="7" class="text-center text-muted">Sin recibos externos en el periodo.</td>
           </tr>
