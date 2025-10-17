@@ -49,7 +49,9 @@ if ($tipo == 'emitida') {
         $tipo_comprobante = 'Ingreso';
     } elseif ($factura->metodo_pago == 'PPD') {
         $tipo_comprobante = 'Crédito';
-    } else {
+    }elseif (!empty($factura->uuid_relacionado)) {
+        $tipo_comprobante = 'Pago';
+    }else {
         // Verificar si hay relacionados (Nota de crédito)
         $database->query("SELECT uuid_relacionado FROM CFDIs_Recibidas WHERE uuid_relacionado = :folio_fiscal");
         $database->bind(':folio_fiscal', $factura->folio_fiscal);
@@ -166,6 +168,12 @@ include_once __DIR__ . '/../../includes/header.php';
                         <th>RFC Receptor:</th>
                         <td><?php echo $factura->rfc_receptor; ?></td>
                     </tr>
+                    <?php if(!empty($factura->uuid_relacionado)): ?>
+                    <tr>
+                        <th>CFDI Relacionado:</th>
+                        <td><?php echo strtoupper($factura->uuid_relacionado); ?></td>
+                    </tr>
+                    <?php endif; ?>
                     <?php else: ?>
                     <tr>
                         <th width="40%">Emisor:</th>
@@ -178,7 +186,7 @@ include_once __DIR__ . '/../../includes/header.php';
                     <?php if(!empty($factura->uuid_relacionado)): ?>
                     <tr>
                         <th>CFDI Relacionado:</th>
-                        <td><?php echo $factura->uuid_relacionado; ?></td>
+                        <td><?php echo strtoupper($factura->uuid_relacionado); ?></td>
                     </tr>
                     <?php endif; ?>
                     <?php endif; ?>
@@ -202,8 +210,15 @@ include_once __DIR__ . '/../../includes/header.php';
                         <th>IVA:</th>
                         <td class="text-end"><?php echo formatMoney($factura->iva_importe); ?></td>
                     </tr>
-                    <?php if($tipo == 'recibida'): ?>
                     <tr>
+                        <th>IEPS:</th>
+                        <td class="text-end"><?php echo formatMoney($factura->ieps_importe); ?></td>
+                    </tr>
+                    <tr>
+                        <th>ISR:</th>
+                        <td class="text-end"><?php echo formatMoney($factura->isr_importe); ?></td>
+                    </tr>
+                     <tr>
                         <th>Retención IVA:</th>
                         <td class="text-end"><?php echo formatMoney($factura->retencion_iva); ?></td>
                     </tr>
@@ -215,8 +230,6 @@ include_once __DIR__ . '/../../includes/header.php';
                         <th>Retención IEPS:</th>
                         <td class="text-end"><?php echo formatMoney($factura->retencion_ieps); ?></td>
                     </tr>
-                    <?php endif; ?>
-                    <tr>
                         <th>Total:</th>
                         <td class="text-end"><strong><?php echo formatMoney($factura->total); ?></strong></td>
                     </tr>

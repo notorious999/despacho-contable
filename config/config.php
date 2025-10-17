@@ -2,7 +2,7 @@
 // Configuración general del sistema
 define('SITE_NAME', 'Despacho Contable');
 define('APP_ROOT', dirname(dirname(__FILE__)));
-define('URL_ROOT', 'http://192.168.1.107/despacho-contable');
+define('URL_ROOT', 'http://localhost/despacho-contable');
 define('UPLOAD_PATH', APP_ROOT . '/uploads');
 define('XML_UPLOAD_PATH', UPLOAD_PATH . '/xml');
 

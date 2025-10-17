@@ -180,6 +180,10 @@ include_once __DIR__ . '/../../includes/header.php';
                 </button>
                 <a class="btn btn-sm btn-outline-secondary mb-1" href="<?php echo URL_ROOT; ?>/modulos/recibos/pagos_servicio.php?recibo_id=<?php echo (int)$r->id; ?>"><i class="fas fa-list"></i> Historial</a>
                 
+                <a href="editar_servicio.php?id=<?php echo (int)$r->id; ?>" class="btn btn-sm btn-outline-primary mb-1">
+                    <i class="fas fa-edit"></i> Editar
+                </a>
+                
                 <?php if ($r->ultimo_pago_id): ?>
                   <a class="btn btn-sm btn-outline-success mb-1"
                     href="<?php echo URL_ROOT; ?>/modulos/recibos/imprimir.php?pago_id=<?php echo (int)$r->ultimo_pago_id; ?>" target="_blank">
@@ -191,6 +195,7 @@ include_once __DIR__ . '/../../includes/header.php';
                     <i class="fas fa-print"></i> Imprimir
                   </a>
                 <?php endif; ?>
+                
 
               </td>
             </tr>

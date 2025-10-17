@@ -186,6 +186,14 @@ function procesarCFDIEmitido(SimpleXMLElement $xml, array $namespaces, $cliente_
         $nombre_receptor = $recNodes && isset($recNodes[0]['Nombre']) ? (string)$recNodes[0]['Nombre'] : '';
         $rfc_receptor    = $recNodes ? ((isset($recNodes[0]['Rfc']) ? (string)$recNodes[0]['Rfc'] : (isset($recNodes[0]['RFC']) ? (string)$recNodes[0]['RFC'] : ''))) : '';
 
+        $uuid_relacionado = '';
+        $rel = $xml->xpath('/*[local-name()="Comprobante"]/*[local-name()="CfdiRelacionados"]/*[local-name()="CfdiRelacionado"]');
+        if ($rel && isset($rel[0]['UUID'])) $uuid_relacionado = (string)$rel[0]['UUID'];
+        if ($uuid_relacionado === '' && $tipoC === 'P') {
+            $docRel = $xml->xpath('//*[local-name()="DoctoRelacionado"]');
+            if ($docRel && isset($docRel[0]['IdDocumento'])) $uuid_relacionado = (string)$docRel[0]['IdDocumento'];
+        }
+
         // Campos de compatibilidad antigua (si los usas aún en vistas)
         $tasa0 = (float)$tasa0_base;
         $tasa16 = (float)$tasa16_base;
@@ -199,13 +207,13 @@ function procesarCFDIEmitido(SimpleXMLElement $xml, array $namespaces, $cliente_
         $database->query('INSERT INTO CFDIs_Emitidas (
             cliente_id, tipo_comprobante, folio_interno, forma_pago, metodo_pago, folio_fiscal,
             fecha_emision, nombre_receptor, rfc_receptor, descripcion,
-            subtotal, total,
+            subtotal, total, uuid_relacionado,
             tasa0_base, tasa16_base, iva_importe, ieps_importe, isr_importe,
             retencion_iva, retencion_ieps, retencion_isr
         ) VALUES (
             :cliente_id, :tipo_comprobante, :folio_interno, :forma_pago, :metodo_pago, :folio_fiscal,
             :fecha_emision, :nombre_receptor, :rfc_receptor, :descripcion,
-            :subtotal, :total,
+            :subtotal, :total, :uuid_relacionado,
             :tasa0_base, :tasa16_base, :iva_importe, :ieps_importe, :isr_importe,
             :retencion_iva, :retencion_ieps, :retencion_isr
         )');
@@ -222,6 +230,7 @@ function procesarCFDIEmitido(SimpleXMLElement $xml, array $namespaces, $cliente_
         $database->bind(':descripcion', $descripcion);
         $database->bind(':subtotal', $subtotal);
         $database->bind(':total', $total);
+        $database->bind(':uuid_relacionado', $uuid_relacionado);
 
         $database->bind(':tasa0_base',   $tasa0_base);
         $database->bind(':tasa16_base',  $tasa16_base);

@@ -88,6 +88,7 @@ foreach ($recibos as $r) {
 
 include_once __DIR__ . '/../../includes/header.php';
 ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
 
 <div class="row mb-4 align-items-center">
   <div class="col-md-6">
@@ -96,7 +97,7 @@ include_once __DIR__ . '/../../includes/header.php';
   <div class="col-md-6 text-end">
 
     <div class="btn-group me-2" role="group" aria-label="Acciones Principales">
-      <a href="?desde=<?php echo htmlspecialchars($desde, ENT_QUOTES, 'UTF-8'); ?>&hasta=<?php echo htmlspecialchars($hasta, ENT_QUOTES, 'UTF-8'); ?>&generar=1"
+      <a id="generarLink" href="?desde=<?php echo htmlspecialchars($desde, ENT_QUOTES, 'UTF-8'); ?>&hasta=<?php echo htmlspecialchars($hasta, ENT_QUOTES, 'UTF-8'); ?>&generar=1"
          class="btn btn-primary" onclick="return confirm('¿Generar recibos para el periodo seleccionado?');">
         <i class="fas fa-magic"></i> Generar del Periodo
       </a>
@@ -260,6 +261,11 @@ include_once __DIR__ . '/../../includes/header.php';
                   href="<?php echo URL_ROOT; ?>/modulos/recibos/pagos.php?recibo_id=<?php echo (int)$r->id; ?>">
                   <i class="fas fa-list"></i> Historial
                 </a>
+                <a class="btn btn-sm btn-info mb-1"
+                  href="<?php echo URL_ROOT; ?>/modulos/recibos/marcar_cortesia.php?id=<?php echo (int)$r->id; ?>"
+                  onclick="return confirm('¿Marcar este recibo como cortesía? Los montos se establecerán en 0 y se marcará como pagado.');">
+                   <i class="fas fa-gift"></i> Cortesía
+                </a>
                 <a class="btn btn-sm btn-outline-primary mb-1"
                   href="<?php echo URL_ROOT; ?>/modulos/recibos/editar.php?id=<?php echo (int)$r->id; ?>">
                   <i class="fas fa-edit"></i> Editar
@@ -300,7 +306,6 @@ include_once __DIR__ . '/../../includes/header.php';
   </div>
 </div>
 
-<!-- Modal Pago -->
 <div class="modal fade" id="modalPago" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -319,7 +324,7 @@ include_once __DIR__ . '/../../includes/header.php';
             </div>
             <div class="col-md-6">
               <label class="form-label">Monto</label>
-              <input type="number" step="0.01" min="0" name="monto" id="" class="form-control" required>
+              <input type="number" step="0.01" min="0" name="monto" id="pago_monto" class="form-control" required>
               <div class="form-text">Saldo: <span id="pago_saldo"></span></div>
             </div>
           </div>
@@ -352,8 +357,35 @@ include_once __DIR__ . '/../../includes/header.php';
     </div>
   </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
 <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const clienteSelect = new Choices('#filtroCliente', {
+      searchEnabled: true,
+      itemSelectText: 'Presiona para seleccionar',
+      noResultsText: 'No se encontraron resultados',
+      noChoicesText: 'No hay más opciones para elegir'
+    });
+
+    const generarLink = document.getElementById('generarLink');
+    const filtroCliente = document.getElementById('filtroCliente');
+
+    function updateGenerarLink() {
+      const clienteId = filtroCliente.value;
+      const url = new URL(generarLink.href);
+      if (clienteId) {
+        url.searchParams.set('cliente_id', clienteId);
+      } else {
+        url.searchParams.delete('cliente_id');
+      }
+      generarLink.href = url.toString();
+    }
+
+    filtroCliente.addEventListener('change', updateGenerarLink);
+    updateGenerarLink(); // Initial call
+  });
+
   const modalPago = document.getElementById('modalPago');
   modalPago.addEventListener('show.bs.modal', function(event) {
     const btn = event.relatedTarget;

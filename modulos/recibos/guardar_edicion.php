@@ -2,65 +2,80 @@
 require_once __DIR__ . '/../../config/config.php';
 require_once __DIR__ . '/../../config/db.php';
 require_once __DIR__ . '/../../includes/functions.php';
-require_once __DIR__ . '/../../includes/recibos_service.php';
 
-if (!isLoggedIn()) { redirect(URL_ROOT.'/modulos/usuarios/login.php'); }
-
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-  redirect(URL_ROOT.'/modulos/recibos/index.php'); exit;
+if (!isLoggedIn()) {
+    redirect(URL_ROOT . '/modulos/usuarios/login.php');
 }
 
-$id = (int)sanitize($_POST['id'] ?? 0);
-$concepto = sanitize($_POST['concepto'] ?? '');
-$pi = sanitize($_POST['periodo_inicio'] ?? '');
-$pf = sanitize($_POST['periodo_fin'] ?? '');
-$monto = (float)sanitize($_POST['monto'] ?? 0);
-$fv = sanitize($_POST['fecha_vencimiento'] ?? '') ?: null;
-$obs = sanitize($_POST['observaciones'] ?? '');
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $db = new Database();
+    $recibo_id = (int)$_POST['id'];
 
-$db = new Database();
-$db->query('SELECT * FROM recibos WHERE id = :id');
-$db->bind(':id', $id);
-$r = $db->single();
-if (!$r) {
-  flash('mensaje', 'Recibo no encontrado.', 'alert alert-danger');
-  redirect(URL_ROOT.'/modulos/recibos/index.php'); exit;
+    // Escenario 1: Cancelar el recibo
+    if (isset($_POST['cancelar']) && $_POST['cancelar'] == '1') {
+        $cancel_reason = sanitize($_POST['cancel_reason'] ?? 'Cancelado manualmente por el usuario.');
+        $cancelled_by = $_SESSION['user_id'] ?? null;
+
+        $db->query('UPDATE recibos SET 
+                        estatus = "cancelado",
+                        cancel_reason = :reason,
+                        cancelled_at = NOW(),
+                        cancelled_by = :user_id
+                    WHERE id = :id');
+        $db->bind(':reason', $cancel_reason);
+        $db->bind(':user_id', $cancelled_by);
+        $db->bind(':id', $recibo_id);
+
+        if ($db->execute()) {
+            // Opcional: Podrías considerar eliminar los pagos asociados para mantener la consistencia
+            // $db->query('DELETE FROM recibos_pagos WHERE recibo_id = :id');
+            // $db->bind(':id', $recibo_id);
+            // $db->execute();
+            flash('mensaje', 'El recibo ha sido cancelado correctamente.');
+        } else {
+            flash('mensaje', 'Error al cancelar el recibo.', 'alert alert-danger');
+        }
+
+    // Escenario 2: Actualizar la información del recibo
+    } else {
+        $cliente_id = (int)$_POST['cliente_id'];
+        $concepto = sanitize($_POST['concepto']);
+        $monto = (float)$_POST['monto'];
+        $monto_pagado = (float)$_POST['monto_pagado'];
+        $periodo_inicio = sanitize($_POST['periodo_inicio']);
+        $periodo_fin = sanitize($_POST['periodo_fin']);
+
+        // Determinar el nuevo estado basado en los montos
+        $estado = ($monto_pagado >= $monto) ? 'pagado' : 'pendiente';
+
+        $db->query('UPDATE recibos SET 
+                        cliente_id = :cliente_id,
+                        concepto = :concepto,
+                        monto = :monto,
+                        monto_pagado = :monto_pagado,
+                        periodo_inicio = :periodo_inicio,
+                        periodo_fin = :periodo_fin,
+                        estado = :estado
+                    WHERE id = :id');
+
+        $db->bind(':cliente_id', $cliente_id);
+        $db->bind(':concepto', $concepto);
+        $db->bind(':monto', $monto);
+        $db->bind(':monto_pagado', $monto_pagado);
+        $db->bind(':periodo_inicio', $periodo_inicio);
+        $db->bind(':periodo_fin', $periodo_fin);
+        $db->bind(':estado', $estado);
+        $db->bind(':id', $recibo_id);
+
+        if ($db->execute()) {
+            flash('mensaje', 'Recibo actualizado correctamente.');
+        } else {
+            flash('mensaje', 'Error al actualizar el recibo.', 'alert alert-danger');
+        }
+    }
+
+    redirect(URL_ROOT . '/modulos/recibos/index.php');
+} else {
+    redirect(URL_ROOT . '/modulos/recibos/index.php');
 }
-
-if ($r->estatus === 'cancelado') {
-  flash('mensaje', 'No se puede editar un recibo cancelado.', 'alert alert-danger');
-  redirect(URL_ROOT.'/modulos/recibos/editar.php?id='.$id); exit;
-}
-
-if ($monto < (float)$r->monto_pagado) {
-  flash('mensaje', 'El monto no puede ser menor a lo ya pagado ('.number_format((float)$r->monto_pagado,2,'.',',').').', 'alert alert-danger');
-  redirect(URL_ROOT.'/modulos/recibos/editar.php?id='.$id); exit;
-}
-
-$db->query('UPDATE recibos SET
-            concepto = :concepto,
-            periodo_inicio = :pi,
-            periodo_fin = :pf,
-            monto = :monto,
-            fecha_vencimiento = :fv,
-            observaciones = :obs
-            WHERE id = :id');
-$db->bind(':concepto', $concepto);
-$db->bind(':pi', $pi);
-$db->bind(':pf', $pf);
-$db->bind(':monto', $monto);
-$db->bind(':fv', $fv);
-$db->bind(':obs', $obs);
-$db->bind(':id', $id);
-
-if (!$db->execute()) {
-  flash('mensaje','No se pudo guardar.','alert alert-danger');
-  redirect(URL_ROOT.'/modulos/recibos/editar.php?id='.$id); exit;
-}
-
-// Recalcular estado por si el monto cambió
-$service = new RecibosService();
-$service->recalcularEstado($id);
-
-flash('mensaje', 'Cambios guardados.', 'alert alert-success');
-redirect(URL_ROOT.'/modulos/recibos/editar.php?id='.$id);
+?>

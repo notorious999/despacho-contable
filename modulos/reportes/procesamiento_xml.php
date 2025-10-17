@@ -55,6 +55,24 @@ function procesarCFDIEmitido($xml, $namespaces, $cliente_id, $database) {
             $nombre_receptor = isset($receptor[0]['Nombre']) ? (string)$receptor[0]['Nombre'] : '';
             $rfc_receptor = isset($receptor[0]['Rfc']) ? (string)$receptor[0]['Rfc'] : '';
         }
+
+        // Buscar CFDIs relacionados
+        $uuid_relacionado = '';
+        $cfdiRelacionados = $xml->xpath('//cfdi:CfdiRelacionados/cfdi:CfdiRelacionado');
+        if (!empty($cfdiRelacionados)) {
+            $uuid_relacionado = (string)$cfdiRelacionados[0]['UUID'];
+        }
+        
+        // Pago también puede tener docto relacionado
+        if (empty($uuid_relacionado) && $tipoComprobante === 'P') {
+            $doctoRelacionado = $xml->xpath('//pago20:DoctoRelacionado');
+            if (empty($doctoRelacionado)) {
+                $doctoRelacionado = $xml->xpath('//pago:DoctoRelacionado');
+            }
+            if (!empty($doctoRelacionado)) {
+                $uuid_relacionado = isset($doctoRelacionado[0]['IdDocumento']) ? (string)$doctoRelacionado[0]['IdDocumento'] : '';
+            }
+        }
         
         // Inicializar variables para impuestos
         $tasa0 = 0;
@@ -153,11 +171,11 @@ function procesarCFDIEmitido($xml, $namespaces, $cliente_id, $database) {
         $database->query('INSERT INTO CFDIs_Emitidas (
                           cliente_id, tipo_comprobante, folio_interno, forma_pago, metodo_pago, folio_fiscal, 
                           fecha_emision, nombre_receptor, rfc_receptor, descripcion, 
-                          subtotal, tasa0, tasa16, iva, total) 
+                          subtotal, tasa0, tasa16, iva, total, uuid_relacionado) 
                           VALUES (
                           :cliente_id, :tipo_comprobante, :folio_interno, :forma_pago, :metodo_pago, :folio_fiscal, 
                           :fecha_emision, :nombre_receptor, :rfc_receptor, :descripcion, 
-                          :subtotal, :tasa0, :tasa16, :iva, :total)');
+                          :subtotal, :tasa0, :tasa16, :iva, :total, :uuid_relacionado)');
         
         $database->bind(':cliente_id', $cliente_id);
         $database->bind(':tipo_comprobante', $tipo_comprobante);
@@ -174,6 +192,7 @@ function procesarCFDIEmitido($xml, $namespaces, $cliente_id, $database) {
         $database->bind(':tasa16', $tasa16);
         $database->bind(':iva', $iva);
         $database->bind(':total', $total);
+        $database->bind(':uuid_relacionado', $uuid_relacionado); // CFDIs emitidos no suelen tener UUID relacionado
         
         if ($database->execute()) {
             return ['status' => 'success', 'message' => 'CFDI procesado correctamente'];
