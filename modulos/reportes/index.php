@@ -9,11 +9,17 @@ if (!isLoggedIn()) {
 
 
 // Filtros
+// Filtros
 $tipo       = isset($_GET['tipo']) ? sanitize($_GET['tipo']) : 'emitida';
 $cliente_id = isset($_GET['cliente_id']) ? sanitize($_GET['cliente_id']) : '';
-$desde      = isset($_GET['desde']) ? sanitize($_GET['desde']) : '';
-$hasta      = isset($_GET['hasta']) ? sanitize($_GET['hasta']) : '';
+// --- CORRECCIÓN ---
+// Establecer el mes actual como rango de fechas por defecto
+$desde      = isset($_GET['desde']) && $_GET['desde'] !== '' ? sanitize($_GET['desde']) : date('Y-m-01');
+$hasta      = isset($_GET['hasta']) && $_GET['hasta'] !== '' ? sanitize($_GET['hasta']) : date('Y-m-t');
+// --- FIN CORRECCIÓN ---
+
 $hastaFiltro = '';
+// ... (el resto del código de filtros sigue igual) ...
 if ($hasta !== '') {
   // Si el campo en BD es DATETIME/TIMESTAMP
   $hastaFiltro = date('Y-m-d', strtotime($hasta . ' +1 day'));

@@ -11,7 +11,7 @@ $db = new Database();
 $recibo_id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
 if ($recibo_id === 0) {
-    redirect(URL_ROOT . '/modulos/recibos/servicios.php');
+    redirect(URL_ROOT . '/modulos/recibos/index.php');
 }
 
 // Obtener datos del recibo
@@ -21,7 +21,7 @@ $recibo = $db->single();
 
 if (!$recibo) {
     flash('mensaje', 'El recibo de servicio no fue encontrado.', 'alert alert-danger');
-    redirect(URL_ROOT . '/modulos/recibos/servicios.php');
+    redirect(URL_ROOT . '/modulos/recibos/index.php');
 }
 
 // Obtener servicios asociados
@@ -89,7 +89,7 @@ include_once __DIR__ . '/../../includes/header.php';
                     </div>
                     
                     <div class="d-flex justify-content-between mt-3">
-                        <a href="<?php echo URL_ROOT; ?>/modulos/recibos/servicios.php" class="btn btn-secondary">Cancelar Cambios</a>
+                        <a href="<?php echo URL_ROOT; ?>/modulos/recibos/index.php" class="btn btn-secondary">Cancelar Cambios</a>
                         <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Guardar Cambios</button>
                     </div>
                 </form>

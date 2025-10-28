@@ -4,7 +4,7 @@ require_once __DIR__ . '/../../config/db.php';
 require_once __DIR__ . '/../../includes/functions.php';
 
 if (!isLoggedIn() || $_SERVER['REQUEST_METHOD'] !== 'POST') {
-    redirect(URL_ROOT . '/modulos/recibos/servicios.php');
+    redirect(URL_ROOT . '/modulos/recibos/index.php');
 }
 
 $db = new Database();
@@ -25,7 +25,7 @@ if (isset($_POST['cancelar']) && $_POST['cancelar'] == '1') {
     } else {
         flash('mensaje', 'Error al cancelar el recibo.', 'alert alert-danger');
     }
-    redirect(URL_ROOT . '/modulos/recibos/servicios.php');
+    redirect(URL_ROOT . '/modulos/recibos/index.php');
     exit;
 }
 
@@ -83,5 +83,5 @@ try {
     flash('mensaje', 'Error al actualizar el recibo: ' . $e->getMessage(), 'alert alert-danger');
 }
 
-redirect(URL_ROOT . '/modulos/recibos/servicios.php');
+redirect(URL_ROOT . '/modulos/recibos/index.php');
 ?>

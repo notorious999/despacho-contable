@@ -16537,3 +16537,585 @@
 [2025-10-16 18:59:48] RESP tipo=emitida id=201 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
 [2025-10-16 18:59:48] REQ tipo=emitida id=171 re=XAXX010101000 rr=AVE850213HR1 tt=0000000496.330000 uuid=603AF6B4-1410-4E99-BACE-B21B8C4E8F71
 [2025-10-16 18:59:48] RESP tipo=emitida id=171 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-23 17:06:33] REQ tipo=recibida id=334 re=BBA830831LJ2 rr=XAXX010101000 tt=0000000000.000000 uuid=FDF7DBD2-A8D3-407C-B24E-ABEDD036FC08
+[2025-10-23 17:06:37] RESP tipo=recibida id=334 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-23 17:06:37] REQ tipo=recibida id=339 re=MHC8501011RA rr=XAXX010101000 tt=0000007592.200000 uuid=760EF7FA-4BF8-49FC-89EA-AF2AA604E55B
+[2025-10-23 17:06:41] RESP tipo=recibida id=339 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-23 17:06:41] REQ tipo=recibida id=337 re=MHC8501011RA rr=XAXX010101000 tt=0000007592.200000 uuid=C5C5698E-185C-4EF0-9538-5F278B5B9C64
+[2025-10-23 17:06:44] RESP tipo=recibida id=337 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-23 17:06:44] REQ tipo=recibida id=336 re=BBA830831LJ2 rr=XAXX010101000 tt=0000000371.640000 uuid=C8A2BF3D-B7EE-42A4-9E85-1DC72AF89CE8
+[2025-10-23 17:06:48] RESP tipo=recibida id=336 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-23 17:06:48] REQ tipo=recibida id=338 re=MHC8501011RA rr=XAXX010101000 tt=0000007592.200000 uuid=A43478CC-6283-4D04-A7F1-FDBCD5762854
+[2025-10-23 17:06:52] RESP tipo=recibida id=338 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-23 17:06:52] REQ tipo=recibida id=335 re=BBA830831LJ2 rr=XAXX010101000 tt=0000000288.920000 uuid=E5246A71-93FF-458C-9395-3EDCC9299613
+[2025-10-23 17:06:56] RESP tipo=recibida id=335 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-23 17:06:56] REQ tipo=recibida id=340 re=MME920427EM3 rr=XAXX010101000 tt=0000000381.300000 uuid=7DDDA01A-E9D2-426F-8EA1-2EE1EC34EB22
+[2025-10-23 17:06:59] RESP tipo=recibida id=340 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-23 17:06:59] REQ tipo=recibida id=342 re=MME920427EM3 rr=XAXX010101000 tt=0000000000.000000 uuid=2A40E6FD-4218-4CF3-BFA1-3946DBCCA081
+[2025-10-23 17:07:03] RESP tipo=recibida id=342 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-23 17:07:03] REQ tipo=recibida id=341 re=BBA830831LJ2 rr=XAXX010101000 tt=0000000000.000000 uuid=04A3ACAD-21EA-4581-9F3F-62310EDAD0F7
+[2025-10-23 17:07:07] RESP tipo=recibida id=341 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-24 16:52:29] REQ tipo=emitida id=307 re=KBL070228MH3 rr=ADD200521DF7 tt=0000000620.000000 uuid=3A40B9B1-6DC4-4C7C-A2D1-5DCFD3E552EE
+[2025-10-24 16:52:30] RESP tipo=emitida id=307 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:30] REQ tipo=emitida id=276 re=KBL070228MH3 rr=SWI9912167A3 tt=0000000400.000000 uuid=1DA5EDEF-25F8-4790-ACD9-BF29BEBC6B34
+[2025-10-24 16:52:30] RESP tipo=emitida id=276 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:30] REQ tipo=emitida id=282 re=KBL070228MH3 rr=SMD930209JT3 tt=0000000620.000000 uuid=1F480A03-254F-4758-B1A4-CBA4FF1D732B
+[2025-10-24 16:52:31] RESP tipo=emitida id=282 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:31] REQ tipo=emitida id=311 re=KBL070228MH3 rr=CBC900824F44 tt=0000039200.000000 uuid=3C45FCED-53CA-488D-9233-960076F76BAE
+[2025-10-24 16:52:31] RESP tipo=emitida id=311 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:31] REQ tipo=emitida id=373 re=KBL070228MH3 rr=MEC910101JL4 tt=0000055000.000000 uuid=47BDD6FA-CFBD-434C-BE69-922279C96F3E
+[2025-10-24 16:52:31] RESP tipo=emitida id=373 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:32] REQ tipo=emitida id=268 re=KBL070228MH3 rr=IEE990423V79 tt=0000001000.000000 uuid=1A2302AF-369E-4A33-8323-D2C2D2985910
+[2025-10-24 16:52:32] RESP tipo=emitida id=268 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:32] REQ tipo=emitida id=313 re=KBL070228MH3 rr=ICT9308273W2 tt=0000036600.050000 uuid=3E1D0085-4F5C-4ED2-81C2-1EBC69D426FA
+[2025-10-24 16:52:32] RESP tipo=emitida id=313 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:32] REQ tipo=emitida id=291 re=KBL070228MH3 rr=EBE7711037Y5 tt=0000001800.000000 uuid=2BBE6234-5661-4E08-AAD7-9CCABD7B59FC
+[2025-10-24 16:52:33] RESP tipo=emitida id=291 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:33] REQ tipo=emitida id=359 re=KBL070228MH3 rr=MPB891006LR6 tt=0000001800.000000 uuid=30DC809A-B798-4DBF-AB07-30A4A87FDC39
+[2025-10-24 16:52:33] RESP tipo=emitida id=359 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:33] REQ tipo=emitida id=435 re=KBL070228MH3 rr=ITS0410163P6 tt=0000009800.000000 uuid=56176041-2652-4F67-AAD0-3251E08F0129
+[2025-10-24 16:52:34] RESP tipo=emitida id=435 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:34] REQ tipo=emitida id=407 re=KBL070228MH3 rr=BAC800208B25 tt=0000011400.000000 uuid=1159A23E-256D-4783-B919-C65030202AEB
+[2025-10-24 16:52:35] RESP tipo=emitida id=407 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:35] REQ tipo=emitida id=392 re=KBL070228MH3 rr=DFX180612J34 tt=0000002900.000000 uuid=303C19D4-6192-4824-A1A9-835040FAC691
+[2025-10-24 16:52:35] RESP tipo=emitida id=392 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:35] REQ tipo=emitida id=412 re=KBL070228MH3 rr=GBI970925TH1 tt=0000000400.000000 uuid=3304B6C5-941C-4057-B654-224187251C7C
+[2025-10-24 16:52:36] RESP tipo=emitida id=412 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:36] REQ tipo=emitida id=275 re=KBL070228MH3 rr=ISD9609109M3 tt=0000017985.000000 uuid=1D29B67A-BBE3-401C-BB7A-727478568B35
+[2025-10-24 16:52:36] RESP tipo=emitida id=275 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:36] REQ tipo=emitida id=386 re=KBL070228MH3 rr=ISD9609109M3 tt=0000020504.000000 uuid=191DD425-B85F-4C6C-9A0A-56FB6ABBBF32
+[2025-10-24 16:52:37] RESP tipo=emitida id=386 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:37] REQ tipo=emitida id=397 re=KBL070228MH3 rr=ISD9609109M3 tt=0000020504.000000 uuid=393F3DD6-BD80-4B67-9BF2-8E8D2DAAA74D
+[2025-10-24 16:52:37] RESP tipo=emitida id=397 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:37] REQ tipo=emitida id=267 re=KBL070228MH3 rr=ISD9609109M3 tt=0000017985.000000 uuid=1A18E083-F552-46FB-B149-EAB24AFB170D
+[2025-10-24 16:52:38] RESP tipo=emitida id=267 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:38] REQ tipo=emitida id=401 re=KBL070228MH3 rr=MCC811208FQ5 tt=0000004730.370000 uuid=510F4E74-2376-4D54-939F-9B38B3E411AA
+[2025-10-24 16:52:38] RESP tipo=emitida id=401 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:38] REQ tipo=emitida id=308 re=KBL070228MH3 rr=SEM1410318Q5 tt=0000003800.000000 uuid=3A800E85-7847-48D1-875C-0BEB503D5DF9
+[2025-10-24 16:52:39] RESP tipo=emitida id=308 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:39] REQ tipo=emitida id=302 re=KBL070228MH3 rr=ISD9609109M3 tt=0000017985.000000 uuid=2DE16C6B-0B04-4BEE-B0CB-8EFB75B0DBFA
+[2025-10-24 16:52:39] RESP tipo=emitida id=302 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:39] REQ tipo=emitida id=279 re=KBL070228MH3 rr=ISD9609109M3 tt=0000017985.000000 uuid=1E48198F-6100-43E9-A38D-6B8F41A3F32F
+[2025-10-24 16:52:40] RESP tipo=emitida id=279 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:40] REQ tipo=emitida id=357 re=KBL070228MH3 rr=ISD9609109M3 tt=0000017985.000000 uuid=26CBD66D-4D68-410F-AD7C-EA5953EA527B
+[2025-10-24 16:52:40] RESP tipo=emitida id=357 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:40] REQ tipo=emitida id=266 re=KBL070228MH3 rr=ISD9609109M3 tt=0000017985.000000 uuid=0F2151B9-A407-406F-A830-708DF13B7602
+[2025-10-24 16:52:41] RESP tipo=emitida id=266 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:41] REQ tipo=emitida id=321 re=KBL070228MH3 rr=AACH690331426 tt=0000001970.000000 uuid=4A168735-05EC-4F0B-ADBF-AC5CAE90DF19
+[2025-10-24 16:52:41] RESP tipo=emitida id=321 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:41] REQ tipo=emitida id=289 re=KBL070228MH3 rr=PAYA831205612 tt=0000000500.000000 uuid=2AE6AD9D-9116-43F9-B1CC-232271E89443
+[2025-10-24 16:52:42] RESP tipo=emitida id=289 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:42] REQ tipo=emitida id=325 re=KBL070228MH3 rr=EACR810130GH5 tt=0000000395.000000 uuid=4B98453D-3491-4AFA-B2F8-F5C4BE3CBD49
+[2025-10-24 16:52:42] RESP tipo=emitida id=325 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:42] REQ tipo=emitida id=316 re=KBL070228MH3 rr=BOCJ780228728 tt=0000000400.000000 uuid=3EE66F16-C365-4AAE-ABC3-06154F34DC5C
+[2025-10-24 16:52:43] RESP tipo=emitida id=316 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:43] REQ tipo=emitida id=382 re=KBL070228MH3 rr=POCL900512TH4 tt=0000000690.000000 uuid=085C02AC-7F46-4E85-A5C1-49B5F462CD8E
+[2025-10-24 16:52:43] RESP tipo=emitida id=382 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:43] REQ tipo=emitida id=327 re=KBL070228MH3 rr=SHC130107MD3 tt=0000001040.000000 uuid=4BCDA127-DC5C-4D32-8B94-BAD2A34CACD8
+[2025-10-24 16:52:44] RESP tipo=emitida id=327 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:44] REQ tipo=emitida id=355 re=KBL070228MH3 rr=FIFB8208273X9 tt=0000000760.000000 uuid=25C1423A-0FA2-4509-ACA9-68928B15CE7E
+[2025-10-24 16:52:44] RESP tipo=emitida id=355 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:44] REQ tipo=emitida id=274 re=KBL070228MH3 rr=RIPM780312J16 tt=0000000400.000000 uuid=1CB6146C-16D4-499D-8F3D-83E91B791CBD
+[2025-10-24 16:52:45] RESP tipo=emitida id=274 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:45] REQ tipo=emitida id=337 re=KBL070228MH3 rr=EACR810130GH5 tt=0000000395.000000 uuid=4EAAF492-320C-4EDB-8B8D-9C481E6781A3
+[2025-10-24 16:52:45] RESP tipo=emitida id=337 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:45] REQ tipo=emitida id=347 re=KBL070228MH3 rr=GUBP970724GU0 tt=0000001360.000000 uuid=16E30B58-2798-43BC-AEE5-D3CAAD2903DB
+[2025-10-24 16:52:46] RESP tipo=emitida id=347 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:46] REQ tipo=emitida id=405 re=KBL070228MH3 rr=PECR670306KJ9 tt=0000000295.000000 uuid=0681F22B-91CC-499A-A653-59DE8C20B18C
+[2025-10-24 16:52:46] RESP tipo=emitida id=405 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:46] REQ tipo=emitida id=430 re=KBL070228MH3 rr=CSC180808G43 tt=0000000540.000000 uuid=2988918D-FB72-4BE1-9F2F-38BBC9E567C4
+[2025-10-24 16:52:47] RESP tipo=emitida id=430 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:47] REQ tipo=emitida id=368 re=KBL070228MH3 rr=SWI9912167A3 tt=0000000400.000000 uuid=40FC1A2C-BDD8-4064-8267-7175383B03BE
+[2025-10-24 16:52:47] RESP tipo=emitida id=368 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:47] REQ tipo=emitida id=363 re=KBL070228MH3 rr=GASY700727MZ9 tt=0000000750.000000 uuid=33C816E2-2EE5-4FD4-B123-69D40771E978
+[2025-10-24 16:52:48] RESP tipo=emitida id=363 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:48] REQ tipo=emitida id=290 re=KBL070228MH3 rr=HECL710629J80 tt=0000001570.000000 uuid=2B9E2003-0BF7-4A1C-9733-1B6FEE33A8D1
+[2025-10-24 16:52:48] RESP tipo=emitida id=290 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:48] REQ tipo=emitida id=426 re=KBL070228MH3 rr=MHC8501011RA tt=0000000540.000000 uuid=358045A9-7517-4890-891A-0B50E1994AA0
+[2025-10-24 16:52:49] RESP tipo=emitida id=426 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:49] REQ tipo=emitida id=433 re=KBL070228MH3 rr=CACS671126Q42 tt=0000000550.000000 uuid=16544729-A267-4151-B8A4-7F6FC62B52CD
+[2025-10-24 16:52:49] RESP tipo=emitida id=433 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:49] REQ tipo=emitida id=317 re=KBL070228MH3 rr=XAXX010101000 tt=0000099664.000000 uuid=3F383A40-DC24-4090-85FE-9D36181D84EC
+[2025-10-24 16:52:50] RESP tipo=emitida id=317 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:50] REQ tipo=emitida id=335 re=KBL070228MH3 rr=SEM141031V5A tt=0000000900.000000 uuid=4E594B72-2AB0-4DDB-874B-8043E9AE91CC
+[2025-10-24 16:52:50] RESP tipo=emitida id=335 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:50] REQ tipo=emitida id=300 re=KBL070228MH3 rr=CED160202T45 tt=0000000400.000000 uuid=2D2DD4BF-D51B-457A-9540-36C12F2367D3
+[2025-10-24 16:52:51] RESP tipo=emitida id=300 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:51] REQ tipo=emitida id=271 re=KBL070228MH3 rr=CACD920402446 tt=0000000400.000000 uuid=1C0D149D-A7CA-48FF-B33B-4DAEC30615D0
+[2025-10-24 16:52:51] RESP tipo=emitida id=271 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:51] REQ tipo=emitida id=416 re=KBL070228MH3 rr=CACD920402446 tt=0000000490.000000 uuid=5421B8D8-98D1-45C8-8076-56DD030E0EF1
+[2025-10-24 16:52:52] RESP tipo=emitida id=416 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:52] REQ tipo=emitida id=423 re=KBL070228MH3 rr=CACM8810158W5 tt=0000000380.000000 uuid=42032AA6-0C96-4C8A-AEBE-0723054A8DFB
+[2025-10-24 16:52:52] RESP tipo=emitida id=423 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:52] REQ tipo=emitida id=264 re=KBL070228MH3 rr=JMT361101L29 tt=0000001590.000000 uuid=0DF9EE4B-D217-40ED-9635-B9D1914638FC
+[2025-10-24 16:52:53] RESP tipo=emitida id=264 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:53] REQ tipo=emitida id=385 re=KBL070228MH3 rr=TUPC830528N62 tt=0000000400.000000 uuid=181D34BB-28B2-48F0-B049-5843B6A5ABB1
+[2025-10-24 16:52:54] RESP tipo=emitida id=385 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:54] REQ tipo=emitida id=278 re=KBL070228MH3 rr=GFR090108SM5 tt=0000000295.000000 uuid=1E3B97B6-658F-4BEF-9DBC-4382DA431FDA
+[2025-10-24 16:52:54] RESP tipo=emitida id=278 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:54] REQ tipo=emitida id=284 re=KBL070228MH3 rr=FME100624J73 tt=0000000295.000000 uuid=02FD35B3-6308-46D9-870E-4FBA6B9A4580
+[2025-10-24 16:52:55] RESP tipo=emitida id=284 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:55] REQ tipo=emitida id=332 re=KBL070228MH3 rr=POCM890929B17 tt=0000000400.000000 uuid=4D02C9AB-5246-44B6-96DC-91E578DFCE6F
+[2025-10-24 16:52:55] RESP tipo=emitida id=332 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:55] REQ tipo=emitida id=298 re=KBL070228MH3 rr=SES9211027I4 tt=0000000380.000000 uuid=2C6BE201-838E-40EE-8252-3D2C34BECC18
+[2025-10-24 16:52:56] RESP tipo=emitida id=298 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:56] REQ tipo=emitida id=377 re=KBL070228MH3 rr=JIAC870202FK9 tt=0000000400.000000 uuid=51E7D6B1-9AD5-4B9B-B990-93740A66954F
+[2025-10-24 16:52:56] RESP tipo=emitida id=377 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:56] REQ tipo=emitida id=409 re=KBL070228MH3 rr=AARH670531F62 tt=0000000600.000000 uuid=2123D418-470E-4CD7-9DD2-9EB36331C55C
+[2025-10-24 16:52:57] RESP tipo=emitida id=409 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:57] REQ tipo=emitida id=404 re=KBL070228MH3 rr=CUFC750110MVA tt=0000000250.000000 uuid=546D3BAE-64E3-4651-B622-5EFC77F68C07
+[2025-10-24 16:52:57] RESP tipo=emitida id=404 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:57] REQ tipo=emitida id=399 re=KBL070228MH3 rr=BECH870523JP0 tt=0000000295.000000 uuid=495BE77E-9E9F-452C-9057-B4B7FF080AF2
+[2025-10-24 16:52:58] RESP tipo=emitida id=399 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:58] REQ tipo=emitida id=374 re=KBL070228MH3 rr=QUMM860701SU7 tt=0000000295.000000 uuid=47F2C7D8-E68E-472D-856A-CFDEC2ADFE8A
+[2025-10-24 16:52:58] RESP tipo=emitida id=374 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:58] REQ tipo=emitida id=432 re=KBL070228MH3 rr=QUMM860701SU7 tt=0000000340.000000 uuid=10388941-5293-44A5-BA47-624D5435E4C7
+[2025-10-24 16:52:59] RESP tipo=emitida id=432 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:59] REQ tipo=emitida id=370 re=KBL070228MH3 rr=BEBJ850616IB5 tt=0000000450.000000 uuid=43BA723F-C7DA-4C68-9C1F-2DAD0C7EA590
+[2025-10-24 16:52:59] RESP tipo=emitida id=370 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:52:59] REQ tipo=emitida id=292 re=KBL070228MH3 rr=TOSK840327JX2 tt=0000000400.000000 uuid=2BD0B7BB-80F4-47D1-B4DE-BB4CCFFEA91C
+[2025-10-24 16:53:00] RESP tipo=emitida id=292 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:00] REQ tipo=emitida id=403 re=KBL070228MH3 rr=NOBC890511UC4 tt=0000000400.000000 uuid=527D7387-2B95-4EC5-A404-684A9D8512EE
+[2025-10-24 16:53:01] RESP tipo=emitida id=403 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:01] REQ tipo=emitida id=415 re=KBL070228MH3 rr=MESK8905121N1 tt=0000000450.000000 uuid=4703A858-0BD6-4B58-9814-76A5406436F0
+[2025-10-24 16:53:01] RESP tipo=emitida id=415 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:01] REQ tipo=emitida id=314 re=KBL070228MH3 rr=SIAM750124DU7 tt=0000000450.000000 uuid=3E3D2C59-F22C-4727-9A38-6153CF9D9F7A
+[2025-10-24 16:53:02] RESP tipo=emitida id=314 estado=Cancelado codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=Cancelado sin aceptación
+[2025-10-24 16:53:02] REQ tipo=emitida id=283 re=KBL070228MH3 rr=MDZ100112V70 tt=0000000750.000000 uuid=02DD4911-A49D-4ABD-ACA0-01A34DD387DE
+[2025-10-24 16:53:02] RESP tipo=emitida id=283 estado=Cancelado codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=Cancelado sin aceptación
+[2025-10-24 16:53:02] REQ tipo=emitida id=341 re=KBL070228MH3 rr=XAXX010101000 tt=0000170217.000000 uuid=011C67B7-EAF7-4906-8699-60D858CFC2E2
+[2025-10-24 16:53:03] RESP tipo=emitida id=341 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:03] REQ tipo=emitida id=305 re=KBL070228MH3 rr=RARA840121QR2 tt=0000000295.000000 uuid=2F38BCAB-56D8-45DE-A1D9-8F140FB6D277
+[2025-10-24 16:53:03] RESP tipo=emitida id=305 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:03] REQ tipo=emitida id=396 re=KBL070228MH3 rr=CASR950924VD1 tt=0000000400.000000 uuid=389BF4E0-BACB-451A-8B2A-F862B8067A19
+[2025-10-24 16:53:04] RESP tipo=emitida id=396 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:04] REQ tipo=emitida id=413 re=KBL070228MH3 rr=LOWM021016S70 tt=0000000400.000000 uuid=3966F12F-0850-44D9-B621-17EDE5EC3A62
+[2025-10-24 16:53:04] RESP tipo=emitida id=413 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:04] REQ tipo=emitida id=273 re=KBL070228MH3 rr=SOUA920704GP2 tt=0000000395.000000 uuid=1C84F5B2-5736-4CEF-928F-55E9BDA3CF26
+[2025-10-24 16:53:05] RESP tipo=emitida id=273 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:05] REQ tipo=emitida id=322 re=KBL070228MH3 rr=NOCY520307LYA tt=0000000550.000000 uuid=4AF5D081-EF98-4DC4-9A6A-A7F7E1CC59A5
+[2025-10-24 16:53:05] RESP tipo=emitida id=322 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:05] REQ tipo=emitida id=378 re=KBL070228MH3 rr=GOCE900914UC3 tt=0000000620.000000 uuid=54D2A9D7-6E88-4961-82FB-ABEE541E59A6
+[2025-10-24 16:53:06] RESP tipo=emitida id=378 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:06] REQ tipo=emitida id=263 re=KBL070228MH3 rr=PEMD771120RM7 tt=0000000490.000000 uuid=0CE02029-C68B-42F7-945B-C6A297DFF985
+[2025-10-24 16:53:06] RESP tipo=emitida id=263 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:06] REQ tipo=emitida id=330 re=KBL070228MH3 rr=EISA850921L31 tt=0000000800.000000 uuid=4CA96A0A-06A7-450B-BCF6-BB9355203490
+[2025-10-24 16:53:07] RESP tipo=emitida id=330 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:07] REQ tipo=emitida id=259 re=KBL070228MH3 rr=SOME9304286Q7 tt=0000000250.000000 uuid=0B1F7B36-5284-4D20-AAB6-EBFAF57FDB20
+[2025-10-24 16:53:07] RESP tipo=emitida id=259 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:07] REQ tipo=emitida id=393 re=KBL070228MH3 rr=FOGE771121LF6 tt=0000000400.000000 uuid=310BA86F-CBAF-46D6-A538-9CEADA6351DE
+[2025-10-24 16:53:08] RESP tipo=emitida id=393 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:08] REQ tipo=emitida id=315 re=KBL070228MH3 rr=FOGE771121LF6 tt=0000001300.000000 uuid=3EC4DB18-8902-41C2-B275-963ADC86FF5C
+[2025-10-24 16:53:08] RESP tipo=emitida id=315 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:08] REQ tipo=emitida id=376 re=KBL070228MH3 rr=TOSK840327JX2 tt=0000000395.000000 uuid=51B5F42A-EE94-499B-B0D3-9D2829F58C04
+[2025-10-24 16:53:09] RESP tipo=emitida id=376 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:09] REQ tipo=emitida id=287 re=KBL070228MH3 rr=PIVF880102ED2 tt=0000000400.000000 uuid=2AD7B255-10E0-4246-B30E-75B3CBF8F374
+[2025-10-24 16:53:09] RESP tipo=emitida id=287 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:09] REQ tipo=emitida id=288 re=KBL070228MH3 rr=AAAJ7405308D8 tt=0000000620.000000 uuid=2ADD2BDF-AA32-4B11-8356-5EF59DE24F29
+[2025-10-24 16:53:10] RESP tipo=emitida id=288 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:10] REQ tipo=emitida id=384 re=KBL070228MH3 rr=EISA850921L31 tt=0000000400.000000 uuid=118BE3E5-98F0-4346-9850-15A58E484AE5
+[2025-10-24 16:53:10] RESP tipo=emitida id=384 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:10] REQ tipo=emitida id=286 re=KBL070228MH3 rr=PETG810210BZ1 tt=0000000680.000000 uuid=2A955B2E-5A96-4F44-B57A-D68BB5273312
+[2025-10-24 16:53:11] RESP tipo=emitida id=286 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:11] REQ tipo=emitida id=364 re=KBL070228MH3 rr=GOGW981231DA9 tt=0000000340.000000 uuid=36DE59A4-7B36-480A-87EE-AB8DF2E9C597
+[2025-10-24 16:53:11] RESP tipo=emitida id=364 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:12] REQ tipo=emitida id=427 re=KBL070228MH3 rr=BEGL9008183K1 tt=0000001860.000000 uuid=376978DD-3618-4C35-AA01-4BFFEA7C6A6A
+[2025-10-24 16:53:12] RESP tipo=emitida id=427 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:12] REQ tipo=emitida id=265 re=KBL070228MH3 rr=MAEJ730420378 tt=0000002280.000000 uuid=0F6D947B-4349-404F-A3B4-B5555CCF1436
+[2025-10-24 16:53:12] RESP tipo=emitida id=265 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:12] REQ tipo=emitida id=422 re=KBL070228MH3 rr=MOGJ970105GB3 tt=0000000800.000000 uuid=39626A9B-74DA-4DC2-980E-DB972668EFC2
+[2025-10-24 16:53:13] RESP tipo=emitida id=422 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:13] REQ tipo=emitida id=304 re=KBL070228MH3 rr=CPP080426SX4 tt=0000000400.000000 uuid=2F7F0499-73E6-4B04-949F-DC3967F4B554
+[2025-10-24 16:53:14] RESP tipo=emitida id=304 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:14] REQ tipo=emitida id=260 re=KBL070228MH3 rr=DORO701020FZ8 tt=0000000295.000000 uuid=0B967E18-43DD-4612-882B-634220639C24
+[2025-10-24 16:53:14] RESP tipo=emitida id=260 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:14] REQ tipo=emitida id=395 re=KBL070228MH3 rr=ACA990927LG4 tt=0000001000.000000 uuid=377DFF5D-68E3-4B54-8F76-E0A6BA30DD71
+[2025-10-24 16:53:15] RESP tipo=emitida id=395 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:15] REQ tipo=emitida id=312 re=KBL070228MH3 rr=OOTG770727MB6 tt=0000000450.000000 uuid=3D29BAE7-8A7F-49EB-847B-38451EDC3E90
+[2025-10-24 16:53:15] RESP tipo=emitida id=312 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:15] REQ tipo=emitida id=306 re=KBL070228MH3 rr=DODR6008298W3 tt=0000000450.000000 uuid=3A3E0216-8EB0-409E-8122-E2303D547ECD
+[2025-10-24 16:53:16] RESP tipo=emitida id=306 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:16] REQ tipo=emitida id=362 re=KBL070228MH3 rr=GAGL850125IY4 tt=0000000295.000000 uuid=32F9DD5C-B80E-4539-8758-CB24805EAA71
+[2025-10-24 16:53:16] RESP tipo=emitida id=362 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:16] REQ tipo=emitida id=372 re=KBL070228MH3 rr=EBE7711037Y5 tt=0000000000.000000 uuid=46A52053-F668-4D84-ABD4-98F596F3146C
+[2025-10-24 16:53:17] RESP tipo=emitida id=372 estado=Cancelado codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=Cancelado sin aceptación
+[2025-10-24 16:53:17] REQ tipo=emitida id=419 re=KBL070228MH3 rr=EBE7711037Y5 tt=0000000000.000000 uuid=28022AE8-0AB3-427C-9BA2-3EAD7760EF89
+[2025-10-24 16:53:17] RESP tipo=emitida id=419 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:17] REQ tipo=emitida id=326 re=KBL070228MH3 rr=EBE7711037Y5 tt=0000000000.000000 uuid=4BC508BD-6722-4DA8-8123-4C9239926188
+[2025-10-24 16:53:18] RESP tipo=emitida id=326 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:18] REQ tipo=emitida id=299 re=KBL070228MH3 rr=GCA071004RV1 tt=0000000340.000000 uuid=2C0861B4-9CE2-4AA4-9414-73B537F0DC67
+[2025-10-24 16:53:18] RESP tipo=emitida id=299 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:18] REQ tipo=emitida id=387 re=KBL070228MH3 rr=CED160202T45 tt=0000000400.000000 uuid=220D359A-A3C1-4F9C-A7E6-936AC6289030
+[2025-10-24 16:53:19] RESP tipo=emitida id=387 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:19] REQ tipo=emitida id=277 re=KBL070228MH3 rr=EACO721004Q61 tt=0000000550.000000 uuid=1DA18F45-7886-4D40-B28A-50D0BD1D1048
+[2025-10-24 16:53:19] RESP tipo=emitida id=277 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:19] REQ tipo=emitida id=366 re=KBL070228MH3 rr=XAXX010101000 tt=0000005910.000000 uuid=37FBBA8F-FBEC-41B7-AB71-2DC320E22D58
+[2025-10-24 16:53:20] RESP tipo=emitida id=366 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:20] REQ tipo=emitida id=331 re=KBL070228MH3 rr=COPM840524RE9 tt=0000000400.000000 uuid=4CD96A82-80ED-4D2C-BFD0-6A4CF62A004A
+[2025-10-24 16:53:20] RESP tipo=emitida id=331 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:20] REQ tipo=emitida id=285 re=KBL070228MH3 rr=ZACE880706CJ8 tt=0000000400.000000 uuid=2A1C87C9-4BA6-446A-ABC9-0C3842AC2CCF
+[2025-10-24 16:53:21] RESP tipo=emitida id=285 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:21] REQ tipo=emitida id=345 re=KBL070228MH3 rr=XAXX010101000 tt=0000248233.950000 uuid=15A160C4-D98D-419C-BA2A-91227A06D05A
+[2025-10-24 16:53:21] RESP tipo=emitida id=345 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:21] REQ tipo=emitida id=361 re=KBL070228MH3 rr=DUDR0002247Z5 tt=0000000400.000000 uuid=32DFB17E-8581-4429-AC00-B4CC7EA586DE
+[2025-10-24 16:53:22] RESP tipo=emitida id=361 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:22] REQ tipo=emitida id=414 re=KBL070228MH3 rr=CED160202T45 tt=0000000400.000000 uuid=4445C86F-5F93-4777-8B67-5444F1CE44D8
+[2025-10-24 16:53:22] RESP tipo=emitida id=414 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:22] REQ tipo=emitida id=388 re=KBL070228MH3 rr=LOGL9501021K7 tt=0000000295.000000 uuid=229F3846-171A-446F-9EA9-6EB329E7BCEF
+[2025-10-24 16:53:23] RESP tipo=emitida id=388 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:23] REQ tipo=emitida id=323 re=KBL070228MH3 rr=AEBS931115FR4 tt=0000000450.000000 uuid=4B753D7F-3F8B-410C-A8B2-A900EE4D9860
+[2025-10-24 16:53:23] RESP tipo=emitida id=323 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:23] REQ tipo=emitida id=329 re=KBL070228MH3 rr=SACF810920DX4 tt=0000000400.000000 uuid=4C355691-9646-43CD-8A9C-A0EC75D1FFA1
+[2025-10-24 16:53:24] RESP tipo=emitida id=329 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:24] REQ tipo=emitida id=334 re=KBL070228MH3 rr=SEI1410319R7 tt=0000003800.000000 uuid=4E45BC6B-334C-4067-AFE7-33B83C6AEF38
+[2025-10-24 16:53:24] RESP tipo=emitida id=334 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:24] REQ tipo=emitida id=301 re=KBL070228MH3 rr=SAG901123IU0 tt=0000000490.000000 uuid=2D6C90AB-2012-4402-A40D-CAB287F965EC
+[2025-10-24 16:53:25] RESP tipo=emitida id=301 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:25] REQ tipo=emitida id=280 re=KBL070228MH3 rr=UPXO940214LQ4 tt=0000000400.000000 uuid=1EFC4F43-0BC0-4060-8B1E-EA65955E295C
+[2025-10-24 16:53:25] RESP tipo=emitida id=280 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:25] REQ tipo=emitida id=262 re=KBL070228MH3 rr=PAZ1505298S4 tt=0000000540.000000 uuid=0CC98D82-F932-412A-AC1E-E5930CE3F3CE
+[2025-10-24 16:53:26] RESP tipo=emitida id=262 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:26] REQ tipo=emitida id=431 re=KBL070228MH3 rr=VEGE850323MV6 tt=0000001200.000000 uuid=06965046-1918-4B1B-9E73-287A419C9432
+[2025-10-24 16:53:26] RESP tipo=emitida id=431 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:26] REQ tipo=emitida id=342 re=KBL070228MH3 rr=AGR1804121M7 tt=0000000295.000000 uuid=12AB7325-312F-453E-81DB-473ECD23E7AC
+[2025-10-24 16:53:27] RESP tipo=emitida id=342 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:27] REQ tipo=emitida id=344 re=KBL070228MH3 rr=SAVJ8808051Z2 tt=0000001000.000000 uuid=013B8412-D8AE-4100-9DC9-0379489392AB
+[2025-10-24 16:53:27] RESP tipo=emitida id=344 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:28] REQ tipo=emitida id=333 re=KBL070228MH3 rr=MAJV701223KCA tt=0000001000.000000 uuid=4D90913B-9A37-4C16-9422-072A733E307E
+[2025-10-24 16:53:28] RESP tipo=emitida id=333 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:28] REQ tipo=emitida id=295 re=KBL070228MH3 rr=EOMP9005253H9 tt=0000000450.000000 uuid=2BE30DA1-80CF-49DC-9714-9A3F5DCB0FFD
+[2025-10-24 16:53:29] RESP tipo=emitida id=295 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:29] REQ tipo=emitida id=258 re=KBL070228MH3 rr=CACJ820823JS9 tt=0000000295.000000 uuid=0AB03A5D-5EC3-467A-8614-3CD568DB242A
+[2025-10-24 16:53:29] RESP tipo=emitida id=258 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:29] REQ tipo=emitida id=424 re=KBL070228MH3 rr=CACJ820823JS9 tt=0000000295.000000 uuid=45121E4B-DAC6-4AEF-9E04-1B41BC5C657B
+[2025-10-24 16:53:30] RESP tipo=emitida id=424 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:30] REQ tipo=emitida id=296 re=KBL070228MH3 rr=GRO210125NY9 tt=0000000620.000000 uuid=2BEB973D-E7E6-49F7-9108-E6DECEB8F308
+[2025-10-24 16:53:30] RESP tipo=emitida id=296 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:30] REQ tipo=emitida id=320 re=KBL070228MH3 rr=OSM160921I24 tt=0000001800.000000 uuid=4A3FC5AC-D50E-4FAB-B5F1-607BBC6D465E
+[2025-10-24 16:53:31] RESP tipo=emitida id=320 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:31] REQ tipo=emitida id=365 re=KBL070228MH3 rr=GOA180712SF5 tt=0000000550.000000 uuid=37AE1DD2-DAA9-4393-9E73-3FB49A87530E
+[2025-10-24 16:53:31] RESP tipo=emitida id=365 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:31] REQ tipo=emitida id=272 re=KBL070228MH3 rr=SASE7403146N1 tt=0000000400.000000 uuid=1C8D9C21-D0FE-42DE-8488-BB3F7794C0A7
+[2025-10-24 16:53:32] RESP tipo=emitida id=272 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:32] REQ tipo=emitida id=318 re=KBL070228MH3 rr=FELA880726EQA tt=0000000400.000000 uuid=3F9339E1-AB09-4D31-9571-A64E586D296F
+[2025-10-24 16:53:32] RESP tipo=emitida id=318 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:32] REQ tipo=emitida id=400 re=KBL070228MH3 rr=READ890611RL2 tt=0000000295.000000 uuid=502C91B8-7496-4C97-9732-86D96C65A6A4
+[2025-10-24 16:53:33] RESP tipo=emitida id=400 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:33] REQ tipo=emitida id=410 re=KBL070228MH3 rr=CASA720112L88 tt=0000000400.000000 uuid=2187D535-EEC7-4831-8274-0C54597B0874
+[2025-10-24 16:53:33] RESP tipo=emitida id=410 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:33] REQ tipo=emitida id=360 re=KBL070228MH3 rr=CPI0609281G6 tt=0000000490.000000 uuid=31D81C97-50C8-4A6D-9175-45ADAC0DA71D
+[2025-10-24 16:53:34] RESP tipo=emitida id=360 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:34] REQ tipo=emitida id=398 re=KBL070228MH3 rr=OST040220A36 tt=0000000620.000000 uuid=408D104B-7EE5-47E5-94C7-792C559DBB51
+[2025-10-24 16:53:34] RESP tipo=emitida id=398 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:34] REQ tipo=emitida id=358 re=KBL070228MH3 rr=LOMJ910722LE9 tt=0000000400.000000 uuid=26D745D4-C505-4EA0-9F93-83C0064CA120
+[2025-10-24 16:53:35] RESP tipo=emitida id=358 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:35] REQ tipo=emitida id=375 re=KBL070228MH3 rr=MOOP860122LJ9 tt=0000000400.000000 uuid=50D576B5-A989-4FDC-B5AB-8A045393B632
+[2025-10-24 16:53:35] RESP tipo=emitida id=375 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:35] REQ tipo=emitida id=356 re=KBL070228MH3 rr=JULG921212R17 tt=0000000780.000000 uuid=25F1C15B-6191-48DD-821D-DE468262A3DF
+[2025-10-24 16:53:36] RESP tipo=emitida id=356 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:36] REQ tipo=emitida id=408 re=KBL070228MH3 rr=MORJ941010K15 tt=0000000400.000000 uuid=1707D5DA-D986-404E-9A40-302383AC2D85
+[2025-10-24 16:53:36] RESP tipo=emitida id=408 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:36] REQ tipo=emitida id=421 re=KBL070228MH3 rr=SAVC921013C66 tt=0000000400.000000 uuid=38348A66-A338-4429-A32D-E425911F9B5A
+[2025-10-24 16:53:37] RESP tipo=emitida id=421 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:37] REQ tipo=emitida id=257 re=KBL070228MH3 rr=CEV110414UG1 tt=0000000490.000000 uuid=000B425C-C53A-4598-8110-6DA4D1E5E76B
+[2025-10-24 16:53:37] RESP tipo=emitida id=257 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:37] REQ tipo=emitida id=390 re=KBL070228MH3 rr=CER901010CHA tt=0000000450.000000 uuid=244FBEF3-6AC0-46A6-A1F1-91332EB7E89F
+[2025-10-24 16:53:38] RESP tipo=emitida id=390 estado=Cancelado codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=Cancelado sin aceptación
+[2025-10-24 16:53:38] REQ tipo=emitida id=406 re=KBL070228MH3 rr=CAKS810824C97 tt=0000000295.000000 uuid=1023D916-E424-48B5-8233-29E66F4AC945
+[2025-10-24 16:53:39] RESP tipo=emitida id=406 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:39] REQ tipo=emitida id=270 re=KBL070228MH3 rr=MOGS930723DQ6 tt=0000000400.000000 uuid=1B23F8F0-9305-4041-9478-3C514CC9DD57
+[2025-10-24 16:53:39] RESP tipo=emitida id=270 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:39] REQ tipo=emitida id=418 re=KBL070228MH3 rr=MOVG830625B3A tt=0000000885.000000 uuid=07012DAC-6E10-46D5-9CE9-CEAC67D9C431
+[2025-10-24 16:53:40] RESP tipo=emitida id=418 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:40] REQ tipo=emitida id=420 re=KBL070228MH3 rr=AVB220825CT5 tt=0000000620.000000 uuid=035381AC-1944-45A3-9786-619058FCC1A7
+[2025-10-24 16:53:40] RESP tipo=emitida id=420 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:40] REQ tipo=emitida id=269 re=KBL070228MH3 rr=KUVM8508239B6 tt=0000000295.000000 uuid=1A2315B6-4A7E-4899-A069-E06F70E7B61E
+[2025-10-24 16:53:41] RESP tipo=emitida id=269 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:41] REQ tipo=emitida id=381 re=KBL070228MH3 rr=XAXX010101000 tt=0000094469.000000 uuid=081CFC71-E5BF-4A8F-A8CE-9A498C9EFB25
+[2025-10-24 16:53:41] RESP tipo=emitida id=381 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:41] REQ tipo=emitida id=339 re=KBL070228MH3 rr=XAXX010101000 tt=0000003030.000000 uuid=06A84FC6-C445-4E2C-A841-D80917F50A32
+[2025-10-24 16:53:42] RESP tipo=emitida id=339 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:42] REQ tipo=emitida id=389 re=KBL070228MH3 rr=PAPC7102027H2 tt=0000000490.000000 uuid=243B9DF7-2A2B-4A9C-9AFB-439232372BAB
+[2025-10-24 16:53:43] RESP tipo=emitida id=389 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:43] REQ tipo=emitida id=281 re=KBL070228MH3 rr=SWI9912167A3 tt=0000000000.000000 uuid=1F0C08BE-608E-4FF8-913D-53F6A1E1A07A
+[2025-10-24 16:53:43] RESP tipo=emitida id=281 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:43] REQ tipo=emitida id=293 re=KBL070228MH3 rr=GAAE7303052UA tt=0000000450.000000 uuid=2BD599EE-2990-49E2-B994-1BA5F4289FFD
+[2025-10-24 16:53:44] RESP tipo=emitida id=293 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:44] REQ tipo=emitida id=379 re=KBL070228MH3 rr=XAXX010101000 tt=0000097677.000000 uuid=55EA43B9-D7F4-468E-ABDE-0A9E075AD358
+[2025-10-24 16:53:44] RESP tipo=emitida id=379 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:44] REQ tipo=emitida id=402 re=KBL070228MH3 rr=XAXX010101000 tt=0000465388.990000 uuid=524B0C7B-366F-4D29-BFD2-1AD1D1D3EABA
+[2025-10-24 16:53:45] RESP tipo=emitida id=402 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:45] REQ tipo=emitida id=336 re=KBL070228MH3 rr=XAXX010101000 tt=0000053905.000000 uuid=4E4874AF-622E-4BC6-8304-CF1AB7466273
+[2025-10-24 16:53:45] RESP tipo=emitida id=336 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:45] REQ tipo=emitida id=367 re=KBL070228MH3 rr=GOOP9908316T1 tt=0000000380.000000 uuid=38A109BD-E85A-4931-8340-8D9C4F99528E
+[2025-10-24 16:53:46] RESP tipo=emitida id=367 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:46] REQ tipo=emitida id=294 re=KBL070228MH3 rr=TCD191210Q76 tt=0000000750.000000 uuid=2BE2A843-5EF6-47C7-BFDE-284DA4367F1E
+[2025-10-24 16:53:46] RESP tipo=emitida id=294 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:46] REQ tipo=emitida id=303 re=KBL070228MH3 rr=MAAM981021M43 tt=0000000380.000000 uuid=2ECC1F0B-BCD0-4084-B1C6-C74F14B8C764
+[2025-10-24 16:53:47] RESP tipo=emitida id=303 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:47] REQ tipo=emitida id=434 re=KBL070228MH3 rr=MUQL801225B44 tt=0000000400.000000 uuid=41121177-00D5-467F-A386-356B04EDE9AA
+[2025-10-24 16:53:47] RESP tipo=emitida id=434 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:47] REQ tipo=emitida id=297 re=KBL070228MH3 rr=FFT0811152B9 tt=0000009280.000000 uuid=2BF75018-5660-4DE7-A1FB-4422B7A59026
+[2025-10-24 16:53:48] RESP tipo=emitida id=297 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:48] REQ tipo=emitida id=352 re=KBL070228MH3 rr=PIHE881015L42 tt=0000003745.000000 uuid=21C23EC9-8EA8-4B08-A656-869CC216C823
+[2025-10-24 16:53:48] RESP tipo=emitida id=352 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:48] REQ tipo=emitida id=383 re=KBL070228MH3 rr=AISS940810T93 tt=0000001250.000000 uuid=094A901C-7A3D-4BF5-9498-9D6BCA8239C8
+[2025-10-24 16:53:49] RESP tipo=emitida id=383 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:49] REQ tipo=emitida id=417 re=KBL070228MH3 rr=TOJA010521PL6 tt=0000000400.000000 uuid=05925A0B-7F03-4A22-9310-46511D6FA3DE
+[2025-10-24 16:53:49] RESP tipo=emitida id=417 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:49] REQ tipo=emitida id=394 re=KBL070228MH3 rr=ROTM651019EH9 tt=0000000250.000000 uuid=314C4FD7-1970-4F33-8B9C-4DEE64C7389A
+[2025-10-24 16:53:50] RESP tipo=emitida id=394 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:50] REQ tipo=emitida id=346 re=KBL070228MH3 rr=XAXX010101000 tt=0000017110.000000 uuid=16B0C59F-02D2-4D5A-9E4E-66915519EFA0
+[2025-10-24 16:53:50] RESP tipo=emitida id=346 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:50] REQ tipo=emitida id=310 re=KBL070228MH3 rr=ROMV681008828 tt=0000001200.000000 uuid=3BBAEEB7-B205-4CAF-BB4C-55CCCF1B80B8
+[2025-10-24 16:53:51] RESP tipo=emitida id=310 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:51] REQ tipo=emitida id=328 re=KBL070228MH3 rr=BACM841008AU8 tt=0000000295.000000 uuid=4C2783B2-4B3B-4C92-9A9D-CFEA2509086F
+[2025-10-24 16:53:51] RESP tipo=emitida id=328 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:51] REQ tipo=emitida id=309 re=KBL070228MH3 rr=XAXX010101000 tt=0000049144.000000 uuid=3BB5520A-8E47-41C8-A48E-A31315AC3875
+[2025-10-24 16:53:52] RESP tipo=emitida id=309 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:52] REQ tipo=emitida id=261 re=KBL070228MH3 rr=XAXX010101000 tt=0000002200.000000 uuid=0BCBD2B6-89E8-4935-AF28-77A3CA44D34B
+[2025-10-24 16:53:52] RESP tipo=emitida id=261 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:52] REQ tipo=emitida id=338 re=KBL070228MH3 rr=XAXX010101000 tt=0000047360.000000 uuid=4F31321F-CAD6-4EB6-A327-2D4B39288D43
+[2025-10-24 16:53:53] RESP tipo=emitida id=338 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:53] REQ tipo=emitida id=348 re=KBL070228MH3 rr=SSC171017L72 tt=0000107056.000000 uuid=17FA8547-67DB-4D0D-9F54-25072BE188B1
+[2025-10-24 16:53:53] RESP tipo=emitida id=348 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:53] REQ tipo=emitida id=319 re=KBL070228MH3 rr=XAXX010101000 tt=0000004535.000000 uuid=04CB76FC-A2F9-4CC5-B6C1-56A45A18C637
+[2025-10-24 16:53:54] RESP tipo=emitida id=319 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:54] REQ tipo=emitida id=349 re=KBL070228MH3 rr=SWI9912167A3 tt=0000000000.000000 uuid=18F467EE-4536-4C21-822F-874B478DF3C8
+[2025-10-24 16:53:55] RESP tipo=emitida id=349 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:55] REQ tipo=emitida id=369 re=KBL070228MH3 rr=XAXX010101000 tt=0000015191.000000 uuid=41AB8CCF-4CFC-4AB1-9BC5-5C4C637AA33C
+[2025-10-24 16:53:55] RESP tipo=emitida id=369 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:55] REQ tipo=emitida id=350 re=KBL070228MH3 rr=XAXX010101000 tt=0000007485.000000 uuid=20B9C3F5-7991-49DB-AD21-2A1F397C93B3
+[2025-10-24 16:53:56] RESP tipo=emitida id=350 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:56] REQ tipo=emitida id=391 re=KBL070228MH3 rr=XAXX010101000 tt=0000014975.000000 uuid=258B05D2-BE20-4B59-98AC-D4056951B0E1
+[2025-10-24 16:53:56] RESP tipo=emitida id=391 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:56] REQ tipo=emitida id=354 re=KBL070228MH3 rr=XAXX010101000 tt=0000010230.010000 uuid=24D82F4A-A029-4948-9336-8C7439C57A8C
+[2025-10-24 16:53:57] RESP tipo=emitida id=354 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:57] REQ tipo=emitida id=353 re=KBL070228MH3 rr=XAXX010101000 tt=0000217499.000000 uuid=22C998FD-6B72-4316-A836-439BD4DCC695
+[2025-10-24 16:53:57] RESP tipo=emitida id=353 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:57] REQ tipo=emitida id=371 re=KBL070228MH3 rr=LUPS591209LPA tt=0000002370.000000 uuid=43EB12D9-9635-4ACB-8732-B0D677C5822E
+[2025-10-24 16:53:58] RESP tipo=emitida id=371 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:58] REQ tipo=emitida id=428 re=KBL070228MH3 rr=DMT140428TF2 tt=0000000620.000000 uuid=0983324B-83A5-4D77-8D8E-C2AC5D821FDA
+[2025-10-24 16:53:58] RESP tipo=emitida id=428 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:58] REQ tipo=emitida id=429 re=KBL070228MH3 rr=CAHI660924HJA tt=0000000450.000000 uuid=1333188B-F596-4AF2-992F-C9D8A691BDC3
+[2025-10-24 16:53:59] RESP tipo=emitida id=429 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:59] REQ tipo=emitida id=425 re=KBL070228MH3 rr=BAAJ690625MV6 tt=0000001650.000000 uuid=133821ED-3E55-4454-A118-A299016E7FCC
+[2025-10-24 16:53:59] RESP tipo=emitida id=425 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:53:59] REQ tipo=emitida id=411 re=KBL070228MH3 rr=QBE220606MF9 tt=0000000550.000000 uuid=2334F0B6-691B-4C9F-8253-C035F7D898F8
+[2025-10-24 16:54:00] RESP tipo=emitida id=411 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:54:00] REQ tipo=emitida id=351 re=KBL070228MH3 rr=MACG8612027A5 tt=0000000395.000000 uuid=20DA06CF-D346-471D-AFB9-4F480EBAB1BC
+[2025-10-24 16:54:00] RESP tipo=emitida id=351 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:54:00] REQ tipo=emitida id=343 re=KBL070228MH3 rr=CVP2105044T5 tt=0000000540.000000 uuid=12BCC57C-03F5-46F5-9DB5-4E9824FBB40A
+[2025-10-24 16:54:01] RESP tipo=emitida id=343 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:54:01] REQ tipo=emitida id=340 re=KBL070228MH3 rr=XAXX010101000 tt=0000022190.000000 uuid=09B51C04-A026-4776-B805-0ACD776B5395
+[2025-10-24 16:54:01] RESP tipo=emitida id=340 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:54:01] REQ tipo=emitida id=324 re=KBL070228MH3 rr=XAXX010101000 tt=0000172445.000000 uuid=4B6387DE-0175-4CA7-A621-DA3CAE49A84D
+[2025-10-24 16:54:02] RESP tipo=emitida id=324 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:54:02] REQ tipo=emitida id=380 re=KBL070228MH3 rr=XAXX010101000 tt=0000014180.000000 uuid=072ECB7E-A90D-49B6-A769-BE5F3C22C3B1
+[2025-10-24 16:54:02] RESP tipo=emitida id=380 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:26] REQ tipo=emitida id=506 re=FFT0811152B9 rr=ROJC650718F77 tt=0000000180.000000 uuid=F0B5E789-113C-4933-A9F6-F2C3C72C9A7F
+[2025-10-24 16:58:26] RESP tipo=emitida id=506 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:26] REQ tipo=emitida id=452 re=FFT0811152B9 rr=TSP111011H2A tt=0000000340.000000 uuid=4C736386-1976-4660-8085-DBEFA55CC46B
+[2025-10-24 16:58:27] RESP tipo=emitida id=452 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:27] REQ tipo=emitida id=464 re=FFT0811152B9 rr=INE140404NI0 tt=0000000180.000000 uuid=48B9BF7B-5C6E-42C4-BC49-EFDF2CA63208
+[2025-10-24 16:58:27] RESP tipo=emitida id=464 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:27] REQ tipo=emitida id=509 re=FFT0811152B9 rr=TUAF681005BE4 tt=0000000800.000000 uuid=F87C5589-540D-4D33-A525-D4045934B9FB
+[2025-10-24 16:58:28] RESP tipo=emitida id=509 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:28] REQ tipo=emitida id=510 re=FFT0811152B9 rr=PEFL680326EN5 tt=0000000450.000000 uuid=F9219504-19C7-4B58-8FD0-805AEEB334B3
+[2025-10-24 16:58:28] RESP tipo=emitida id=510 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:28] REQ tipo=emitida id=439 re=FFT0811152B9 rr=MACA5103217JA tt=0000001530.000000 uuid=0FAEB82E-98F3-4C04-9123-6CA3AA479E69
+[2025-10-24 16:58:29] RESP tipo=emitida id=439 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:29] REQ tipo=emitida id=449 re=FFT0811152B9 rr=CNA110221HI3 tt=0000000550.000000 uuid=3C884897-F6FC-4B09-847C-89E25A543F02
+[2025-10-24 16:58:29] RESP tipo=emitida id=449 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:29] REQ tipo=emitida id=502 re=FFT0811152B9 rr=CCL1609297J5 tt=0000000550.000000 uuid=DB35B99E-749F-4D6D-B02B-60C0D8E41065
+[2025-10-24 16:58:30] RESP tipo=emitida id=502 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:30] REQ tipo=emitida id=498 re=FFT0811152B9 rr=PINC610219CN9 tt=0000001140.000000 uuid=D86EA5EC-5CF4-48BE-A007-EF985FE176D0
+[2025-10-24 16:58:30] RESP tipo=emitida id=498 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:30] REQ tipo=emitida id=492 re=FFT0811152B9 rr=PINC610219CN9 tt=0000001995.000000 uuid=BDCD7E66-3394-4EFD-B2EA-FEE937D9FF1C
+[2025-10-24 16:58:31] RESP tipo=emitida id=492 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:31] REQ tipo=emitida id=508 re=FFT0811152B9 rr=MOPJ8412219J1 tt=0000001170.000000 uuid=F69A9EE3-5D56-4263-A4A3-3EB1A6C3BA01
+[2025-10-24 16:58:31] RESP tipo=emitida id=508 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:31] REQ tipo=emitida id=478 re=FFT0811152B9 rr=HEME000714ETA tt=0000000295.000000 uuid=6742A24D-3117-43AF-9B52-668C3FA5CAFE
+[2025-10-24 16:58:32] RESP tipo=emitida id=478 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:32] REQ tipo=emitida id=451 re=FFT0811152B9 rr=AHU970313H34 tt=0000001100.000000 uuid=4C5D174F-544B-41D0-9C00-13FAA2CF115D
+[2025-10-24 16:58:32] RESP tipo=emitida id=451 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:32] REQ tipo=emitida id=496 re=FFT0811152B9 rr=LOMF8204295I3 tt=0000002300.000000 uuid=D8E62BFC-975C-4C23-A927-02A83CED42B2
+[2025-10-24 16:58:33] RESP tipo=emitida id=496 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:33] REQ tipo=emitida id=491 re=FFT0811152B9 rr=INE100707HE6 tt=0000000950.000000 uuid=BBA1FB1C-3637-4FAE-A4DF-16DEF8D29278
+[2025-10-24 16:58:33] RESP tipo=emitida id=491 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:33] REQ tipo=emitida id=494 re=FFT0811152B9 rr=GATC921205DB4 tt=0000000340.000000 uuid=C080BA1D-B469-4BF0-89C3-0971887A0B82
+[2025-10-24 16:58:34] RESP tipo=emitida id=494 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:34] REQ tipo=emitida id=460 re=FFT0811152B9 rr=MSF850101TQ5 tt=0000000490.000000 uuid=31F966A8-BDFE-40E0-BDB8-C35BB26F17F2
+[2025-10-24 16:58:34] RESP tipo=emitida id=460 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:34] REQ tipo=emitida id=457 re=FFT0811152B9 rr=GARA790222REA tt=0000000680.000000 uuid=15C90347-A6D7-4575-BE8A-342C65177121
+[2025-10-24 16:58:35] RESP tipo=emitida id=457 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:35] REQ tipo=emitida id=465 re=FFT0811152B9 rr=SUMM761207TG5 tt=0000000400.000000 uuid=52DADB36-B4D4-4437-9AA1-A15831F87ED4
+[2025-10-24 16:58:36] RESP tipo=emitida id=465 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:36] REQ tipo=emitida id=466 re=FFT0811152B9 rr=NAOJ660617RG6 tt=0000012158.220000 uuid=67DBE162-1029-4EAE-A529-4C4998DA83FA
+[2025-10-24 16:58:36] RESP tipo=emitida id=466 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:36] REQ tipo=emitida id=471 re=FFT0811152B9 rr=FUSN851227EP7 tt=0000002790.000000 uuid=430B5745-AF1B-4FE7-8013-6ED618C949A4
+[2025-10-24 16:58:37] RESP tipo=emitida id=471 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:37] REQ tipo=emitida id=511 re=FFT0811152B9 rr=FUSN851227EP7 tt=0000000180.000000 uuid=FA2327BD-C06C-45FF-AFC6-B63BAC070EBE
+[2025-10-24 16:58:37] RESP tipo=emitida id=511 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:37] REQ tipo=emitida id=441 re=FFT0811152B9 rr=CAVE6701248I9 tt=0000001056.000000 uuid=1C2E4E44-0AD3-4BD8-9D99-BCD83AB6B77C
+[2025-10-24 16:58:38] RESP tipo=emitida id=441 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:38] REQ tipo=emitida id=488 re=FFT0811152B9 rr=OAGC020520V68 tt=0000000445.000000 uuid=ADE0B704-73E3-446B-B438-E9F3BA28835F
+[2025-10-24 16:58:38] RESP tipo=emitida id=488 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:39] REQ tipo=emitida id=495 re=FFT0811152B9 rr=GCA010528773 tt=0000000200.000000 uuid=CB596A1C-B9D9-4804-AB91-ACFF3D8EE594
+[2025-10-24 16:58:39] RESP tipo=emitida id=495 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:39] REQ tipo=emitida id=463 re=FFT0811152B9 rr=GCA010528773 tt=0000000200.000000 uuid=43F723BC-3DA7-4586-A5DB-9D85C18135BC
+[2025-10-24 16:58:40] RESP tipo=emitida id=463 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:40] REQ tipo=emitida id=486 re=FFT0811152B9 rr=MOGG4702049F1 tt=0000000200.000000 uuid=A9AD0F46-E695-446B-920B-B096A2B5B3FD
+[2025-10-24 16:58:40] RESP tipo=emitida id=486 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:40] REQ tipo=emitida id=490 re=FFT0811152B9 rr=FASI931207I62 tt=0000000600.000000 uuid=BAE11997-EA9F-4F75-863F-C3C281FC6890
+[2025-10-24 16:58:41] RESP tipo=emitida id=490 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:41] REQ tipo=emitida id=454 re=FFT0811152B9 rr=HIL011114KC2 tt=0000001870.000000 uuid=7BAED156-8E67-4020-89A2-E95AEA1064F7
+[2025-10-24 16:58:41] RESP tipo=emitida id=454 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:41] REQ tipo=emitida id=501 re=FFT0811152B9 rr=VETR650316LH9 tt=0000001230.000000 uuid=D5498648-0FDD-438D-9524-382F5C843E72
+[2025-10-24 16:58:42] RESP tipo=emitida id=501 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:42] REQ tipo=emitida id=497 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000900.000000 uuid=D70E8BE9-FCBC-4538-8F7F-60896ED3BB92
+[2025-10-24 16:58:42] RESP tipo=emitida id=497 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:43] REQ tipo=emitida id=437 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000900.000000 uuid=0E881B2E-CFD5-4671-B868-78418210AEBA
+[2025-10-24 16:58:43] RESP tipo=emitida id=437 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:43] REQ tipo=emitida id=482 re=FFT0811152B9 rr=NAGG600516R21 tt=0000000180.000000 uuid=91499D4F-7786-4F33-A645-ED25A2C70C39
+[2025-10-24 16:58:44] RESP tipo=emitida id=482 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:44] REQ tipo=emitida id=474 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000540.000000 uuid=835B5B3D-E3C6-49E3-B0DB-69DC95FE34AB
+[2025-10-24 16:58:44] RESP tipo=emitida id=474 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:44] REQ tipo=emitida id=456 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000750.000000 uuid=7F4A828C-E38F-4327-9232-7E29464BB312
+[2025-10-24 16:58:45] RESP tipo=emitida id=456 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:45] REQ tipo=emitida id=447 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000750.000000 uuid=2DEBCD92-931D-4FFA-BBDD-8F42B2556D5C
+[2025-10-24 16:58:45] RESP tipo=emitida id=447 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:45] REQ tipo=emitida id=450 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000400.000000 uuid=3FCF7566-D27A-415E-A3B3-CCA724C9C914
+[2025-10-24 16:58:46] RESP tipo=emitida id=450 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:46] REQ tipo=emitida id=436 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000620.000000 uuid=0BD6544E-3E5C-4ECB-8B81-70E1791CEF01
+[2025-10-24 16:58:46] RESP tipo=emitida id=436 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:46] REQ tipo=emitida id=479 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000620.000000 uuid=8960D177-39AD-484C-9D3D-9243E3DA5CD0
+[2025-10-24 16:58:47] RESP tipo=emitida id=479 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:47] REQ tipo=emitida id=468 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000400.000000 uuid=95F80157-3452-461D-B78D-18F59398D27C
+[2025-10-24 16:58:47] RESP tipo=emitida id=468 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:47] REQ tipo=emitida id=455 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000400.000000 uuid=7D5C02B5-358E-4173-850F-CDE2BE350F38
+[2025-10-24 16:58:48] RESP tipo=emitida id=455 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:48] REQ tipo=emitida id=442 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000400.000000 uuid=1CF43613-43B6-4D3B-9501-7D79FD4271B0
+[2025-10-24 16:58:48] RESP tipo=emitida id=442 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:48] REQ tipo=emitida id=483 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000540.000000 uuid=97863DE3-348F-4043-AEE8-ABEE2BBBEB6C
+[2025-10-24 16:58:49] RESP tipo=emitida id=483 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:49] REQ tipo=emitida id=458 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000620.000000 uuid=20D29BAA-0979-429B-BFA1-6952385E2165
+[2025-10-24 16:58:49] RESP tipo=emitida id=458 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:49] REQ tipo=emitida id=485 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000400.000000 uuid=32076188-7275-43EF-AF30-AD80D8C88AD0
+[2025-10-24 16:58:50] RESP tipo=emitida id=485 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:50] REQ tipo=emitida id=505 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000540.000000 uuid=EFAE3449-2D4F-43C6-ACC7-9FB43A55916A
+[2025-10-24 16:58:50] RESP tipo=emitida id=505 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:50] REQ tipo=emitida id=445 re=FFT0811152B9 rr=GCI200424ED1 tt=0000001650.000000 uuid=2BFD379E-DA51-4A83-8DA9-955DF18D788E
+[2025-10-24 16:58:51] RESP tipo=emitida id=445 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:51] REQ tipo=emitida id=448 re=FFT0811152B9 rr=MAC850101GX8 tt=0000000100.000000 uuid=3B417DCC-94FB-4391-8C51-D36136D6D5CC
+[2025-10-24 16:58:52] RESP tipo=emitida id=448 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:52] REQ tipo=emitida id=443 re=FFT0811152B9 rr=IHJ010607B84 tt=0000002000.000000 uuid=1D164597-33A3-4C98-954B-573190A0C742
+[2025-10-24 16:58:52] RESP tipo=emitida id=443 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:52] REQ tipo=emitida id=453 re=FFT0811152B9 rr=IHJ010607B84 tt=0000001500.000000 uuid=06F59F5F-B77E-4116-B45D-824EA7B862E0
+[2025-10-24 16:58:53] RESP tipo=emitida id=453 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:53] REQ tipo=emitida id=487 re=FFT0811152B9 rr=IHJ010607B84 tt=0000001500.000000 uuid=AD096C38-7379-4D0C-AB9C-728D4A8D68B1
+[2025-10-24 16:58:53] RESP tipo=emitida id=487 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:53] REQ tipo=emitida id=504 re=FFT0811152B9 rr=IHJ010607B84 tt=0000000750.000000 uuid=E04DDB17-4E7D-434F-8F12-E882843ABEEF
+[2025-10-24 16:58:54] RESP tipo=emitida id=504 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:54] REQ tipo=emitida id=446 re=FFT0811152B9 rr=MOPF900210HF9 tt=0000000950.000000 uuid=2D3DFE68-D8A8-44D6-A0A8-8D07472FC043
+[2025-10-24 16:58:54] RESP tipo=emitida id=446 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:54] REQ tipo=emitida id=503 re=FFT0811152B9 rr=MOPF900210HF9 tt=0000001235.000000 uuid=E1EA482F-3A7D-48BC-B68B-46DA82AD52E1
+[2025-10-24 16:58:55] RESP tipo=emitida id=503 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:55] REQ tipo=emitida id=500 re=FFT0811152B9 rr=PUMG650713NY4 tt=0000001280.000000 uuid=D6781E93-EAA8-4EBB-AAF6-82E1FABA2BC0
+[2025-10-24 16:58:55] RESP tipo=emitida id=500 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:55] REQ tipo=emitida id=469 re=FFT0811152B9 rr=TBE130117S47 tt=0000000990.000000 uuid=97BCCE00-2902-4849-B4D1-74BE91265ECF
+[2025-10-24 16:58:56] RESP tipo=emitida id=469 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:56] REQ tipo=emitida id=462 re=FFT0811152B9 rr=MOPR9102182SA tt=0000000295.000000 uuid=39BC3119-6BFF-4D1C-B9CC-7F1A21E02B8C
+[2025-10-24 16:58:56] RESP tipo=emitida id=462 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:56] REQ tipo=emitida id=499 re=FFT0811152B9 rr=MISA990505963 tt=0000000200.000000 uuid=D162E8F1-BB1D-403C-B97D-0419647B519F
+[2025-10-24 16:58:57] RESP tipo=emitida id=499 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:57] REQ tipo=emitida id=461 re=FFT0811152B9 rr=PADJ460331SZ2 tt=0000000800.000000 uuid=33BB05F8-D7B8-47B7-9522-2DCC67A75EF4
+[2025-10-24 16:58:57] RESP tipo=emitida id=461 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:57] REQ tipo=emitida id=512 re=FFT0811152B9 rr=CFN230526QJ9 tt=0001591429.910000 uuid=FFB5B697-7213-41D7-BA32-908EADD51C2F
+[2025-10-24 16:58:58] RESP tipo=emitida id=512 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:58] REQ tipo=emitida id=476 re=FFT0811152B9 rr=INE140404NI0 tt=0000000200.000000 uuid=1035AF25-ABB0-4DD5-B249-0B7C34084CA4
+[2025-10-24 16:58:58] RESP tipo=emitida id=476 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:58] REQ tipo=emitida id=475 re=FFT0811152B9 rr=SGD000222SF5 tt=0000001440.000000 uuid=987AB24B-7B97-458E-8B81-07D7C312923D
+[2025-10-24 16:58:59] RESP tipo=emitida id=475 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:59] REQ tipo=emitida id=481 re=FFT0811152B9 rr=VEDS690219KB9 tt=0000000160.000000 uuid=53793A01-B6D4-4F63-8221-2E859852DC92
+[2025-10-24 16:58:59] RESP tipo=emitida id=481 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:58:59] REQ tipo=emitida id=493 re=FFT0811152B9 rr=SALP5401268TA tt=0000001600.000000 uuid=C5D0C359-1510-4872-B10B-E43A4AEE62E3
+[2025-10-24 16:59:00] RESP tipo=emitida id=493 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:59:00] REQ tipo=emitida id=470 re=FFT0811152B9 rr=SAGL5203087W8 tt=0000001400.000000 uuid=381CB68F-70B1-42CA-B77E-3F74120B8A54
+[2025-10-24 16:59:00] RESP tipo=emitida id=470 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:59:00] REQ tipo=emitida id=444 re=FFT0811152B9 rr=TSP111011H2A tt=0000000340.000000 uuid=2B47D655-CCF4-47E9-A910-9F32EBEE600C
+[2025-10-24 16:59:01] RESP tipo=emitida id=444 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:59:01] REQ tipo=emitida id=459 re=FFT0811152B9 rr=MOPJ8412219J1 tt=0000001200.000000 uuid=22C0D91C-BF5E-416C-A4E1-D8F286D3DBC5
+[2025-10-24 16:59:01] RESP tipo=emitida id=459 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:59:01] REQ tipo=emitida id=484 re=FFT0811152B9 rr=MASF540104EA9 tt=0000000295.000000 uuid=8422422F-6915-4A74-A8C7-7C1616D1E399
+[2025-10-24 16:59:02] RESP tipo=emitida id=484 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:59:02] REQ tipo=emitida id=438 re=FFT0811152B9 rr=LOVJ8409244F1 tt=0000000340.000000 uuid=0F4FC8A4-6DA1-4C43-ABF9-83F2596D83A0
+[2025-10-24 16:59:02] RESP tipo=emitida id=438 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:59:02] REQ tipo=emitida id=507 re=FFT0811152B9 rr=MOPJ8412219J1 tt=0000001170.000000 uuid=F5E34EB0-8CCC-4A9C-8A3F-0B30E726CA12
+[2025-10-24 16:59:03] RESP tipo=emitida id=507 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:59:03] REQ tipo=emitida id=473 re=FFT0811152B9 rr=AUAC560717SJ9 tt=0000000700.000000 uuid=554B8A87-AB3E-4876-B355-B5D59B9F4D38
+[2025-10-24 16:59:03] RESP tipo=emitida id=473 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:59:03] REQ tipo=emitida id=472 re=FFT0811152B9 rr=GCA010528773 tt=0000005000.000000 uuid=530FC1A9-A748-43A9-99A5-A4C6C723CB2A
+[2025-10-24 16:59:04] RESP tipo=emitida id=472 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:59:04] REQ tipo=emitida id=477 re=FFT0811152B9 rr=INE100707HE6 tt=0000000950.000000 uuid=1055BD5F-BBB8-4777-9B88-907691943481
+[2025-10-24 16:59:04] RESP tipo=emitida id=477 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:59:04] REQ tipo=emitida id=467 re=FFT0811152B9 rr=GUCJ490122L97 tt=0000000700.000000 uuid=70ABB314-87EB-4D18-91FA-02F0DB1AC73B
+[2025-10-24 16:59:05] RESP tipo=emitida id=467 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:59:05] REQ tipo=emitida id=440 re=FFT0811152B9 rr=AAVJ740927D56 tt=0000000180.000000 uuid=1BBA4296-0713-489A-B2BA-91C84788FA89
+[2025-10-24 16:59:06] RESP tipo=emitida id=440 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:59:06] REQ tipo=emitida id=480 re=FFT0811152B9 rr=CIMM731102586 tt=0000000295.000000 uuid=42315BD9-D0C7-4CAA-A62E-654455185682
+[2025-10-24 16:59:06] RESP tipo=emitida id=480 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 16:59:06] REQ tipo=emitida id=489 re=FFT0811152B9 rr=XAXX010101000 tt=0001838694.790000 uuid=B53DB426-A377-4399-BEA4-F17C6F9E3E0F
+[2025-10-24 16:59:07] RESP tipo=emitida id=489 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 17:27:34] REQ tipo=emitida id=515 re=PIC060606IS0 rr=OEHF9403197G1 tt=0000070000.000000 uuid=6F089825-B9DB-43EA-9B48-FCC9C8D2CDE6
+[2025-10-24 17:27:35] RESP tipo=emitida id=515 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 17:27:35] REQ tipo=emitida id=518 re=PIC060606IS0 rr=OEHF9403197G1 tt=0000030000.000000 uuid=D3D2088A-CBFD-468D-827B-6B877A3EAEE7
+[2025-10-24 17:27:36] RESP tipo=emitida id=518 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 17:27:36] REQ tipo=emitida id=519 re=PIC060606IS0 rr=CTE170509685 tt=0000006317.870000 uuid=D345C808-724E-4F14-BE51-733B66D3A90F
+[2025-10-24 17:27:36] RESP tipo=emitida id=519 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 17:27:36] REQ tipo=emitida id=514 re=PIC060606IS0 rr=CTE170509685 tt=0000002088.000000 uuid=2AF1ABC9-F23C-41D5-B6F7-FA5E6760FC38
+[2025-10-24 17:27:37] RESP tipo=emitida id=514 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 17:27:37] REQ tipo=emitida id=520 re=PIC060606IS0 rr=CTE170509685 tt=0000002088.000000 uuid=E6D9E40C-C2AF-40C0-971C-9B737B923BC6
+[2025-10-24 17:27:37] RESP tipo=emitida id=520 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 17:27:37] REQ tipo=emitida id=516 re=PIC060606IS0 rr=RECS9310129D1 tt=0000054931.000000 uuid=4150D214-8801-4097-9C9F-4922031ED87B
+[2025-10-24 17:27:38] RESP tipo=emitida id=516 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 17:27:38] REQ tipo=emitida id=513 re=PIC060606IS0 rr=KBL070228MH3 tt=0000014394.600000 uuid=02D567AC-75D6-4568-A5DD-B704013255BF
+[2025-10-24 17:27:38] RESP tipo=emitida id=513 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 17:27:38] REQ tipo=emitida id=517 re=PIC060606IS0 rr=KBL070228MH3 tt=0000011144.910000 uuid=A280D186-8157-4D8F-8952-EB95E06EB767
+[2025-10-24 17:27:39] RESP tipo=emitida id=517 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-24 17:27:39] REQ tipo=emitida id=521 re=PIC060606IS0 rr=FFT0811152B9 tt=0000035728.000000 uuid=FA977382-CB74-4427-9F30-EA1937A2F96C
+[2025-10-24 17:27:40] RESP tipo=emitida id=521 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-27 03:08:53] REQ tipo=emitida id=518 re=PIC060606IS0 rr=OEHF9403197G1 tt=0000030000.000000 uuid=D3D2088A-CBFD-468D-827B-6B877A3EAEE7
+[2025-10-27 03:08:54] RESP tipo=emitida id=518 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-27 03:08:54] REQ tipo=emitida id=515 re=PIC060606IS0 rr=OEHF9403197G1 tt=0000070000.000000 uuid=6F089825-B9DB-43EA-9B48-FCC9C8D2CDE6
+[2025-10-27 03:08:55] RESP tipo=emitida id=515 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-27 03:08:55] REQ tipo=emitida id=519 re=PIC060606IS0 rr=CTE170509685 tt=0000006317.870000 uuid=D345C808-724E-4F14-BE51-733B66D3A90F
+[2025-10-27 03:08:57] RESP tipo=emitida id=519 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-27 03:08:57] REQ tipo=emitida id=514 re=PIC060606IS0 rr=CTE170509685 tt=0000002088.000000 uuid=2AF1ABC9-F23C-41D5-B6F7-FA5E6760FC38
+[2025-10-27 03:08:58] RESP tipo=emitida id=514 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-27 03:08:58] REQ tipo=emitida id=520 re=PIC060606IS0 rr=CTE170509685 tt=0000002088.000000 uuid=E6D9E40C-C2AF-40C0-971C-9B737B923BC6
+[2025-10-27 03:08:58] RESP tipo=emitida id=520 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-27 03:08:58] REQ tipo=emitida id=516 re=PIC060606IS0 rr=RECS9310129D1 tt=0000054931.000000 uuid=4150D214-8801-4097-9C9F-4922031ED87B
+[2025-10-27 03:08:59] RESP tipo=emitida id=516 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-27 03:08:59] REQ tipo=emitida id=513 re=PIC060606IS0 rr=KBL070228MH3 tt=0000014394.600000 uuid=02D567AC-75D6-4568-A5DD-B704013255BF
+[2025-10-27 03:09:00] RESP tipo=emitida id=513 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-27 03:09:00] REQ tipo=emitida id=517 re=PIC060606IS0 rr=KBL070228MH3 tt=0000011144.910000 uuid=A280D186-8157-4D8F-8952-EB95E06EB767
+[2025-10-27 03:09:01] RESP tipo=emitida id=517 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-27 03:09:01] REQ tipo=emitida id=521 re=PIC060606IS0 rr=FFT0811152B9 tt=0000035728.000000 uuid=FA977382-CB74-4427-9F30-EA1937A2F96C
+[2025-10-27 03:09:02] RESP tipo=emitida id=521 estado=Vigente codigo=S - Comprobante obtenido satisfactoriamente. estatusCancelacion=
+[2025-10-27 18:55:29] REQ tipo=recibida id=5 re=GGE131107DR8 rr=XAXX010101000 tt=0000000500.000000 uuid=A06B9135-13CD-49FA-9A1B-32DA7208CD10
+[2025-10-27 18:55:30] RESP tipo=recibida id=5 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-27 18:55:30] REQ tipo=recibida id=7 re=BBA830831LJ2 rr=XAXX010101000 tt=0000000090.480000 uuid=D7D8DA00-A574-4E9B-90CF-4FFD40EE3C48
+[2025-10-27 18:55:31] RESP tipo=recibida id=7 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-27 18:55:31] REQ tipo=recibida id=1 re=GGE131107DR8 rr=XAXX010101000 tt=0000000500.000000 uuid=0BB9ACC0-DF63-4F30-8168-EF5A3DA147D0
+[2025-10-27 18:55:32] RESP tipo=recibida id=1 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-27 18:55:32] REQ tipo=recibida id=2 re=GGE131107DR8 rr=XAXX010101000 tt=0000001226.530000 uuid=45A1355A-44B3-4DD6-8ADC-4F49B2AD8D61
+[2025-10-27 18:55:33] RESP tipo=recibida id=2 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-27 18:55:33] REQ tipo=recibida id=6 re=GGE131107DR8 rr=XAXX010101000 tt=0000000700.270000 uuid=CDF06E4C-C4D0-4A5C-9115-189C00412BFC
+[2025-10-27 18:55:35] RESP tipo=recibida id=6 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-27 18:55:35] REQ tipo=recibida id=4 re=GGE131107DR8 rr=XAXX010101000 tt=0000000600.000000 uuid=966A9A81-23D1-41D2-A937-2548607FCF83
+[2025-10-27 18:55:36] RESP tipo=recibida id=4 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-27 18:55:36] REQ tipo=recibida id=3 re=GGE131107DR8 rr=XAXX010101000 tt=0000000650.130000 uuid=64A8B823-D7B4-4C33-A43D-B11E6B209603
+[2025-10-27 18:55:37] RESP tipo=recibida id=3 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=
+[2025-10-27 18:55:37] REQ tipo=recibida id=8 re=GGE131107DR8 rr=XAXX010101000 tt=0000001000.000000 uuid=E9285649-AD3A-4648-A049-A10D5FC984C7
+[2025-10-27 18:55:38] RESP tipo=recibida id=8 estado=No Encontrado codigo=N - 601: La expresión impresa proporcionada no es válida. estatusCancelacion=

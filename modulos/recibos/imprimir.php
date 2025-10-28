@@ -51,7 +51,7 @@ if (!$data) {
 }
 
 // Variables para la plantilla
-$folio = $data->folio ?? 'N/A';
+$folio = $data->folio ?? "N/A";
 $fecha = date("d/m/Y", strtotime($data->fecha_pago));
 $cliente = $data->cliente ?? "_________________________";
 $rfc = $data->rfc ?? "_________________________";

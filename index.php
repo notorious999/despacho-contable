@@ -231,9 +231,6 @@ include_once __DIR__ . '/includes/header.php';
                     <a href="<?php echo URL_ROOT; ?>/modulos/recibos/nuevo_servicio.php" class="btn btn-primary">
                         <i class="fas fa-plus"></i> Nuevo Recibo (Clientes)
                     </a>
-                    <a href="<?php echo URL_ROOT; ?>/modulos/recibos/pago_adelantado.php" class="btn btn-primary">
-                        <i class="fas fa-plus"></i> Pagos Adelantados
-                    </a>
                 </div>
             </div>
         </div>

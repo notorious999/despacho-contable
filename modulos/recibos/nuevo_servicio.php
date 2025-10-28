@@ -3,124 +3,115 @@ require_once __DIR__ . '/../../config/config.php';
 require_once __DIR__ . '/../../config/db.php';
 require_once __DIR__ . '/../../includes/functions.php';
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 if (!isLoggedIn()) {
     redirect(URL_ROOT . '/modulos/usuarios/login.php');
 }
 
 $db = new Database();
-$db->query('SELECT id, razon_social, rfc FROM clientes WHERE estatus="activo" ORDER BY razon_social');
+$db->query('SELECT id, razon_social, rfc, honorarios FROM clientes WHERE estatus="activo" ORDER BY razon_social');
 $clientes = $db->resultSet();
 
 include_once __DIR__ . '/../../includes/header.php';
 ?>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+<style>
+    /* Estilos (sin cambios) */
+    #listaPeriodosHonorarios { max-height: 300px; overflow-y: auto; padding: 15px; border: 1px solid #dee2e6; border-radius: 0.375rem; margin-bottom: 1rem; background-color: #f8f9fa; }
+    .form-check-label.text-muted { text-decoration: line-through; opacity: 0.7; }
+    .form-check-label .badge { vertical-align: middle; margin-left: 0.3rem; font-size: 0.75em; }
+    .servicio-item .btn-danger { height: calc(1.5em + 0.5rem + 2px); display: flex; align-items: center; justify-content: center; }
+    .form-control-sm.text-end { text-align: right; }
+</style>
 
-<div class="row mb-4">
-    <div class="col-md-6">
-        <h2>Nuevo Recibo de Servicio</h2>
+<div class="container-fluid px-4">
+    <div class="row mb-3 align-items-center">
+        <div class="col-md-6"> <h1 class="mt-4 mb-0">Nuevo Recibo de Servicio</h1> </div>
+        <div class="col-md-6 text-end"> <a href="index.php" class="btn btn-secondary"><i class="fas fa-arrow-left me-2"></i>Volver a Recibos</a> </div>
     </div>
-    <div class="col-md-6 text-end">
-        <a href="servicios.php" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver</a>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <?php flash('mensaje'); ?>
+            <form action="guardar_servicio.php" method="post" id="formNuevoServicio">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="cliente_id" class="form-label">Cliente *</label>
+                        <select class="form-select" id="cliente_id" name="cliente_id" required>
+                            <option value="">Seleccione un cliente</option>
+                            <?php foreach ($clientes as $cliente): ?>
+                                <option value="<?php echo $cliente->id; ?>" data-honorarios="<?php echo htmlspecialchars($cliente->honorarios ?? 0, ENT_QUOTES, 'UTF-8'); ?>">
+                                    <?php echo htmlspecialchars($cliente->razon_social . ' (' . $cliente->rfc . ')', ENT_QUOTES, 'UTF-8'); ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="fecha" class="form-label">Fecha del Recibo *</label>
+                        <input type="date" class="form-control" id="fecha" name="fecha" value="<?php echo date('Y-m-d'); ?>" required>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+                <h5 class="mb-3">Servicios / Conceptos</h5>
+                
+                <!-- *** CORRECCIÓN: Contenedor VACÍO *** -->
+                <div id="servicios-container" class="mb-3">
+                    <!-- NADA AQUÍ - El JS (en footer.php) añadirá la primera fila -->
+                </div>
+                
+                <div class="mb-3">
+                    <button type="button" id="add-servicio" class="btn btn-success btn-sm"><i class="fas fa-plus me-1"></i> Agregar Servicio</button>
+                    <button type="button" class="btn btn-info btn-sm" id="btnAgregarHonorarios" style="margin-left: 10px;">
+                        <i class="fas fa-hand-holding-usd me-1"></i> Agregar Honorarios
+                    </button>
+                </div>
+
+                <div class="row justify-content-end mt-3">
+                    <div class="col-md-4 col-lg-3">
+                         <div class="text-end border-top pt-2">
+                            <h5 class="mb-0">Total: $<span id="total" class="fw-bold">0.00</span></h5>
+                            <input type="hidden" name="monto_total_calculado" id="monto_total_hidden" value="0.00">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-12 border-top pt-3">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-save me-2"></i> Crear Recibo</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div class="card">
-    <div class="card-body">
-        <form action="guardar_servicio.php" method="post">
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label for="cliente_id" class="form-label">Cliente *</label>
-                    <select class="form-select" id="cliente_id" name="cliente_id" required>
-                        <option value="">Seleccione un cliente</option>
-                        <?php foreach($clientes as $cliente): ?>
-                        <option value="<?php echo $cliente->id; ?>"><?php echo htmlspecialchars($cliente->razon_social . ' (' . $cliente->rfc . ')', ENT_QUOTES, 'UTF-8'); ?></option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <label for="fecha" class="form-label">Fecha del Recibo *</label>
-                    <input type="date" class="form-control" id="fecha" name="fecha" value="<?php echo date('Y-m-d'); ?>" required>
-                </div>
+    <!-- Modal (Sin cambios) -->
+    <div class="modal fade" id="modalHonorarios" tabindex="-1" aria-labelledby="modalHonorariosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg"> <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalHonorariosLabel">Seleccionar Periodos de Honorarios</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-
-            <hr>
-            <h5>Servicios</h5>
-            <div id="servicios-container">
-                <div class="row servicio-item mb-2">
-                    <div class="col-md-7"><input type="text" name="descripcion[]" class="form-control" placeholder="Descripción del servicio" required></div>
-                    <div class="col-md-3"><input type="number" name="importe[]" class="form-control importe" placeholder="Importe" step="0.01" min="0.00" required></div>
-                    <div class="col-md-2"><button type="button" class="btn btn-danger remove-servicio">Eliminar</button></div>
+            <div class="modal-body">
+                <p>Cliente: <strong id="modalClienteNombre"></strong></p>
+                <p>Monto Honorario Mensual: $<strong id="modalMontoHonorario">0.00</strong></p>
+                <hr>
+                <p class="mb-2">Selecciona los periodos (mes/año) que deseas incluir:</p>
+                <div id="listaPeriodosHonorarios" class="row border rounded pt-2 pb-1 mb-3 bg-light">
+                    <div class="text-center p-3 text-muted">Cargando periodos...</div>
                 </div>
+                <p class="mt-3 fw-bold">Total Seleccionado (sin cortesías): $<span id="modalTotalSeleccionado">0.00</span></p>
             </div>
-            <button type="button" id="add-servicio" class="btn btn-success mb-3"><i class="fas fa-plus"></i> Agregar Servicio</button>
-
-            <div class="row">
-                <div class="col-md-12 text-end">
-                    <h4>Total: $<span id="total">0.00</span></h4>
-                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" id="btnConfirmarAgregarHonorarios">Agregar al Recibo</button>
             </div>
-            
-            <div class="row mt-3">
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Crear Recibo</button>
-                </div>
-            </div>
-        </form>
+        </div> </div>
     </div>
-</div>
+</div> <!-- Fin container-fluid -->
 
-<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    // Inicializar el buscador para el selector de clientes
-    const clienteSelect = new Choices('#cliente_id', {
-      searchEnabled: true,
-      itemSelectText: 'Presiona para seleccionar',
-      noResultsText: 'No se encontraron resultados',
-      noChoicesText: 'No hay más opciones para elegir',
-      placeholder: true,
-      placeholderValue: 'Busca o selecciona un cliente...'
-    });
-
-    // --- Tu código original para la suma y agregar/eliminar servicios (sin cambios) ---
-    const container = document.getElementById('servicios-container');
-    
-    document.getElementById('add-servicio').addEventListener('click', function () {
-        const newItem = document.createElement('div');
-        newItem.classList.add('row', 'servicio-item', 'mb-2');
-        newItem.innerHTML = `
-            <div class="col-md-7"><input type="text" name="descripcion[]" class="form-control" placeholder="Descripción del servicio" required></div>
-            <div class="col-md-3"><input type="number" name="importe[]" class="form-control importe" placeholder="Importe" step="0.01" min="0.00" required></div>
-            <div class="col-md-2"><button type="button" class="btn btn-danger remove-servicio">Eliminar</button></div>
-        `;
-        container.appendChild(newItem);
-    });
-
-    container.addEventListener('click', function (e) {
-        if (e.target && e.target.classList.contains('remove-servicio')) {
-            e.target.closest('.servicio-item').remove();
-            updateTotal();
-        }
-    });
-
-    container.addEventListener('input', function (e) {
-        if (e.target && e.target.classList.contains('importe')) {
-            updateTotal();
-        }
-    });
-
-    function updateTotal() {
-        let total = 0;
-        document.querySelectorAll('.importe').forEach(function (input) {
-            total += parseFloat(input.value) || 0;
-        });
-        document.getElementById('total').textContent = total.toFixed(2);
-    }
-
-    // Inicializar el total al cargar la página por si hay valores precargados
-    updateTotal();
-});
-</script>
+<!-- El script <script>...</script> ha sido movido a footer.php -->
 
 <?php include_once __DIR__ . '/../../includes/footer.php'; ?>

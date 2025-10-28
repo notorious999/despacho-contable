@@ -4,3 +4,11 @@
   height: 35px; /* Ajusta la altura del logo según necesites */
   width: auto;
 }
+
+#listaPeriodosHonorarios {
+    max-height: 300px; /* Ajusta esta altura según prefieras */
+    overflow-y: auto; /* Muestra una barra de desplazamiento vertical si el contenido excede la altura */
+    padding: 10px; /* Añade un poco de espacio interno */
+    border: 1px solid #eee; /* Opcional: añade un borde para verlo mejor */
+    border-radius: 4px; /* Opcional: esquinas redondeadas */
+}

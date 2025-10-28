@@ -10,7 +10,7 @@ if (!isLoggedIn()) {
 $recibo_id = isset($_GET['recibo_id']) ? (int)sanitize($_GET['recibo_id']) : 0;
 if ($recibo_id <= 0) {
     flash('mensaje', 'Recibo no especificado.', 'alert alert-danger');
-    redirect(URL_ROOT . '/modulos/recibos/servicios.php');
+    redirect(URL_ROOT . '/modulos/recibos/index.php');
     exit;
 }
 
@@ -20,7 +20,7 @@ $db->bind(':id', $recibo_id);
 $recibo = $db->single();
 if (!$recibo) {
     flash('mensaje', 'Recibo no encontrado.', 'alert alert-danger');
-    redirect(URL_ROOT . '/modulos/recibos/servicios.php');
+    redirect(URL_ROOT . '/modulos/recibos/index.php');
     exit;
 }
 
@@ -36,7 +36,7 @@ include_once __DIR__ . '/../../includes/header.php';
     <div class="text-muted"><?php echo htmlspecialchars($recibo->razon_social, ENT_QUOTES, 'UTF-8'); ?> — RFC: <?php echo htmlspecialchars($recibo->rfc, ENT_QUOTES, 'UTF-8'); ?></div>
   </div>
   <div class="col-md-4 text-end">
-    <a href="<?php echo URL_ROOT; ?>/modulos/recibos/servicios.php" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a Recibos de Servicios</a>
+    <a href="<?php echo URL_ROOT; ?>/modulos/recibos/index.php" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a Recibos de Servicios</a>
   </div>
 </div>
 
